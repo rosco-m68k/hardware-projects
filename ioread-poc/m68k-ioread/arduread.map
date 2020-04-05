@@ -1,0 +1,98 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../rosco_m68k/code/software/libs/build/lib/libgpio.a(gpio.o)
+                              kmain.o (pinMode)
+../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(machine.o)
+                              kmain.o (mcBusywait)
+../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(basicio.o)
+                              kmain.o (printuchar)
+../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(init.o)
+                              (START)
+../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(kinit.o)
+                              ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(init.o) (__kinit)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+INIT             0x0000000000028000 0x00000000000d7fff
+KRAM             0x0000000000001000 0x00000000000fefff
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000001000                kram = 0x1000
+                0x0000000000028000                phys = 0x28000
+
+.text.init      0x0000000000028000       0x2a load address 0x0000000000000000
+                0x0000000000028000                _init = .
+ *(.init)
+ .init          0x0000000000028000       0x2a ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(init.o)
+                0x000000000002802a                _init_end = .
+
+.text.postinit  0x0000000000001000       0x10 load address 0x000000000000002a
+                0x0000000000001000                _postinit = .
+ *(.postinit)
+ .postinit      0x0000000000001000       0x10 ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(init.o)
+                0x0000000000001010                _postinit_end = .
+
+.text           0x0000000000001010      0x641 load address 0x000000000000003a
+                0x0000000000001010                _code = .
+ *(.text)
+ .text          0x0000000000001010       0xae kmain.o
+                0x0000000000001010                kmain
+ *fill*         0x00000000000010be        0x2 
+ .text          0x00000000000010c0       0xb0 ../../../rosco_m68k/code/software/libs/build/lib/libgpio.a(gpio.o)
+                0x00000000000010c0                pinMode
+                0x0000000000001102                digitalRead
+                0x0000000000001126                digitalWrite
+ .text          0x0000000000001170       0x4c ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(machine.o)
+                0x0000000000001170                mcPrint
+                0x0000000000001182                mcPrintln
+                0x0000000000001194                mcSendchar
+                0x00000000000011a6                mcReadchar
+                0x00000000000011b0                mcBusywait
+ .text          0x00000000000011bc      0x3e2 ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(basicio.o)
+                0x00000000000011bc                readline
+                0x00000000000013f0                printuint
+                0x00000000000014e0                printushort
+                0x0000000000001562                printuchar
+ *fill*         0x000000000000159e        0x2 
+ .text          0x00000000000015a0       0x2e ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(kinit.o)
+                0x00000000000015a0                __kinit
+ *(.rodata)
+ .rodata        0x00000000000015ce       0x59 kmain.o
+ *fill*         0x0000000000001627        0x1 
+ .rodata        0x0000000000001628        0x8 ../../../rosco_m68k/code/software/libs/build/lib/libgpio.a(gpio.o)
+ .rodata        0x0000000000001630       0x21 ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(basicio.o)
+                0x0000000000001651                _code_end = .
+
+.data           0x0000000000001652        0x6 load address 0x000000000000067c
+                0x0000000000001652                _data_start = .
+ *(.data)
+ *fill*         0x0000000000001652        0x2 
+ .data          0x0000000000001654        0x4 kmain.o
+ .data          0x0000000000001658        0x0 ../../../rosco_m68k/code/software/libs/build/lib/libgpio.a(gpio.o)
+ .data          0x0000000000001658        0x0 ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(basicio.o)
+ .data          0x0000000000001658        0x0 ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(kinit.o)
+                0x0000000000001658                _data_end = .
+
+.bss            0x0000000000001658        0x0 load address 0x0000000000000682
+                0x0000000000001658                _bss_start = .
+ *(.bss)
+ .bss           0x0000000000001658        0x0 kmain.o
+ .bss           0x0000000000001658        0x0 ../../../rosco_m68k/code/software/libs/build/lib/libgpio.a(gpio.o)
+ .bss           0x0000000000001658        0x0 ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(basicio.o)
+ .bss           0x0000000000001658        0x0 ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(kinit.o)
+                0x0000000000001658                _bss_end = .
+                0x0000000000001658                _end = .
+LOAD kmain.o
+LOAD ../../../rosco_m68k/code/software/libs/build/lib/libgpio.a
+LOAD ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a
+LOAD ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a
+OUTPUT(arduread.bin binary)
+
+.comment        0x0000000000000000       0x48
+ .comment       0x0000000000000000       0x12 kmain.o
+ .comment       0x0000000000000012       0x12 ../../../rosco_m68k/code/software/libs/build/lib/libgpio.a(gpio.o)
+ .comment       0x0000000000000024       0x12 ../../../rosco_m68k/code/software/libs/build/lib/libmachine.a(basicio.o)
+ .comment       0x0000000000000036       0x12 ../../../rosco_m68k/code/software/libs/build/lib/libstart_serial.a(kinit.o)
