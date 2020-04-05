@@ -85,8 +85,8 @@ a suggested setup (for an 8-channel analyzer).
 For convenience when using a LA, two additional lines are managed by the 
 software:
 
-* rosco_m68k GPIO 1 is toggled when the m68k starts - this is a convenient
-  trigger for your LA.
+* rosco_m68k GPIO 1 is toggled when the m68k starts running the loaded code
+  - this is a convenient trigger for your LA.
 * The Arduino provides a SIGNAL line (on pin 42). This is driven high
   during interrupt processing so you can see when the Arduino is driving
   the bus.
