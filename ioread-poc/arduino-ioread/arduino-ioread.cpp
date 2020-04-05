@@ -114,9 +114,9 @@ ISR(PCINT0_vect) {
         __asm__ __volatile__ ("nop;");  /* Each nop adds 62.5ns on 16MHz Arduino */
         __asm__ __volatile__ ("nop;");
 
-        SIGNAL_LOW;
         TRI_STATE_BUS;
         TRI_STATE_DTACK;
+        SIGNAL_LOW;
     }
 }
 
