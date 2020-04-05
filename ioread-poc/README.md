@@ -22,7 +22,7 @@ There are two subdirectories:
 * **arduino-ioread** is the Arduino code (as an Eclipse project)
 * **m68k-ioread** is the rosco_m68k code
 
-### Hardware set-up
+### Hardware set-up
 
 You'll need to build a small circuit to generate the STROBE line. For this 
 you'll need:
