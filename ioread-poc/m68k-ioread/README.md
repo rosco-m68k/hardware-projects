@@ -1,21 +1,23 @@
-# Very simple GPIO programming example
+# Arduino IO device example
 
-This is a very simple example of programming the GPIOs. 
+This is a very simple reading an Arduino 'IO device' register. 
 
-In order to actually see this do anything, you'll need to hook up
-a circuit with some LEDs or something connected to the GPIO lines.
-
-**Note** If you're going to do that, use transistors - the GPIO's
-can't directly drive LEDs! See `example-circuit/circuit.pdf` for an
-example circuit schematic (in KiCad). 
+See `../arduino-ioread` for the required Arduino code that makes
+this work, and `../README.md` for details of how to hook everything
+up.
 
 ## Building
+
+You may need to adjust the library and include paths in the `Makefile`
+to point to the built libraries from the main `rosco_m68k` project.
+
+Then do:
 
 ```
 make clean all
 ```
 
-This will build `kernel.bin`, which can be uploaded to a board that
+This will build `arduread.bin`, which can be uploaded to a board that
 is running the `serial-receive` firmware.
 
 If you're feeling adventurous (and have ckermit installed), you
