@@ -1,0 +1,25 @@
+
+
+ Pin # | Name     | Pin Type
+-----------------------------
+   1   | A23      | Input
+   2   | A22      | Input
+   3   | A21      | Input
+   4   | A20      | Input
+   5   | JP1      | Input
+   6   | JP2      | Input
+   7   | JP3      | Input
+   8   | UDS      | Input
+   9   | LDS      | Input
+  10   | GND      | GND
+  11   | EXPSEL   | Input
+  12   | ODDRAM4  | Output
+  13   | ODDRAM3  | Output
+  14   | ODDRAM2  | Output
+  15   | ODDRAM1  | Output
+  16   | EVENRAM1 | Output
+  17   | EVENRAM2 | Output
+  18   | EVENRAM3 | Output
+  19   | EVENRAM4 | Output
+  20   | VCC      | VCC
+

@@ -1,0 +1,82 @@
+
+
+Pin 19 = EVENRAM4     XOR = 0   AC1 = 0
+  0  x--x -x-- -x-- -x-- -x-- -x-- -x-- ---x
+  1  x--x x--- -x-- -x-- -x-- x--- -x-- ---x
+  2  -xx- -x-- -x-- -x-- x--- -x-- -x-- ---x
+  3  -xx- x--- -x-- -x-- x--- x--- -x-- ---x
+  4  x-x- -x-- -x-- x--- -x-- -x-- -x-- ---x
+  5  x-x- x--- -x-- x--- -x-- x--- -x-- ---x
+  6  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+  7  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 18 = EVENRAM3     XOR = 0   AC1 = 0
+  8  -x-x x--- x--- -x-- -x-- -x-- -x-- ---x
+  9  x--x x--- x--- -x-- -x-- x--- -x-- ---x
+ 10  x--x x--- x--- -x-- x--- -x-- -x-- ---x
+ 11  -xx- -x-- x--- -x-- x--- x--- -x-- ---x
+ 12  -xx- x--- x--- x--- -x-- -x-- -x-- ---x
+ 13  x-x- -x-- x--- x--- -x-- x--- -x-- ---x
+ 14  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 15  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 17 = EVENRAM2     XOR = 0   AC1 = 0
+ 16  -x-x x--- -x-- -x-- -x-- -x-- -x-- ---x
+ 17  x--x -x-- -x-- -x-- -x-- x--- -x-- ---x
+ 18  x--x x--- -x-- -x-- x--- -x-- -x-- ---x
+ 19  -xx- -x-- -x-- -x-- x--- x--- -x-- ---x
+ 20  -xx- x--- -x-- x--- -x-- -x-- -x-- ---x
+ 21  x-x- -x-- -x-- x--- -x-- x--- -x-- ---x
+ 22  x-x- x--- -x-- x--- x--- -x-- -x-- ---x
+ 23  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 16 = EVENRAM1     XOR = 0   AC1 = 0
+ 24  -x-x -x-- x--- -x-- -x-- -x-- -x-- ---x
+ 25  -x-x x--- x--- -x-- -x-- x--- -x-- ---x
+ 26  x--x -x-- x--- -x-- x--- -x-- -x-- ---x
+ 27  x--x x--- x--- -x-- x--- x--- -x-- ---x
+ 28  -xx- -x-- x--- x--- -x-- -x-- -x-- ---x
+ 29  -xx- x--- x--- x--- -x-- x--- -x-- ---x
+ 30  x-x- -x-- x--- x--- x--- -x-- -x-- ---x
+ 31  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 15 = ODDRAM1      XOR = 0   AC1 = 0
+ 32  -x-x -x-- x--- -x-- -x-- -x-- ---- -x-x
+ 33  -x-x x--- x--- -x-- -x-- x--- ---- -x-x
+ 34  x--x -x-- x--- -x-- x--- -x-- ---- -x-x
+ 35  x--x x--- x--- -x-- x--- x--- ---- -x-x
+ 36  -xx- -x-- x--- x--- -x-- -x-- ---- -x-x
+ 37  -xx- x--- x--- x--- -x-- x--- ---- -x-x
+ 38  x-x- -x-- x--- x--- x--- -x-- ---- -x-x
+ 39  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 14 = ODDRAM2      XOR = 0   AC1 = 0
+ 40  -x-x x--- -x-- -x-- -x-- -x-- ---- -x-x
+ 41  x--x -x-- -x-- -x-- -x-- x--- ---- -x-x
+ 42  x--x x--- -x-- -x-- x--- -x-- ---- -x-x
+ 43  -xx- -x-- -x-- -x-- x--- x--- ---- -x-x
+ 44  -xx- x--- -x-- x--- -x-- -x-- ---- -x-x
+ 45  x-x- -x-- -x-- x--- -x-- x--- ---- -x-x
+ 46  x-x- x--- -x-- x--- x--- -x-- ---- -x-x
+ 47  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 13 = ODDRAM3      XOR = 0   AC1 = 0
+ 48  -x-x x--- x--- -x-- -x-- -x-- ---- -x-x
+ 49  x--x -x-- x--- -x-- -x-- x--- ---- -x-x
+ 50  x--x x--- x--- -x-- x--- -x-- ---- -x-x
+ 51  -xx- -x-- x--- -x-- x--- x--- ---- -x-x
+ 52  -xx- x--- x--- x--- -x-- -x-- ---- -x-x
+ 53  x-x- -x-- x--- x--- -x-- x--- ---- -x-x
+ 54  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 55  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
+Pin 12 = ODDRAM4      XOR = 0   AC1 = 0
+ 56  x--x -x-- -x-- -x-- -x-- -x-- ---- -x-x
+ 57  x--x x--- -x-- -x-- -x-- x--- ---- -x-x
+ 58  -xx- -x-- -x-- -x-- x--- -x-- ---- -x-x
+ 59  -xx- x--- -x-- -x-- x--- x--- ---- -x-x
+ 60  x-x- -x-- -x-- x--- -x-- -x-- ---- -x-x
+ 61  x-x- x--- -x-- x--- -x-- x--- ---- -x-x
+ 62  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 63  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+
