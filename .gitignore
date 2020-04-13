@@ -1,4 +1,6 @@
 **/build
 **/*.o
 **/*.d
-
+**/.DS_Store
+**/*.sch-bak
+**/*.kicad_pcb-bak
