@@ -1,0 +1,25 @@
+
+
+                                GAL16V8
+
+                          -------\___/-------
+                      A23 |  1           20 | VCC
+                          |                 |
+                      A22 |  2           19 | EVENRAM4
+                          |                 |
+                      A21 |  3           18 | EVENRAM3
+                          |                 |
+                      A20 |  4           17 | EVENRAM2
+                          |                 |
+                      JP1 |  5           16 | EVENRAM1
+                          |                 |
+                      JP2 |  6           15 | ODDRAM1
+                          |                 |
+                      JP3 |  7           14 | ODDRAM2
+                          |                 |
+                      UDS |  8           13 | ODDRAM3
+                          |                 |
+                      LDS |  9           12 | ODDRAM4
+                          |                 |
+                      GND | 10           11 | EXPSEL
+                          -------------------

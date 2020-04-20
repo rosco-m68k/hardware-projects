@@ -1,0 +1,133 @@
+GAL16V8
+EXPANSION_DECODER
+
+A23     A22       A21       A20       JP1       JP2       JP3        UDS       LDS        GND
+EXPSEL  ODDRAM4   ODDRAM3   ODDRAM2   ODDRAM1   EVENRAM1  EVENRAM2   EVENRAM3  EVENRAM4   VCC
+
+/ODDRAM1      = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 * /A22 * /A21 * A20 * /LDS    ; Base 1MB; Addr 1MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 * /A22 *  A21 * A20 * /LDS    ; Base 3MB; Addr 3MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 * /A23 *  A22 * /A21 * A20 * /LDS    ; Base 5MB; Addr 5MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 * /A23 *  A22 *  A21 * A20 * /LDS    ; Base 7MB; Addr 7MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 * /A22 * /A21 * A20 * /LDS    ; Base 9MB; Addr 9MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 * /A22 *  A21 * A20 * /LDS    ; Base 11MB; Addr 11MB
+              + /EXPSEL *  JP1 *  JP2 * /JP3 *  A23 *  A22 * /A21 * A20 * /LDS    ; Base 13MB; Addr 13MB
+
+/EVENRAM1     = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 * /A22 * /A21 * A20 * /UDS    ; Base 1MB; Addr 1MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 * /A22 *  A21 * A20 * /UDS    ; Base 3MB; Addr 3MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 * /A23 *  A22 * /A21 * A20 * /UDS    ; Base 5MB; Addr 5MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 * /A23 *  A22 *  A21 * A20 * /UDS    ; Base 7MB; Addr 7MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 * /A22 * /A21 * A20 * /UDS    ; Base 9MB; Addr 9MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 * /A22 *  A21 * A20 * /UDS    ; Base 11MB; Addr 11MB
+              + /EXPSEL *  JP1 *  JP2 * /JP3 *  A23 *  A22 * /A21 * A20 * /UDS    ; Base 13MB; Addr 13MB
+
+/ODDRAM2      = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 * /A22 *  A21 * /A20 * /LDS   ; Base 1MB; Addr 2MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 *  A22 * /A21 * /A20 * /LDS   ; Base 3MB; Addr 4MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 * /A23 *  A22 *  A21 * /A20 * /LDS   ; Base 5MB; Addr 6MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 *  A23 * /A22 * /A21 * /A20 * /LDS   ; Base 7MB; Addr 8MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 * /A22 *  A21 * /A20 * /LDS   ; Base 9MB; Addr 10MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 *  A22 * /A21 * /A20 * /LDS   ; Base 11MB; Addr 12MB
+              + /EXPSEL *  JP1 *  JP2 * /JP3 *  A23 *  A22 *  A21 * /A20 * /LDS   ; Base 13MB; Addr 14MB
+
+/EVENRAM2     = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 * /A22 *  A21 * /A20 * /UDS   ; Base 1MB; Addr 2MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 *  A22 * /A21 * /A20 * /UDS   ; Base 3MB; Addr 4MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 * /A23 *  A22 *  A21 * /A20 * /UDS   ; Base 5MB; Addr 6MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 *  A23 * /A22 * /A21 * /A20 * /UDS   ; Base 7MB; Addr 8MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 * /A22 *  A21 * /A20 * /UDS   ; Base 9MB; Addr 10MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 *  A22 * /A21 * /A20 * /UDS   ; Base 11MB; Addr 12MB
+              + /EXPSEL *  JP1 *  JP2 * /JP3 *  A23 *  A22 *  A21 * /A20 * /UDS   ; Base 13MB; Addr 14MB
+
+/ODDRAM3      = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 * /A22 *  A21 *  A20 * /LDS   ; Base 1MB; Addr 3MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 *  A22 * /A21 *  A20 * /LDS   ; Base 3MB; Addr 5MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 * /A23 *  A22 *  A21 *  A20 * /LDS   ; Base 5MB; Addr 7MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 *  A23 * /A22 * /A21 *  A20 * /LDS   ; Base 7MB; Addr 9MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 * /A22 *  A21 *  A20 * /LDS   ; Base 9MB; Addr 11MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 *  A22 * /A21 *  A20 * /LDS   ; Base 11MB; Addr 13MB
+
+/EVENRAM3     = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 * /A22 *  A21 *  A20 * /UDS   ; Base 1MB; Addr 3MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 *  A22 *  A21 *  A20 * /UDS   ; Base 3MB; Addr 5MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 * /A23 *  A22 *  A21 *  A20 * /UDS   ; Base 5MB; Addr 7MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 *  A23 * /A22 * /A21 *  A20 * /UDS   ; Base 7MB; Addr 9MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 * /A22 *  A21 *  A20 * /UDS   ; Base 9MB; Addr 11MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 *  A22 * /A21 *  A20 * /UDS   ; Base 11MB; Addr 13MB
+
+/ODDRAM4      = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 *  A22 * /A21 * /A20 * /LDS   ; Base 1MB; Addr 4MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 *  A22 *  A21 * /A20 * /LDS   ; Base 3MB; Addr 6MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 *  A23 * /A22 * /A21 * /A20 * /LDS   ; Base 5MB; Addr 8MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 *  A23 * /A22 *  A21 * /A20 * /LDS   ; Base 7MB; Addr 10MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 *  A22 * /A21 * /A20 * /LDS   ; Base 9MB; Addr 12MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 *  A22 *  A21 * /A20 * /LDS   ; Base 11MB; Addr 14MB
+
+/EVENRAM4     = /EXPSEL * /JP1 * /JP2 * /JP3 * /A23 *  A22 * /A21 * /A20 * /UDS   ; Base 1MB; Addr 4MB
+              + /EXPSEL * /JP1 * /JP2 *  JP3 * /A23 *  A22 *  A21 * /A20 * /UDS   ; Base 3MB; Addr 6MB
+              + /EXPSEL * /JP1 *  JP2 * /JP3 *  A23 * /A22 * /A21 * /A20 * /UDS   ; Base 5MB; Addr 8MB
+              + /EXPSEL * /JP1 *  JP2 *  JP3 *  A23 * /A22 *  A21 * /A20 * /UDS   ; Base 7MB; Addr 10MB
+              + /EXPSEL *  JP1 * /JP2 * /JP3 *  A23 *  A22 * /A21 * /A20 * /UDS   ; Base 9MB; Addr 12MB
+              + /EXPSEL *  JP1 * /JP2 *  JP3 *  A23 *  A22 *  A21 * /A20 * /UDS   ; Base 11MB; Addr 14MB
+
+DESCRIPTION
+
+IC1 (Address Decoder) for rosco_m68k RAM expansion
+
+Copyright (c)2020 Ross Bamford. See LICENSE.
+
+Jumpers:
+
+  JP1-JP3 - Determine an odd-megabyte base address mapping for this expansion
+
+ODD/EVENRAM 1 always map directly to the first megabyte at the base address.
+The next megabyte will always be mapped to ODD/EVENRAM 2. Thus, there is no
+difference in decoding for 1 or 2MB boards - the chips can be either 
+present or not.
+
+The decoder implements the following map to do the right thing based on the 
+jumper settings which determine where the expansion is mapped (left column):
+
+Base: 1048576 (1MB)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  | 1048576 |  0   0   0   0   0   0   1
+RAM2  | 2097152 |  0   0   0   0   0   1   0
+RAM3  | 3145728 |  0   0   0   0   0   1   1
+RAM4  | 4194304 |  0   0   0   0   1   0   0
+
+Base: 3145728 (3MB)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  | 3145728 |  0   0   1   0   0   1   1
+RAM2  | 4194304 |  0   0   1   0   1   0   0
+RAM3  | 5242880 |  0   0   1   0   1   0   1
+RAM4  | 6291456 |  0   0   1   0   1   1   0
+
+Base: 5242880 (5MB)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  | 5242880 |  0   1   0   0   1   0   1
+RAM2  | 6291456 |  0   1   0   0   1   1   0
+RAM3  | 7340032 |  0   1   0   0   1   1   1
+RAM4  | 8388608 |  0   1   0   1   0   0   0
+
+Base: 7340032 (7MB)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  | 7340032 |  0   1   1   0   1   1   1
+RAM2  | 8388608 |  0   1   1   1   0   0   0
+RAM3  | 9437184 |  0   1   1   1   0   0   1
+RAM4  |10485760 |  0   1   1   1   0   1   0
+
+Base: 9437184 (9MB)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  | 9437184 |  1   0   0   1   0   0   1
+RAM2  |10485760 |  1   0   0   1   0   1   0
+RAM3  |11534336 |  1   0   0   1   0   1   1
+RAM4  |12582912 |  1   0   0   1   1   0   0
+
+Base: 11534336 (11MB)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  |11534336 |  1   0   1   1   0   1   1
+RAM2  |12582912 |  1   0   1   1   1   0   0
+RAM3  |13631488 |  1   0   1   1   1   0   1
+RAM4  |14680064 |  1   0   1   1   1   1   0
+
+Base: 13631488 (13MB - Only 2MB supported at this base!)
+ICs   | Address | JP1 JP2 JP3 A23 A22 A21 A20
+RAM1  |13631488 |  1   1   0   1   1   0   1
+RAM2  |14680064 |  1   1   0   1   1   1   0
+RAM3  |Unmapped |
+RAM4  |Unmapped |
+
