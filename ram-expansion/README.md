@@ -8,4 +8,6 @@ Multiple RAM expansions can co-exist in the same system due
 to the base address for the expansion being selectable by 
 three jumpers on the board.
 
+This will be available on Tindie soon. The board looks like this:
 
+![Board image](board.jpg)
