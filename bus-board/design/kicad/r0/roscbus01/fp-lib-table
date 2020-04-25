@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name rosco_m68k)(type KiCad)(uri /Users/rosco/Development/rosco-m68k/hardware-projects/kicad-libs/rosco_m68k.pretty)(options "")(descr ""))
+)
