@@ -1,7 +1,12 @@
 # Hardware projects for rosco_m68k
 
-This repository contains a few simple hardware projects for the 
+This repository expansion boards and some simple hardware projects for the 
 rosco_m68k (https://github.com/rosco-m68k/rosco_m68k).
 
-See the README.md files in the subdirectories for details.
+## Current contents
 
+* `bus_board` - This is the `roscbus-01` expansion bus board for the rosco_m68k
+* `ioread-poc` - A POC project that interfaces with an Arduino (Mega-2560)
+* `ram-expansion` - The `roscram-01` 1/2/3/4MB RAM expansion board
+
+See the README.md files in the subdirectories for details of the indiviual things.
