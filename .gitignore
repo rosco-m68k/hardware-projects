@@ -5,3 +5,7 @@
 **/*.sch-bak
 **/*.kicad_pcb-bak
 **/fp-info-cache
+**/sym-lib-table
+**/*.bin
+**/*.map
+
