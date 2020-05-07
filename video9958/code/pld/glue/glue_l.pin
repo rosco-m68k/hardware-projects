@@ -1,0 +1,25 @@
+
+
+ Pin # | Name     | Pin Type
+-----------------------------
+   1   | IOSEL    | Input
+   2   | UDS      | Input
+   3   | RW       | Input
+   4   | FC0      | Input
+   5   | FC1      | Input
+   6   | FC2      | Input
+   7   | A3       | Input
+   8   | A2       | Input
+   9   | A1       | Input
+  10   | GND      | GND
+  11   | ASEL     | Input
+  12   | CSR      | Output
+  13   | CSW      | Output
+  14   | IODTACK  | Output
+  15   | VPA      | Output
+  16   | NC       | NC
+  17   | NC       | NC
+  18   | NC       | NC
+  19   | NC       | NC
+  20   | VCC      | VCC
+
