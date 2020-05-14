@@ -1,0 +1,14 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"REF**";"roscram-jumper-config";1;"roscram-jumper-config";;;
+2;"REF**";"OSHW-Logo2_9.8x8mm_SilkScreen";1;"OSHW-Logo2_9.8x8mm_SilkScreen";;;
+3;"REF**";"MD-rosco_m68k_logo";1;"MD-rosco_m68k_logo";;;
+4;"JP1-3";"pin-2X3";1;"Conn_02x03_Odd_Even";;;
+5;"IC1";"DIL20";1;"ATF16V8VQL-15PU";;;
+6;"U1,U8,U7,U6,U5,U4,U3,U2";"DIP-32_W15.24mm";8;"AS6C4008-55PCN";;;
+7;"C11,C10";"C-Electolytic-2,5-5";2;"100uF";;;
+8;"C2,C9,C8,C7,C6,C5,C4,C3,C1";"C2.5-3";9;"100nF";;;
+9;"R5,R4,R3";"R-0207_10";3;"4K7";;;
+10;"R2";"R-0207_10";1;"100K";;;
+11;"R1";"R-0207_10";1;"10K";;;
+12;"Q1";"TO-92_Inline";1;"2N3904";;;
+13;"J1";"pin-2X32";1;"Conn_02x32_Odd_Even";;;
