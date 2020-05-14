@@ -1,7 +1,7 @@
 GAL16V8
 GLUE9968
 
-IOSEL  UDS   RW     FC0      FC1   FC2   A3    A2    A1    GND
+IOSEL  UDS   RW     FC0      FC1   FC2   A1    A2    A3    GND
 ASEL   CSR   CSW    IODTACK  VPA   NC    NC    NC    NC    VCC
 
 /CSW       = /ASEL * /IOSEL * /UDS * /RW 

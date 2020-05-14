@@ -15,11 +15,11 @@
                           |                 |
                       FC2 |  6           15 | VPA
                           |                 |
-                       A3 |  7           14 | IODTACK
+                       A1 |  7           14 | IODTACK
                           |                 |
                        A2 |  8           13 | CSW
                           |                 |
-                       A1 |  9           12 | CSR
+                       A3 |  9           12 | CSR
                           |                 |
                       GND | 10           11 | ASEL
                           -------------------

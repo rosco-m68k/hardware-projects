@@ -8,9 +8,9 @@
    4   | FC0      | Input
    5   | FC1      | Input
    6   | FC2      | Input
-   7   | A3       | Input
+   7   | A1       | Input
    8   | A2       | Input
-   9   | A1       | Input
+   9   | A3       | Input
   10   | GND      | GND
   11   | ASEL     | Input
   12   | CSR      | Output

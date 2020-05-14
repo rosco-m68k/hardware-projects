@@ -62,7 +62,7 @@ kmain::
     move.b  #%00010000,PORT_WREG_SETUP  ; Select FG1, BG 0
     move.b  #$87,PORT_WREG_SETUP        ; .. In VDP register 7
 
-    move.b  #%00000010,PORT_WREG_SETUP  ; Select 64K DRAM, disable sprites
+    move.b  #%00001010,PORT_WREG_SETUP  ; Select 64K DRAM, disable sprites
     move.b  #$88,PORT_WREG_SETUP        ; .. In VDP register 8
     
     ; Set pattern generator table to 0x800
@@ -132,10 +132,10 @@ kmain::
     bsr.w   SLOWDOWN
 
     ; Clear screen (TODO V9958 supports commands in text mode...) 
-    move.w  #$3b3,D0
+    move.w  #$3b4,D0
     bra.s   .ZEROMEM_START
 .ZEROMEM_LOOP:
-    move.b  #1,PORT_RWDATA
+    move.b  #FONT_W,PORT_RWDATA
     bsr.w   SLOWDOWN   
 .ZEROMEM_START:
     dbra.w  D0,.ZEROMEM_LOOP
@@ -158,6 +158,7 @@ SLOWDOWN:
     move.l  D0,-(A7)
     move.l  #10,D0
 .WAIT
+    nop
     dbra    D0,.WAIT
     move.l  (A7)+,D0
     rts
