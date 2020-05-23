@@ -1199,7 +1199,7 @@ L Device:R R1
 U 1 1 5EBA6A8D
 P 6200 6100
 F 0 "R1" V 5993 6100 50  0000 C CNN
-F 1 "330R" V 6084 6100 50  0000 C CNN
+F 1 "1K" V 6084 6100 50  0000 C CNN
 F 2 "rosco_m68k:R-0207_10" V 6130 6100 50  0001 C CNN
 F 3 "~" H 6200 6100 50  0001 C CNN
 	1    6200 6100
@@ -1278,8 +1278,6 @@ Wire Wire Line
 Connection ~ 1000 6950
 Wire Wire Line
 	1000 6950 1000 7350
-Wire Wire Line
-	1700 6650 1900 6650
 Wire Wire Line
 	1600 7400 2050 7400
 Wire Wire Line
@@ -1407,12 +1405,11 @@ F 3 "~" H 7750 650 50  0001 C CNN
 	1    7750 650 
 	1    0    0    -1  
 $EndComp
-Connection ~ 1900 6650
-Wire Wire Line
-	1900 6650 2250 6650
 Wire Wire Line
 	5000 7100 5650 7100
 Connection ~ 4000 7100
 Wire Wire Line
 	4000 7100 4100 7100
+Wire Wire Line
+	1700 6650 2250 6650
 $EndSCHEMATC
