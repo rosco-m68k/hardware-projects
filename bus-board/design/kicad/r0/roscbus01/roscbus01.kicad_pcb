@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.45)
+    (last_trace_width 0.16)
     (user_trace_width 0.45)
     (trace_clearance 0.16)
     (zone_clearance 0.508)
@@ -4784,7 +4784,7 @@
       (net 63 VCC) (solder_mask_margin 0.1016))
   )
 
-  (gr_text "-   +" (at 69.8 61.620001 90) (layer F.SilkS)
+  (gr_text "+   -" (at 69.8 61.620001 90) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text "Center Positive" (at 70 51.38 270) (layer F.SilkS)
