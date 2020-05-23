@@ -52,36 +52,43 @@ kmain::
     ; Setup Palette
     move.b  #%00000000,PORT_WREG_SETUP ; Start at palette register 0
     move.b  #$90,PORT_WREG_SETUP       ; .. in VDP register 16
-    ; Color 0 is white
+    ; Color 0 is black
     move.b  #%00000000,PORT_WPALETTE   ; 0 R2 R1 R0 0 B2 B1 B0 
     move.b  #%00000000,PORT_WPALETTE   ; 0 0  0  0  0 G2 G1 G0
-    ; Color 1 is black
+    ; Color 1 is white
     move.b  #%01110111,PORT_WPALETTE   ; 0 R2 R1 R0 0 B2 B1 B0 
     move.b  #%00000111,PORT_WPALETTE   ; 0 0  0  0  0 G2 G1 G0
     
     move.b  #%00010000,PORT_WREG_SETUP  ; Select FG1, BG 0
     move.b  #$87,PORT_WREG_SETUP        ; .. In VDP register 7
 
+    move.b  #%00010000,PORT_WREG_SETUP  ; Select FG1, BG 0
+    move.b  #$8C,PORT_WREG_SETUP        ; .. In VDP register 7
+    
     move.b  #%00001010,PORT_WREG_SETUP  ; Select 64K DRAM, disable sprites
     move.b  #$88,PORT_WREG_SETUP        ; .. In VDP register 8
     
-    ; Set pattern generator table to 0x800
-    move.b  #1,PORT_WREG_SETUP        ; bits 16-11 of 0x800
+    ; Set pattern generator table to 0x1000
+    move.b  #2,PORT_WREG_SETUP        ; bits 16-11 of 0x1000
     move.b  #$84,PORT_WREG_SETUP      ; .. to register 4
 
     ; Set pattern layout table to 0x0
-    move.b  #0,PORT_WREG_SETUP        ; bits 10-16 of 0x0 :D
+    move.b  #03,PORT_WREG_SETUP       ; bits 10-16 of 0x0 :D
     move.b  #$82,PORT_WREG_SETUP      ; .. to register 2
 
+    ; Set color table to 0xA00
+    move.b  #$2F,PORT_WREG_SETUP
+    move.b  #$83,PORT_WREG_SETUP
+
     ; Set up to write VRAM at 0x800
-    ; 0x800 equates to 00000100000000000, which is split across the writes as:
+    ; 0x1000 equates to 00001000000000000, which is split across the writes as:
     ; Write 1: bits 16-14 = (00000)000  = 0
     ; Write 2: bits 7-0   = 00000000    = 0
-    ; Write 3: bits 13-8  = (01)001000  = $48
+    ; Write 3: bits 13-8  = (01)010000  = $50
     move.b  #0,PORT_WREG_SETUP        ; VRAM Base at 0
     move.b  #$8E,PORT_WREG_SETUP      ; > register 14
     move.b  #0,PORT_WREG_SETUP        ; Set VRAM A0-A7
-    move.b  #$48,PORT_WREG_SETUP      ; Set VRAM A8-A13, and write enable
+    move.b  #$50,PORT_WREG_SETUP      ; Set VRAM A8-A13, and write enable
     
     ; Copy 'font' to pattern table
     lea     FONT,A0
@@ -145,7 +152,7 @@ kmain::
     move.b  #$89,PORT_WREG_SETUP      ; .. to register 9
 
     ; Set text mode 0, disable interrupts and enable output
-    move.b  #%00000000,PORT_WREG_SETUP    ; Write DG=0,IE2=0,IE1=0,M5=0,M4=0,M3=0
+    move.b  #%00000010,PORT_WREG_SETUP    ; Write DG=0,IE2=0,IE1=0,M5=0,M4=0,M3=0
     move.b  #$80,PORT_WREG_SETUP          ; To register 0
     move.b  #%01010000,PORT_WREG_SETUP    ; Write BL=1,IE0=0,M1=1,M2=0,SI=0,MAG=0
     move.b  #$81,PORT_WREG_SETUP          ; To register 1
@@ -156,7 +163,7 @@ kmain::
 ; Really big slowdown
 SLOWDOWN:
     move.l  D0,-(A7)
-    move.l  #10,D0
+    move.l  #100,D0
 .WAIT
     nop
     dbra    D0,.WAIT
