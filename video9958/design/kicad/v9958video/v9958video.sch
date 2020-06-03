@@ -944,10 +944,10 @@ F 3 "http://map.grauw.nl/resources/video/yamaha_v9958_ocr.pdf" H 9750 5700 50  0
 	1    0    0    -1  
 $EndComp
 $Comp
-L rosco_m68k:41464 U1
+L rosco_m68k:41464 U5
 U 1 1 5EDB033D
 P 1600 5600
-F 0 "U1" H 1600 6731 50  0000 C CNN
+F 0 "U5" H 1600 6731 50  0000 C CNN
 F 1 "41464" H 1600 6640 50  0000 C CNN
 F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 1700 5600 50  0001 C CNN
 F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x%204bit%20DRAM%20Data%20Sheet.pdf" H 1700 5600 50  0001 C CNN
@@ -955,10 +955,10 @@ F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x
 	1    0    0    -1  
 $EndComp
 $Comp
-L rosco_m68k:41464 U2
+L rosco_m68k:41464 U6
 U 1 1 5EDB1569
 P 1600 7300
-F 0 "U2" H 1600 8431 50  0000 C CNN
+F 0 "U6" H 1600 8431 50  0000 C CNN
 F 1 "41464" H 1600 8340 50  0000 C CNN
 F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 1700 7300 50  0001 C CNN
 F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x%204bit%20DRAM%20Data%20Sheet.pdf" H 1700 7300 50  0001 C CNN
@@ -988,10 +988,10 @@ F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x
 	1    0    0    -1  
 $EndComp
 $Comp
-L rosco_m68k:41464 U5
+L rosco_m68k:41464 U1
 U 1 1 5EDB48B2
 P 5350 5600
-F 0 "U5" H 5350 6731 50  0000 C CNN
+F 0 "U1" H 5350 6731 50  0000 C CNN
 F 1 "41464" H 5350 6640 50  0000 C CNN
 F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 5450 5600 50  0001 C CNN
 F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x%204bit%20DRAM%20Data%20Sheet.pdf" H 5450 5600 50  0001 C CNN
@@ -999,10 +999,10 @@ F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x
 	1    0    0    -1  
 $EndComp
 $Comp
-L rosco_m68k:41464 U6
+L rosco_m68k:41464 U2
 U 1 1 5EDB566C
 P 5350 7300
-F 0 "U6" H 5350 8431 50  0000 C CNN
+F 0 "U2" H 5350 8431 50  0000 C CNN
 F 1 "41464" H 5350 8340 50  0000 C CNN
 F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 5450 7300 50  0001 C CNN
 F 3 "https://downloads.reactivemicro.com/Electronics/DRAM/NEC%20D41464%2064k%20x%204bit%20DRAM%20Data%20Sheet.pdf" H 3250 8550 50  0000 C CNN
