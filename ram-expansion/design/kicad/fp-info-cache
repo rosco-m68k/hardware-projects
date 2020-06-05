@@ -1,4 +1,4 @@
-16966681061582041
+16977819736705041
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -75264,6 +75264,13 @@ varistor SIOV
 2
 2
 local-footprints
+NKK-M2021SS1W01
+
+
+0
+4
+4
+local-footprints
 sdip64
 
 
@@ -75336,6 +75343,13 @@ DIL64
 64
 64
 rosco_m68k
+HC49_S
+<b>CRYSTAL</b>
+
+0
+2
+2
+rosco_m68k
 LED5MM
 <B>LED</B><p>
 5 mm, round
@@ -75358,6 +75372,13 @@ MD-rosco_m68k_logo
 0
 0
 rosco_m68k
+OSHW_Mono_0.25_Scale
+
+
+0
+0
+0
+rosco_m68k
 R-0207_10
 <b>RESISTOR</b><p>
 type 0207, grid 10 mm
@@ -75372,6 +75393,20 @@ SM-rosco_m68k_logo
 0
 0
 0
+rosco_m68k
+din-6
+
+
+0
+8
+8
+rosco_m68k
+din-8
+
+
+0
+10
+10
 rosco_m68k
 pin-1X02
 <b>PIN HEADER</b>
@@ -75416,6 +75451,20 @@ rosco_m68k_logo
 0
 rosco_m68k
 roscram-jumper-config
+
+
+0
+0
+0
+rosco_m68k
+sdip64
+
+
+0
+64
+64
+rosco_m68k
+t
 
 
 0
