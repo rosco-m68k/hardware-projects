@@ -300,12 +300,12 @@ Connection ~ 7100 1350
 $Comp
 L Device:C C8
 U 1 1 5EB5B26B
-P 8150 2050
-F 0 "C8" H 8265 2096 50  0000 L CNN
-F 1 "100nF" H 8265 2005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 8188 1900 50  0001 C CNN
-F 3 "~" H 8150 2050 50  0001 C CNN
-	1    8150 2050
+P 8150 2000
+F 0 "C8" H 8265 2046 50  0000 L CNN
+F 1 "100nF" H 8265 1955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 8188 1850 50  0001 C CNN
+F 3 "~" H 8150 2000 50  0001 C CNN
+	1    8150 2000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -320,12 +320,8 @@ F 3 "~" H 3600 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8150 1350 8150 1900
-Wire Wire Line
 	8150 2750 7100 2750
 Connection ~ 7100 2750
-Wire Wire Line
-	8150 2200 8150 2750
 Wire Wire Line
 	3600 1850 3600 1350
 Wire Wire Line
@@ -583,13 +579,9 @@ F9 "NTSCCLK" I R 7900 3200 50
 F10 "EXT_VSYNC" O R 7900 4150 50 
 F11 "EXT_VIDEO" I R 7900 4250 50 
 $EndSheet
-Wire Wire Line
-	7050 3750 6550 3750
-Wire Wire Line
-	6550 3550 7050 3550
-Text GLabel 6550 3550 0    50   UnSpc ~ 0
+Text GLabel 6950 3550 0    50   UnSpc ~ 0
 VCC
-Text GLabel 6550 3750 0    50   UnSpc ~ 0
+Text GLabel 6950 3750 0    50   UnSpc ~ 0
 GND
 NoConn ~ 9150 4650
 NoConn ~ 9150 4400
@@ -1031,8 +1023,8 @@ L Device:CP C15
 U 1 1 5ECA8C23
 P 5100 3800
 F 0 "C15" H 5218 3846 50  0000 L CNN
-F 1 "100uF" H 5218 3755 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 5138 3650 50  0001 C CNN
+F 1 "220uF" H 5218 3755 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 5138 3650 50  0001 C CNN
 F 3 "~" H 5100 3800 50  0001 C CNN
 	1    5100 3800
 	1    0    0    -1  
@@ -1057,4 +1049,47 @@ Wire Wire Line
 Connection ~ 4650 4150
 Wire Wire Line
 	4650 4150 5100 4150
+$Comp
+L Device:C C28
+U 1 1 5EDA8065
+P 5950 2000
+F 0 "C28" H 6065 2046 50  0000 L CNN
+F 1 "100nF" H 6065 1955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 5988 1850 50  0001 C CNN
+F 3 "~" H 5950 2000 50  0001 C CNN
+	1    5950 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 1850 8150 1350
+Wire Wire Line
+	8150 2150 8150 2750
+Wire Wire Line
+	5950 1850 5950 1350
+Wire Wire Line
+	5950 2150 5950 2750
+Wire Wire Line
+	6950 3550 7050 3550
+Wire Wire Line
+	6950 3750 7050 3750
+$Comp
+L Device:C C27
+U 1 1 5EDDDA3B
+P 6400 3800
+F 0 "C27" H 6515 3846 50  0000 L CNN
+F 1 "100nF" H 6515 3755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 6438 3650 50  0001 C CNN
+F 3 "~" H 6400 3800 50  0001 C CNN
+	1    6400 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3650 6400 3450
+Wire Wire Line
+	6400 3450 5950 3450
+Connection ~ 5950 3450
+Wire Wire Line
+	5950 4150 6400 4150
+Wire Wire Line
+	6400 4150 6400 3950
 $EndSCHEMATC
