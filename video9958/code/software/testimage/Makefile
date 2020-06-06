@@ -37,8 +37,15 @@ BINARY=$(BINARY_BASENAME).$(BINARY_EXT)
 
 OBJECTS=kmain.o $(IMAGEFIXOBJ)
 
+# Remove 5 byte header, and convert to GGGRRRBB format.
 $(IMAGEFIXBIN): $(IMAGEBIN)
-	ruby -e "IO.binwrite('$@', IO.binread('$<')[5..-1])"
+	ruby -e "IO.binwrite('$@',                                    \
+		IO.binread('$<')[5..-1].split('')                           \
+			.map { |c| c.bytes[0] }                                   \
+			.map { |p| ((p & 224) >> 3) | ((p & 28) << 3) | (p & 3) } \
+			.map(&:chr)                                               \
+			.join                                                     \
+		)"
 
 $(IMAGEFIXOBJ): $(IMAGEFIXBIN)
 	m68k-elf-objcopy -I binary -B m68k -O elf32-m68k              \
