@@ -1,0 +1,18 @@
+GAL16V8
+DECODER
+
+A6     A7     A8     A9     A10    A11    A12    A13    A14    GND
+A15    NC     A16    A17    A3     A4     A5     /IOSEL /SEL   VCC
+
+SEL   = A3 * IOSEL * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+      + A4 * IOSEL * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+      + A5 * IOSEL * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+
+DESCRIPTION
+
+MC68681 DUART Address Decoder.
+
+LDS/UDS are not handled here - CS must also be gated off by the correct strobe!
+
+Copyright (c)2020 Ross Bamford. See LICENSE.
+
