@@ -50,7 +50,7 @@ Pin 15 = A3           XOR = 0   AC1 = 1
  38  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  39  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 14 = A17          XOR = 0   AC1 = 1
+Pin 14 = A15          XOR = 0   AC1 = 1
  40  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  41  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  42  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
