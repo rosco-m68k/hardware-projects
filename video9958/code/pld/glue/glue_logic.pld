@@ -7,8 +7,8 @@ ASEL   CSR   CSW    IODTACK  VPA   NC    NC    NC    NC    VCC
 /CSW       = /ASEL * /IOSEL * /UDS * /RW 
 /CSR       = /ASEL * /IOSEL * /UDS * RW 
 
-/VPA.T     = FC0 * FC1 * FC2 * /A3 * /A2 * A1 
-VPA.E      = FC0 * FC1 * FC2 * /A3 * /A2 * A1 
+/VPA.T     = FC0 * FC1 * FC2 * /A3 * A2 * /A1 
+VPA.E      = FC0 * FC1 * FC2 * /A3 * A2 * /A1 
  
 /IODTACK.T = /ASEL * /IOSEL * /UDS
 IODTACK.E  = /ASEL * /IOSEL * /UDS
