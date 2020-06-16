@@ -201,14 +201,16 @@ V9958_CON_SETFLASH::
     ori.w   #$0200,SR                     ; VBLANK would go *badly* here
 
     lea.l   VBLANK_FLASH_IOOFF,A0         ; Write the BSET...
-    move.w  #$00f8,-(A0)
-    move.w  #$0000,-(A0)
-    move.w  #BSET,-(A0)
+    move.w  #BSET,(A0)+
+    move.w  #$0000,(A0)+
+    move.w  #$00f8,(A0)+
+    move.w  #$0001,(A0)+
 
     lea.l   VBLANK_FLASH_IOON,A0          ; ... and the BCLR
-    move.w  #$00f8,-(A0)
-    move.w  #$0000,-(A0)
-    move.w  #BCLR,-(A0)
+    move.w  #BCLR,(A0)+
+    move.w  #$0000,(A0)+
+    move.w  #$00f8,(A0)+
+    move.w  #$0001,(A0)+
 
     andi.w  #~$0200,SR                    ; Safe to VBLANK again.
     bra.s   .DONE
@@ -217,14 +219,16 @@ V9958_CON_SETFLASH::
     ori.w   #$0200,SR                     ; Same deal as above...
 
     lea.l   VBLANK_FLASH_IOOFF,A0         ; Write some NOPs...
-    move.w  #NOP,-(A0)
-    move.w  #NOP,-(A0)
-    move.w  #NOP,-(A0)
+    move.w  #NOP,(A0)+
+    move.w  #NOP,(A0)+
+    move.w  #NOP,(A0)+
+    move.w  #NOP,(A0)+
 
     lea.l   VBLANK_FLASH_IOON,A0
-    move.w  #NOP,-(A0)
-    move.w  #NOP,-(A0)
-    move.w  #NOP,-(A0)
+    move.w  #NOP,(A0)+
+    move.w  #NOP,(A0)+
+    move.w  #NOP,(A0)+
+    move.w  #NOP,(A0)+
     
     andi.w  #~$0200,SR                    ; Safe to VBLANK again.
 
@@ -343,7 +347,7 @@ V9958_CON_PUTCHAR::
 ; by other routines, so labels are used to address those bits
 ; and need to be visible externally...
 ;
-VBLANK_HANDLER:
+VBLANK_HANDLER::
     movem.l  D0-D1/A0,-(A7)
     lea.l   BUFFER,A0                     ; We need the buffer...
 
@@ -355,8 +359,8 @@ VBLANK_HANDLER:
 
     move.w  CURPOS,D1
     move.b  #CURSORLOW,(A0,D1)            ; Hide cursor at #25
+VBLANK_FLASH_IOOFF:                       ; N.B. Next line modified by V9958_CON_SETFLASH!
     bset.b  #0,MFP_GPDR                   ; We've taken over this duty now..
-VBLANK_FLASH_IOOFF:                       ; N.B. Preceeding line modified by V9958_CON_SETFLASH!
     bra.s   CURSORDONE 
 
 CHECKSHOW
@@ -365,8 +369,8 @@ CHECKSHOW
     
     move.w  CURPOS,D1
     move.b  #CURSORHIGH,(A0,D1)           ; Show the cursor
+VBLANK_FLASH_IOON:                        ; N.B. Next line modified by V9958_CON_SETFLASH!
     bclr    #0,MFP_GPDR                   ; (Blinking I0 as MFP interrupts are gone)
-VBLANK_FLASH_IOON:                        ; N.B. Preceeding line modified by V9958_CON_SETFLASH!
     move.b  #0,D0
 
 CURSORDONE
