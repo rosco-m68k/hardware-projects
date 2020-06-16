@@ -7,6 +7,10 @@
 ;------------------------------------------------------------
 ; Copyright (c)2020 Ross Bamford
 ; See top-level LICENSE.md for licence information.
+;
+; This is a simple echo-loop to prove out the console.
+;
+; It reads from UART and prints to screen.
 ;------------------------------------------------------------
 ;
 
@@ -21,9 +25,8 @@ IRQ2_HANDLER      equ   $68
     section .text                     ; This is normal code
 
 kmain::
-
     move.b  #1,PORT_WREG_SETUP        ; Write 1 (SR#1)...
-    move.b  #143,PORT_WREG_SETUP      ; ... to register 15 (with high bit set)
+    move.b  #$8F,PORT_WREG_SETUP      ; ... to register 15 (with high bit set)
     eor.l   D1,D1                     ; Zero D1
     move.b  PORT_WREG_SETUP,D1        ; And read status into it
     and.b   #$3E,D1                   ; We only want ID number
@@ -47,55 +50,38 @@ kmain::
     move.l  #14,D0
     trap    #15
 
+    jsr     V9958_CON_INIT            ; Init console
 
-.INSTALL_ISR:
-    move.l  #VBLANK_HANDLER,IRQ0_HANDLER
+    move.l  #SZHEADER,A0
+.PRINTLOOP
+    move.b  (A0)+,D0
+    tst.b   D0
+    beq.s   .PRINTDONE
+     
+    jsr     V9958_CON_PUTCHAR
+    bra.s   .PRINTLOOP
+.PRINTDONE
 
-.ENABLE_OUTPUT:
-    ; Set PAL mode
-    move.b  #2,PORT_WREG_SETUP        ; Write 2 (PAL mode)
-    move.b  #137,PORT_WREG_SETUP      ; .. to register 9 (with high bit set)
-
-    ; Set text mode 0, enable interrupts and output
-    move.b  #112,PORT_WREG_SETUP      ; Write BL=1,IE0=1,M1=1,M2=0,SI=0,MAG=0
-    move.b  #129,PORT_WREG_SETUP      ; To register 1 (with high bit set)
-
-.BUSYSTOP:
-    bra.s   .BUSYSTOP
-
-
-; Expects delay cycles in D0
-BUSYWAIT:
-    nop
-    dbra    D0,BUSYWAIT
-    rts
-    
-
-VBLANK_HANDLER:
-    move.l  D0,-(A7)
-
-    bchg.b  #1,MFP_GPDR               ; Toggle I1
-    
-    move.b  #0,PORT_WREG_SETUP        ; Write 1 (SR#0)...
-    move.b  #143,PORT_WREG_SETUP      ; ... to register 15 (with high bit set)
-    move.b  PORT_WREG_SETUP,D0        ; And read status into it (clear interrupt flag)
-    
-    move.l  count,D0                  ; Increment the counter...
-    add.l   #1,D0
-    
-    cmp.l   #500,D0
-    bne.s   .DONE
-    
-    move.b  #$2E,MFP_UDR              ; Display dot if counter expired
-    eor.l   D0,D0
-
-.DONE
-    move.l  D0,count
-    move.l  (A7)+,D0
-    rte
+.ECHOLOOP:
+    move.l  #5,D0
+    trap    #15
+    move.b  D1,D0
+    jsr     V9958_CON_PUTCHAR
+    bra.s   .ECHOLOOP
 
 count       dc.l    0 
 SZID        dc.b    "VDP Identifies as V9958; ID from SR: ", 0
 SZNOID      dc.b    "VDP does not identify / is not a V9958; ID from SR: ", 0
 SZCRLF      dc.b    13,10,0
+SZSPACE     dc.b    " ", 0
 
+
+    section .rodata
+;                    123456789^123456789^123456789^123456789^123456789^123456789^123456789^123456789^
+SZHEADER    dc.b    "                                ___ ___ _                                       "
+            dc.b    " ___ ___ ___ __ ___       _____|  _| . | |_                                     "
+            dc.b    "|  _| . |_ -| _| . |     |     | . | . | '_|                                    "
+            dc.b    "|_| |___|___|__|___|_____|_|_|_|___|___|_,_|                                    "
+            dc.b    "                   |_____|       V9958 Video                                    "
+            dc.b    "                                                                                "
+            dc.b    "READY", 13, 0
