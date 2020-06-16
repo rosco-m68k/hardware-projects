@@ -47,8 +47,12 @@ MFP_GPDR          equ   $f80001
 MFP_IERA          equ   $f80007
 MFP_IERB          equ   $f80009
 IRQ2_HANDLER      equ   $68
+BSET              equ   $08f9
+BCLR              equ   $08b9
+NOP               equ   $4E71
 
 LINELENGTH        equ   80                ; Must be a multiple of 4!
+DWLINELENGTH      equ   LINELENGTH/4
 LINECOUNT         equ   24
 DISPLAYSIZE       equ   LINELENGTH*LINECOUNT
 DWDISPLAYSIZE     equ   DISPLAYSIZE/4
@@ -107,36 +111,125 @@ V9958_CON_INIT::
     move.b  #0,PORT_WREG_SETUP            ; Set VRAM A0-A7
     move.b  #$48,PORT_WREG_SETUP          ; Set VRAM A8-A13, and write enable
     
-    ; Set PAL mode (TODO should be runtime configurable...)
+    ; Set PAL/NTSC mode (TODO should be runtime configurable...)
     move.b  #DISPMODE,PORT_WREG_SETUP     ; Write PAL/NTSC mode
     move.b  #$89,PORT_WREG_SETUP          ; .. to register 9
 
+    ; Load font to pattern table - Do this *before* enabling output,
+    ; that way no slowdown is needed to write to VRAM...
+    lea     __FONT_BEGIN,A0
+    move.l  A0,D0
+    sub.l   #__FONT_BEGIN,D0
+    bra.s   .PATTERN_FILL
+
+.PATTERN_FILL_LOOP:
+    move.b  (A0)+,PORT_RWDATA             ; Full throttle - display is disabled
+.PATTERN_FILL:
+    dbra.w  D0,.PATTERN_FILL_LOOP
+;    cmpa    #__FONT_END,A0
+;    bne.s   .PATTERN_FILL_LOOP
+    
     ; Set text mode 1, disable interrupts and enable output
     move.b  #%00000100,PORT_WREG_SETUP    ; Write DG=0,IE2=0,IE1=0,M5=0,M4=0,M3=0
     move.b  #$80,PORT_WREG_SETUP          ; To register 0
     move.b  #%01110000,PORT_WREG_SETUP    ; Write BL=1,IE0=0,M1=1,M2=0,SI=0,MAG=0
     move.b  #$81,PORT_WREG_SETUP          ; To register 1
-    
-    ; Load font to pattern table
-    lea     __FONT_BEGIN,A0
-.PATTERN_FILL_LOOP:
-    move.b  (A0)+,PORT_RWDATA
-    bsr.w   SLOWDOWN
-    cmpa    #__FONT_END,A0
-    bne.s   .PATTERN_FILL_LOOP
    
-    ; Clear buffer
-    move.w  #DWDISPLAYSIZE,D1             ; Display size in longwords
-    move.l  #BUFFER,A0
-    bra.s   .ZEROBUF_START
-.ZEROBUF_LOOP:
-    move.l  #0,(A0)+
-.ZEROBUF_START:
-    dbra.w  D1,.ZEROBUF_LOOP
+    bsr.s   CLEARBUFFER
 
     andi.w   #~$0200,SR                   ; Enable interrupts...
 
     movem.l (A7)+,D0-D1/A0
+    rts
+
+; Clear buffer (private)
+CLEARBUFFER:
+    move.w  #DWDISPLAYSIZE,D1             ; Display size in longwords
+    move.l  #BUFFER,A0
+    bra.s   .ZEROBUF_START
+.ZEROBUF_LOOP:
+    move.l  #0,(A0)+                      ; Clear 4 characters
+.ZEROBUF_START:
+    dbra.w  D1,.ZEROBUF_LOOP
+    rts
+
+
+; Clear the screen
+;
+; Arguments:
+;   None
+;
+; Modifies: 
+;   None
+;
+; This depends on the implementation of CLEARBUFFER (i.e. 
+; the register sizing therein). If that func changes, 
+; this needs to be updated!
+V9958_CON_CLRSCR::
+    move.w  D1,-(A7)
+    move.l  A0,-(A7)
+    ori.w   #$0200,SR                      ; Disable interrupts
+    bsr.s   CLEARBUFFER                    ; Clear
+    andi.w  #~$200,SR                      ; And re-enable...
+    move.w  #0,CURPOS
+    move.l  (A7)+,A0
+    move.w  (A7)+,D1
+    rts
+
+
+; Enable or disable flashing of I0 in VBLANK
+;
+; Arguments:
+;   D0.B   0 for no flashing, not 0 for flashing.
+;
+; Modifies:
+;   None
+;
+; This is here for legacy compatibility - since we no longer
+; use MFP interrupts, this driver can flash I0 as a nice 
+; and comforting bit of familiarity...
+;
+; It does mean an MFP access (with wait-states) from VBLANK 
+; every once in a while though, so you can switch it off
+; with this..
+V9958_CON_SETFLASH::
+    move.l  A0,-(A7)
+
+    tst.b   D0
+    beq.s   .TURNOFF
+
+    ori.w   #$0200,SR                     ; VBLANK would go *badly* here
+
+    lea.l   VBLANK_FLASH_IOOFF,A0         ; Write the BSET...
+    move.w  #$00f8,-(A0)
+    move.w  #$0000,-(A0)
+    move.w  #BSET,-(A0)
+
+    lea.l   VBLANK_FLASH_IOON,A0          ; ... and the BCLR
+    move.w  #$00f8,-(A0)
+    move.w  #$0000,-(A0)
+    move.w  #BCLR,-(A0)
+
+    andi.w  #~$0200,SR                    ; Safe to VBLANK again.
+    bra.s   .DONE
+
+.TURNOFF
+    ori.w   #$0200,SR                     ; Same deal as above...
+
+    lea.l   VBLANK_FLASH_IOOFF,A0         ; Write some NOPs...
+    move.w  #NOP,-(A0)
+    move.w  #NOP,-(A0)
+    move.w  #NOP,-(A0)
+
+    lea.l   VBLANK_FLASH_IOON,A0
+    move.w  #NOP,-(A0)
+    move.w  #NOP,-(A0)
+    move.w  #NOP,-(A0)
+    
+    andi.w  #~$0200,SR                    ; Safe to VBLANK again.
+
+.DONE
+    move.l  (A7)+,A0
     rts
 
 
@@ -230,10 +323,10 @@ V9958_CON_PUTCHAR::
 
     ; Clear the line...
     adda.l  D1,A0                         ; Point to start of line
-    move.w  #LINELENGTH,D2                ; Counter is line length
+    move.w  #DWLINELENGTH,D2              ; Counter is line length
     bra.s   .CLEARLINE
 .CLEARLINE_LOOP
-    move.b  #0,(A0)+                      ; Clear four characters
+    move.l  #0,(A0)+                      ; Clear four characters
 .CLEARLINE
     dbra.w  D2,.CLEARLINE_LOOP
 
@@ -244,15 +337,12 @@ V9958_CON_PUTCHAR::
     rts
 
 
-; Three NOP (plus stack/unstack and branch/return) slowdown
-;
-; Private
-SLOWDOWN:
-    nop
-    rts
-
-
 ; Vertical blanking interval ISR
+;
+; Not using local labels here as some of this code is modified
+; by other routines, so labels are used to address those bits
+; and need to be visible externally...
+;
 VBLANK_HANDLER:
     movem.l  D0-D1/A0,-(A7)
     lea.l   BUFFER,A0                     ; We need the buffer...
@@ -261,20 +351,25 @@ VBLANK_HANDLER:
     move.b  CURSORCOUNT,D0
     addq.b  #1,D0
     cmpi.b  #CURSORDELAY,D0
-    bne.s   .CHECKSHOW
+    bne.s   CHECKSHOW
 
     move.w  CURPOS,D1
     move.b  #CURSORLOW,(A0,D1)            ; Hide cursor at #25
+    bset.b  #0,MFP_GPDR                   ; We've taken over this duty now..
+VBLANK_FLASH_IOOFF:                       ; N.B. Preceeding line modified by V9958_CON_SETFLASH!
+    bra.s   CURSORDONE 
 
-.CHECKSHOW
+CHECKSHOW
     cmpi.b  #CURSORDELAY2,D0
-    bne.s   .NOCHANGE
+    bne.s   CURSORDONE
     
     move.w  CURPOS,D1
     move.b  #CURSORHIGH,(A0,D1)           ; Show the cursor
+    bclr    #0,MFP_GPDR                   ; (Blinking I0 as MFP interrupts are gone)
+VBLANK_FLASH_IOON:                        ; N.B. Preceeding line modified by V9958_CON_SETFLASH!
     move.b  #0,D0
 
-.NOCHANGE
+CURSORDONE
     move.b  D0,CURSORCOUNT
 
     ; Now copy the screen...
@@ -288,8 +383,7 @@ VBLANK_HANDLER:
     move.w  #DISPLAYSIZE,D1
     bra.s   .COPY
 .COPYLOOP
-    move.b  (A0,D0),PORT_RWDATA
-    bsr.s   SLOWDOWN
+    move.b  (A0,D0),PORT_RWDATA           ; Full throttle here, allowed in VBLANK.
     addq.w  #1,D0
     cmpi.w  #DISPLAYSIZE,D0
     bne.s   .COPY
@@ -299,7 +393,7 @@ VBLANK_HANDLER:
 .COPY
     dbra.w  D1,.COPYLOOP  
 
-.DONE
+;.DONE
     move.b  #0,PORT_WREG_SETUP            ; Write 0 (SR#0)...
     move.b  #143,PORT_WREG_SETUP          ; ... to register 15 (with high bit set)
     move.b  PORT_WREG_SETUP,D0            ; And read status into it (clear interrupt flag)

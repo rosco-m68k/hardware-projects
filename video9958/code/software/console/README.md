@@ -7,12 +7,12 @@ This console supports the following features:
 
    * 80x24 lines
    * Scrolling (Software, but fairly efficient)
+   * Clear screen ability
    * Support for CR and Backspace
    * Flashing cursor, alternates between any two characters
 
 The following is still TODO (coming soon):
 
-   * Clear screen ability
    * Programmatically move the cursor
 
 ## Building
