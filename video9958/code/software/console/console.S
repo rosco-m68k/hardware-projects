@@ -118,21 +118,21 @@ V9958_CON_INIT::
     ; Load font to pattern table - Do this *before* enabling output,
     ; that way no slowdown is needed to write to VRAM...
     lea     __FONT_BEGIN,A0
-    move.l  A0,D0
-    sub.l   #__FONT_BEGIN,D0
+    move.l  #__FONT_END,D0
+    sub.l   A0,D0
     bra.s   .PATTERN_FILL
 
-.PATTERN_FILL_LOOP:
-    move.b  (A0)+,PORT_RWDATA             ; Full throttle - display is disabled
+.PATTERN_FILL_LOOP
+    move.b  (A0)+,PORT_RWDATA             ; Copy data
+    nop                                   ; Small slow-down needed here..
+    nop
 .PATTERN_FILL:
     dbra.w  D0,.PATTERN_FILL_LOOP
-;    cmpa    #__FONT_END,A0
-;    bne.s   .PATTERN_FILL_LOOP
     
-    ; Set text mode 1, disable interrupts and enable output
+    ; Set text mode 1, enable interrupts and turn display on
     move.b  #%00000100,PORT_WREG_SETUP    ; Write DG=0,IE2=0,IE1=0,M5=0,M4=0,M3=0
     move.b  #$80,PORT_WREG_SETUP          ; To register 0
-    move.b  #%01110000,PORT_WREG_SETUP    ; Write BL=1,IE0=0,M1=1,M2=0,SI=0,MAG=0
+    move.b  #%01110000,PORT_WREG_SETUP    ; Write BL=1,IE0=1,M1=1,M2=0,SI=0,MAG=0
     move.b  #$81,PORT_WREG_SETUP          ; To register 1
    
     bsr.s   CLEARBUFFER
@@ -397,7 +397,6 @@ CURSORDONE
 .COPY
     dbra.w  D1,.COPYLOOP  
 
-;.DONE
     move.b  #0,PORT_WREG_SETUP            ; Write 0 (SR#0)...
     move.b  #143,PORT_WREG_SETUP          ; ... to register 15 (with high bit set)
     move.b  PORT_WREG_SETUP,D0            ; And read status into it (clear interrupt flag)
