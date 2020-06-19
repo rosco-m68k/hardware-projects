@@ -30,7 +30,7 @@
 DISPMODE          equ   DM_PAL            ; DM_PAL or DM_NTSC
 CURSORHIGH        equ   152               ; "little" cursor character
 CURSORLOW         equ   145               ; "big" cursor character
-CURSORDELAY       equ   18                ; Blink delay, Lower is faster
+CURSORDELAY       equ   50                ; Blink delay, Lower is faster
 
 BACKGROUND1       equ   %00100111         ; BG: 0 R2 R1 R0 0 B2 B1 B0
 BACKGROUND2       equ   %00000010         ; BG: 0 0  0  0  0 G2 G1 G0
@@ -126,6 +126,9 @@ V9958_CON_INIT::
     move.b  (A0)+,PORT_RWDATA             ; Copy data
     nop                                   ; Small slow-down needed here..
     nop
+    nop
+    nop
+    nop
 .PATTERN_FILL:
     dbra.w  D0,.PATTERN_FILL_LOOP
     
@@ -151,6 +154,7 @@ CLEARBUFFER:
     move.l  #0,(A0)+                      ; Clear 4 characters
 .ZEROBUF_START:
     dbra.w  D1,.ZEROBUF_LOOP
+    move.b  #1,DIRTY                      ; Gonna need a redraw...
     rts
 
 
@@ -256,7 +260,7 @@ V9958_CON_PUTCHAR::
     move.w  D2,-(A7)                      ; sized for D1/D2, but needs checking...
     
     move.w  CURPOS,D1                     ; Load current pointer
-
+    
     ; Is this a carriage-return?
     cmp.b   #13,D0
     bne.s   .NOTCR
@@ -335,6 +339,7 @@ V9958_CON_PUTCHAR::
     dbra.w  D2,.CLEARLINE_LOOP
 
 .DONE
+    move.b  #1,DIRTY                      ; Redraw next frame
     move.w  (A7)+,D2
     move.w  (A7)+,D1
     move.l  (A7)+,A0
@@ -348,8 +353,10 @@ V9958_CON_PUTCHAR::
 ; and need to be visible externally...
 ;
 VBLANK_HANDLER::
-    movem.l  D0-D1/A0,-(A7)
+    movem.l  D0-D2/A0,-(A7)
     lea.l   BUFFER,A0                     ; We need the buffer...
+
+    move.b  DIRTY,D2                      ; Track dirty
 
     ; Sort out the cursor first...
     move.b  CURSORCOUNT,D0
@@ -359,6 +366,8 @@ VBLANK_HANDLER::
 
     move.w  CURPOS,D1
     move.b  #CURSORLOW,(A0,D1)            ; Hide cursor at #25
+    move.b  #1,D2
+
 VBLANK_FLASH_IOOFF:                       ; N.B. Next line modified by V9958_CON_SETFLASH!
     bset.b  #0,MFP_GPDR                   ; We've taken over this duty now..
     bra.s   CURSORDONE 
@@ -369,12 +378,19 @@ CHECKSHOW
     
     move.w  CURPOS,D1
     move.b  #CURSORHIGH,(A0,D1)           ; Show the cursor
+    move.b  #1,D2
 VBLANK_FLASH_IOON:                        ; N.B. Next line modified by V9958_CON_SETFLASH!
     bclr    #0,MFP_GPDR                   ; (Blinking I0 as MFP interrupts are gone)
     move.b  #0,D0
 
-CURSORDONE
+CURSORDONE:
     move.b  D0,CURSORCOUNT
+    
+    tst.b   D2                            ; Are we dirty?
+    beq.s   .DONE                         ; Nope, bail...
+;    bra.s   .DONE
+
+    move.b  #0,DIRTY                      ; Reset dirty flag...
 
     ; Now copy the screen...
     ; Set up to write VRAM at 0x0
@@ -388,6 +404,9 @@ CURSORDONE
     bra.s   .COPY
 .COPYLOOP
     move.b  (A0,D0),PORT_RWDATA           ; Full throttle here, allowed in VBLANK.
+    nop
+    nop
+    nop
     addq.w  #1,D0
     cmpi.w  #DISPLAYSIZE,D0
     bne.s   .COPY
@@ -397,11 +416,15 @@ CURSORDONE
 .COPY
     dbra.w  D1,.COPYLOOP  
 
+.DONE
     move.b  #0,PORT_WREG_SETUP            ; Write 0 (SR#0)...
     move.b  #143,PORT_WREG_SETUP          ; ... to register 15 (with high bit set)
     move.b  PORT_WREG_SETUP,D0            ; And read status into it (clear interrupt flag)
+    nop
+    nop
+    nop
     
-    movem.l  (A7)+,D0-D1/A0
+    movem.l  (A7)+,D0-D2/A0
     rte
 
 
@@ -411,5 +434,5 @@ CURPOS        dc.w      0
 DISPLAYSTART  dc.w      0
 BUFFER        dcb.b     1920,0
 CURSORCOUNT   dc.w      0
-
+DIRTY         dc.w      $0001
 
