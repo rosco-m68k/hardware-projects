@@ -29,7 +29,7 @@ INIT_SERIAL_HANDLERS::
     move.b  R_STARTCNTCMD,D0          ; Start count
 
 ;   Debug - output clocks on OP2 for scope
-;    move.b  #%00000011,DUART_OPCR     ; RxCA (1x) on OP2 
+    move.b  #%00000011,DUART_OPCR     ; RxCA (1x) on OP2 
 
     move.b  #%00000101,DUART_CRA      ; Enable TX/RX
 
