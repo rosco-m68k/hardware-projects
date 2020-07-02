@@ -9,5 +9,6 @@ rosco_m68k (https://github.com/rosco-m68k/rosco_m68k).
 * `ioread-poc` - A POC project that interfaces with an Arduino (Mega-2560)
 * `ram-expansion` - The `roscram-01` 1/2/3/4MB RAM expansion board
 * `video9958` - The V9958 video card
+* `mc68681-duart` - MC68681 Dual UART board
 
 See the README.md files in the subdirectories for details of the indiviual things.

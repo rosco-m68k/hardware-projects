@@ -1,0 +1,16 @@
+GAL16V8
+UARTGLUE
+
+IOSEL  UDS    FC0    FC1    FC2    IRQ    NC    NC    NC    GND
+NC     NC     SELIN  VPA    NC     NC     NC    NC    NC    VCC
+
+/SELIN     = /IOSEL * /UDS
+/VPA.T     = /IRQ * FC0 * FC1 * FC2
+VPA.E      = /VPA
+
+DESCRIPTION
+
+MC68681 DUART Select / IACK glue
+
+Copyright (c)2020 Ross Bamford. See LICENSE.
+
