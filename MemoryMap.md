@@ -80,13 +80,13 @@ Note that currently the on-board watchdog (production 1.2 boards only)
 
 | IRQ | Allocated to                             |
 |-----|------------------------------------------|
-| 1   | <Unallocated>                            |
+| 1   | **Unallocated**                          |
 | 2   | V9958 Video: VBLANK (Legacy, VPA)        |
-| 3   | <Unallocated>                            |
+| 3   | **Unallocated**                          |
 | 4   | MC68901 (Vectored, DTACK)                |
 | 5   | MC68681 DUART Expansion (Vectored, DTACK)|
-| 6   | <Unallocated>                            |
-| 7   | <Unallocated>                            |
+| 6   | **Unallocated**                          |
+| 7   | **Unallocated**                          |
 
 Bear in mind that level 7 is non-maskable and should be reserved for
 devices specifically requiring NMI if possible!
