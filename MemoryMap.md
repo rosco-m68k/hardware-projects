@@ -60,7 +60,7 @@ addresses.
 'available' row to reflect your changes. Remember that on r1 boards, only 
 even addresses are _actually_ available in this range!
 
-## ROM space
+## ROM space
 
 ROM space begins at $FC0000 and extends to the top of the address space at
 $FFFFFF. 
