@@ -60,6 +60,22 @@ addresses.
 'available' row to reflect your changes. Remember that on r1 boards, only 
 even addresses are _actually_ available in this range!
 
+## ROM space
+
+ROM space begins at $FC0000 and extends to the top of the address space at
+$FFFFFF. 
+
+**Note** that the on-board ROM occupies all of the space allocated to ROM, 
+regardless of actual ROM size. The ROM is simply repeated ('striped') 
+through all of ROM space.
+
+Therefore, any expansion ROM will need to be mappped either into EXPANSION
+RAM space, or into memory-mapped IO. 
+
+Future boards will more selectively map the ROMs, allowing third-party ROM
+to be mapped into ROM space. This will probably be supported by a runtime
+configuration mechanism where possible, or a jumper configuration otherwise.
+
 ## IRQs
 
 In a compatible system, it is important that devices do not compete for 
