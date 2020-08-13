@@ -171,7 +171,6 @@ NoConn ~ 2000 3300
 NoConn ~ 2000 3400
 NoConn ~ 2000 3500
 NoConn ~ 2000 3600
-NoConn ~ 2000 3700
 Text Notes 1250 4200 0    50   ~ 0
 Note - Inverted layout!
 Text GLabel 1500 1600 0    50   Output ~ 0
@@ -770,9 +769,6 @@ Wire Wire Line
 	8600 2650 8600 2350
 Text GLabel 8600 2350 1    50   UnSpc ~ 0
 VCC
-NoConn ~ 5300 2050
-Text Notes 5600 2650 1    50   ~ 0
-Pin 14 can generate IODTACK
 Text GLabel 4750 5200 0    50   Input ~ 0
 VA5
 Text GLabel 1000 5000 0    50   Input ~ 0
@@ -1092,4 +1088,27 @@ Wire Wire Line
 	5950 4150 6400 4150
 Wire Wire Line
 	6400 4150 6400 3950
+Text GLabel 5300 2050 2    50   3State ~ 0
+VDTACK
+Text GLabel 2000 3700 2    50   3State ~ 0
+DTACK
+$Comp
+L Device:Jumper JP1
+U 1 1 5F36AC4F
+P 7150 5750
+F 0 "JP1" H 7150 6014 50  0000 C CNN
+F 1 "Jumper" H 7150 5923 50  0000 C CNN
+F 2 "rosco_m68k:pin-1X02" H 7150 5750 50  0001 C CNN
+F 3 "~" H 7150 5750 50  0001 C CNN
+	1    7150 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 5750 6550 5750
+Wire Wire Line
+	7450 5750 7750 5750
+Text GLabel 6550 5750 0    50   3State ~ 0
+VDTACK
+Text GLabel 7750 5750 2    50   3State ~ 0
+DTACK
 $EndSCHEMATC
