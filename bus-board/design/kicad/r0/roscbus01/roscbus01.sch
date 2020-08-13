@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "ROSCO_M68K LOCAL BUS BACKPLANE"
+Date "2020-08-13"
+Rev "2"
+Comp "The Really Old-School Company Limited"
+Comment1 "Open Source Hardware licenced under CERN Open Hardware Licence"
+Comment2 "Copyright 2020 Ross Bamford and Contributors"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -1220,19 +1220,6 @@ F 3 "" H 7000 6150 50  0001 C CNN
 $EndComp
 Text Notes 1050 850  0    50   ~ 0
 Recommended\nComputer Connection
-$Comp
-L Diode:BAT43 D1
-U 1 1 5EBDCC17
-P 5800 7100
-F 0 "D1" H 5800 6884 50  0000 C CNN
-F 1 "BAT43" H 5800 6975 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5800 6925 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 5800 7100 50  0001 C CNN
-	1    5800 7100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5950 7100 6250 7100
 Text Notes 4250 7500 0    50   ~ 0
 Optional
 Wire Wire Line
@@ -1405,11 +1392,11 @@ F 3 "~" H 7750 650 50  0001 C CNN
 	1    7750 650 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5000 7100 5650 7100
 Connection ~ 4000 7100
 Wire Wire Line
 	4000 7100 4100 7100
 Wire Wire Line
 	1700 6650 2250 6650
+Wire Wire Line
+	5000 7100 6250 7100
 $EndSCHEMATC
