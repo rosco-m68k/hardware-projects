@@ -428,13 +428,6 @@ F 3 "~" H 8950 4350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3200 6900 2800 6900
-Wire Wire Line
-	2800 6900 2800 7300
-Wire Wire Line
-	2800 7300 3700 7300
-Wire Wire Line
-	1950 7300 2800 7300
-Connection ~ 2800 7300
 Connection ~ 1950 7300
 Text GLabel 3200 6000 0    50   Input ~ 0
 BIP0
@@ -840,56 +833,35 @@ VCC
 Text GLabel 8350 2600 3    50   UnSpc ~ 0
 GND
 $Comp
-L Device:C C1
-U 1 1 5EF75A30
-P 900 6350
-F 0 "C1" H 1015 6396 50  0000 L CNN
-F 1 "100nF" H 1015 6305 50  0000 L CNN
-F 2 "rosco_m68k:C2.5-3" H 938 6200 50  0001 C CNN
-F 3 "~" H 900 6350 50  0001 C CNN
-	1    900  6350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C6
 U 1 1 5EF76323
-P 4800 6350
-F 0 "C6" H 4915 6396 50  0000 L CNN
-F 1 "100nF" H 4915 6305 50  0000 L CNN
-F 2 "rosco_m68k:C2.5-3" H 4838 6200 50  0001 C CNN
-F 3 "~" H 4800 6350 50  0001 C CNN
-	1    4800 6350
+P 4800 7000
+F 0 "C6" H 4915 7046 50  0000 L CNN
+F 1 "100nF" H 4915 6955 50  0000 L CNN
+F 2 "rosco_m68k:C2.5-3" H 4838 6850 50  0001 C CNN
+F 3 "~" H 4800 7000 50  0001 C CNN
+	1    4800 7000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	900  5700 1950 5700
+	900  5700 1150 5700
 Wire Wire Line
 	3700 5700 4800 5700
 Wire Wire Line
-	4800 5700 4800 6200
+	4800 5700 4800 6850
 Wire Wire Line
-	1950 5700 3700 5700
+	1950 5700 2800 5700
 Connection ~ 1950 5700
 Connection ~ 3700 5700
 Wire Wire Line
-	900  6500 900  6900
-Wire Wire Line
 	900  7300 1950 7300
-Wire Wire Line
-	900  6900 1450 6900
-Connection ~ 900  6900
-Wire Wire Line
-	900  6900 900  7300
 Wire Wire Line
 	3700 7300 4800 7300
 Wire Wire Line
-	4800 7300 4800 6500
+	4800 7300 4800 7150
 Connection ~ 3700 7300
 Wire Wire Line
-	900  5700 900  6200
-Wire Wire Line
 	900  5700 900  5550
-Connection ~ 900  5700
 Wire Wire Line
 	4800 7300 4800 7400
 Connection ~ 4800 7300
@@ -1212,4 +1184,34 @@ Wire Wire Line
 Connection ~ 4150 5400
 Wire Wire Line
 	4150 5400 4950 5400
+$Comp
+L Device:C C1
+U 1 1 5EF75A30
+P 900 7000
+F 0 "C1" H 1015 7046 50  0000 L CNN
+F 1 "100nF" H 1000 6900 50  0000 L CNN
+F 2 "rosco_m68k:C2.5-3" H 938 6850 50  0001 C CNN
+F 3 "~" H 900 7000 50  0001 C CNN
+	1    900  7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  7150 900  7300
+Connection ~ 900  5700
+Wire Wire Line
+	1450 6900 1150 6900
+Wire Wire Line
+	900  5700 900  6850
+Wire Wire Line
+	1150 5700 1150 6900
+Connection ~ 1150 5700
+Wire Wire Line
+	1150 5700 1950 5700
+Wire Wire Line
+	1950 7300 3700 7300
+Wire Wire Line
+	2800 6900 2800 5700
+Connection ~ 2800 5700
+Wire Wire Line
+	2800 5700 3700 5700
 $EndSCHEMATC
