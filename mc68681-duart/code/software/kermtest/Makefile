@@ -12,7 +12,7 @@ CFLAGS=-std=c11 -ffreestanding -Wall -pedantic -Werror -I$(SYSINCDIR) 	\
 			 -mcpu=68010 -march=68010 -mtune=68010 -fomit-frame-pointer				\
 			 -mno-align-int -mno-strict-align $(DEFINES)
 LDFLAGS=-T $(SYSLIBDIR)/ld/serial/rosco_m68k_program.ld -L $(SYSLIBDIR) \
-				-Map=$(MAP) -L $(shell dirname `m68k-elf-gcc $CFLAGS -print-libgcc-file-name`)
+				-Map=$(MAP) -L $(shell dirname `m68k-elf-gcc $(CFLAGS) -print-libgcc-file-name`)
 ASFLAGS=-Felf -m68010 -quiet $(DEFINES)
 CC=m68k-elf-gcc
 LD=m68k-elf-ld
