@@ -2,11 +2,12 @@ GAL16V8
 DECODER
 
 A6     A7     A8     A9     A10    A11    A12    A13    A14    GND
-A17    NC     A16    A15    A3     A4     A5     /IOSEL /SEL   VCC
+A17    NC     A16    A15    A3     A4     A5     /IOSEL  /SEL   VCC
 
-SEL   = A3 * IOSEL * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
-      + A4 * IOSEL * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
-      + A5 * IOSEL * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+SEL   = IOSEL * A3 * /A4 * /A5 * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+      + IOSEL * /A3 * A4 * /A5 * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+      + IOSEL * A3 * A4 * /A5 * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
+      + IOSEL * /A3 * /A4 * A5 * /A6 * /A7 * /A8 * /A9 * /A10 * /A11 * /A12 * /A13 * /A14 * /A15 * /A16 * /A17
 
 DESCRIPTION
 
