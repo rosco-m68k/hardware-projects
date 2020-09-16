@@ -4,7 +4,7 @@
 3;"REF**";"MD-rosco_m68k_logo";1;"MD-rosco_m68k_logo";;;
 4;"IC4,IC3,IC2";"DIP-20_W7.62mm_Socket_LongPads";3;"74HCT245";;;
 5;"C12,C11,C10,C15,C9,C8,C7,C6,C4,C2,C1";"C2.5-3";11;"100nF";;;
-6;"C5,C3";"C2.5-3";2;"33pF";;;
+6;"C5,C3";"C2.5-3";2;"7pF";;;
 7;"Q1";"Crystal_HC49-4H_Vertical";1;"Crystal";;;
 8;"JP4,JP3,JP2,JP1";"PinHeader_1x02_P2.54mm_Vertical";4;"Jumper";;;
 9;"J4";"PinHeader_1x06_P2.54mm_Vertical";1;"UART_B";;;
