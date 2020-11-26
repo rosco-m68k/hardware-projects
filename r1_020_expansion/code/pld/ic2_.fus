@@ -52,7 +52,7 @@ Pin 15 = NC           XOR = 0   AC1 = 0
 
 Pin 14 = UDS          XOR = 0   AC1 = 1
  40  ---- ---- ---- ---- ---- ---- ---- ----
- 41  ---- ---- ---- -x-- ---- ---- ---- ----
+ 41  -x-- ---- ---- -x-- ---- ---- ---- ----
  42  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  43  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  44  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -62,9 +62,9 @@ Pin 14 = UDS          XOR = 0   AC1 = 1
 
 Pin 13 = LDS          XOR = 0   AC1 = 1
  48  ---- ---- ---- ---- ---- ---- ---- ----
- 49  ---- ---- ---- x--- ---- ---- ---- ----
- 50  ---- -x-- ---- ---- ---- ---- ---- ----
- 51  ---- ---- x--- ---- ---- ---- ---- ----
+ 49  -x-- ---- ---- x--- ---- ---- ---- ----
+ 50  -x-- -x-- ---- ---- ---- ---- ---- ----
+ 51  -x-- ---- x--- ---- ---- ---- ---- ----
  52  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  53  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  54  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx

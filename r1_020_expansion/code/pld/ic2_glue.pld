@@ -22,8 +22,10 @@ Q3.R =   Q3 * /Q2
        + /Q3 *  Q2 *  Q1 *  Q0
 
 
-/UDS = /A0
-/LDS = A0 + /SIZ0 + SIZ1 
+/UDS = /DS * /A0
+/LDS = /DS * A0 
+     + /DS * /SIZ0 
+     + /DS * SIZ1 
 
 DESCRIPTION
 
