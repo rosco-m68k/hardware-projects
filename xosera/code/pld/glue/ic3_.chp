@@ -1,0 +1,25 @@
+
+
+                                GAL16V8
+
+                          -------\___/-------
+                   FPGACS |  1           20 | VCC
+                          |                 |
+                      FC0 |  2           19 | ODTACK
+                          |                 |
+                      FC1 |  3           18 | VPA
+                          |                 |
+                      FC2 |  4           17 | PPVP
+                          |                 |
+                       NC |  5           16 | FPGAW
+                          |                 |
+                       NC |  6           15 | OIRQ
+                          |                 |
+                       NC |  7           14 | FPGAR
+                          |                 |
+                      RnW |  8           13 | PPDT
+                          |                 |
+                    UDIRQ |  9           12 | NC
+                          |                 |
+                      GND | 10           11 | NC
+                          -------------------

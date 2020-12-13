@@ -1,0 +1,24 @@
+GAL16V8
+UARTGLUE
+
+FPGACS   FC0  FC1   FC2     NC    NC      NC    RnW   UDIRQ     GND
+NC       NC   PPDT  FPGAR   OIRQ  FPGAW   PPVP  VPA   ODTACK    VCC
+
+FPGAR      = RnW
+FPGAW      = /RnW
+OIRQ       = UDIRQ
+
+/PPDT      = /FPGACS
+ODTACK.T   = GND
+ODTACK.E   = /PPDT
+
+/PPVP      = /UDIRQ * FC0 * FC1 * FC2
+VPA.T      = GND
+VPA.E      = /PPVP
+
+DESCRIPTION
+
+Xosera DTACK / IACK and buffer enable glue 
+
+Copyright (c)2020 Ross Bamford. See LICENSE.
+
