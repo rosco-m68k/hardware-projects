@@ -11,8 +11,6 @@ DESCRIPTION
 
 Xosera Address Decoder.
 
-LDS/UDS are not handled here - CS must also be gated off by the correct strobe!
-
 Copyright (c)2020 Ross Bamford. See LICENSE.
 
 This assumes the register selects for the FPGA (RS1-RS5) are connected to A1-A5, and that
