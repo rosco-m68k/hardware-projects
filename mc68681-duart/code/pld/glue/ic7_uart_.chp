@@ -13,7 +13,7 @@
                           |                 |
                       FC2 |  5           16 | NC
                           |                 |
-                      IRQ |  6           15 | NC
+                      IRQ |  6           15 | PPVPA
                           |                 |
                        NC |  7           14 | VPA
                           |                 |
