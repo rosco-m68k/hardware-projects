@@ -52,14 +52,16 @@ instruction can help when programming for expansions mapped at all-even
 addresses.
 
 | Range           | Odd/Even | Description                                    |
-|-----------------|----------|------------------------------------------------| 
+|-----------------|----------|------------------------------------------------|
 | $F80000-$F80006 | Even     | V9958 Video Board                              |
 | $F80001-$F8002F | Odd      | MC68901 MFP                                    |
-| $F80008-$F80026 | Even     | MC68681 DUART Expansion Board                  |
+| $F80008-$F80026 | Even     | MC68681 DUART Expansion Board (r1)             |
 | $F80031-$F8003F | Odd      | MC68901 MFP (First few registers shadowed)     |
 | $F80028-$F8002E | Even     | Reserved                                       |
 | $F80040-$F8005F | Both     | ATA/IDE Interface Board                        |
-| $F80060-$FBFFFF | Both     | Available (note 1)                             |
+| $F80060-$F800a7 | Both     | Available (note 1)                             |
+| $F800a8-$F800c6 | Even     | MC68681 DUART Expansion Board (r2)             |
+| $F800c7-$FBFFFF | Both     | Available (note 1)                             |
 
 **Note 1**: When adding your reserved address range(s), please update the 
 'available' row to reflect your changes. Remember that on r1 boards, only 
