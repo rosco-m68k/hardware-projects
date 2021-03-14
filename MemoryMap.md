@@ -53,8 +53,9 @@ addresses.
 | $F80000-$F80006 | Even     | V9958 Video Board                              |
 | $F80001-$F8002F | Odd      | MC68901 MFP                                    |
 | $F80008-$F80026 | Even     | MC68681 DUART Expansion Board                  |
+| $F80031-$F8003F | Odd      | MC68901 MFP (First few registers shadowed)     |
 | $F80028-$F8002E | Even     | Reserved                                       |
-| $F80030-$FBFFFF | Both     | Available (note 1)                             |
+| $F80040-$FBFFFF | Both     | Available (note 1)                             |
 
 **Note 1**: When adding your reserved address range(s), please update the 
 'available' row to reflect your changes. Remember that on r1 boards, only 
