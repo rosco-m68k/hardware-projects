@@ -102,7 +102,7 @@ Note that currently the on-board watchdog (production 1.2 boards only)
 | 2   | V9958 Video: VBLANK (Legacy, VPA)        |
 | 3   | ATA/IDE interface (Legacy, VPA)          |
 | 4   | MC68901 (Vectored, DTACK)                |
-| 5   | MC68681 DUART Expansion (Vectored, DTACK)|
+| 5   | MC68681 DUART Expansion (Legacy, VPA)    |
 | 6   | **Unallocated**                          |
 | 7   | **Unallocated**                          |
 
