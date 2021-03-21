@@ -55,7 +55,8 @@ addresses.
 | $F80008-$F80026 | Even     | MC68681 DUART Expansion Board                  |
 | $F80031-$F8003F | Odd      | MC68901 MFP (First few registers shadowed)     |
 | $F80028-$F8002E | Even     | Reserved                                       |
-| $F80040-$FBFFFF | Both     | Available (note 1)                             |
+| $F80040-$F8005F | Both     | ATA/IDE Interface Board                        |
+| $F80060-$FBFFFF | Both     | Available (note 1)                             |
 
 **Note 1**: When adding your reserved address range(s), please update the 
 'available' row to reflect your changes. Remember that on r1 boards, only 
@@ -99,7 +100,7 @@ Note that currently the on-board watchdog (production 1.2 boards only)
 |-----|------------------------------------------|
 | 1   | **Unallocated**                          |
 | 2   | V9958 Video: VBLANK (Legacy, VPA)        |
-| 3   | **Unallocated**                          |
+| 3   | ATA/IDE interface (Legacy, VPA)          |
 | 4   | MC68901 (Vectored, DTACK)                |
 | 5   | MC68681 DUART Expansion (Vectored, DTACK)|
 | 6   | **Unallocated**                          |
