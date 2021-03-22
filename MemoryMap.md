@@ -26,11 +26,13 @@ that only the first megabyte (or perhaps a region thereof) will
 be usable with DMA. However, this may well change depending on the
 DMAC that ends up being used.
 
-| Start   | Size             | Description                                    |
-|---------|------------------|------------------------------------------------|
-| $0      | $1000 (4K)       | System reserved area (note 1)                  |
-| $1000   | $ff000 (1020KiB) | On-board RAM                                   |
-| $100000 | $e80000 (14.5MB) | Expansion RAM                                  |
+| Start   | Size (hex) | Size (dec) | Description                     |
+|--------:|-----------:|:----------:|:--------------------------------|
+|      $0 |   $1000    | (4KiB)     | System reserved area (note 1)   |
+|   $1000 |  $FF000    | (1020KiB)  | On-board RAM                    |
+| $100000 | $E00000    | (15MiB)    | Expansion RAM                   |
+| $F00000 |  $80000    | (512KiB)   | Addressing "hole"               |
+| $F80000 | $F00000    | (15MiB)    | Expansion RAM                   |
 
 **Note 1**: The first 1K of the reserved area contains 256 exception vectors
 used directly by the CPU. Custom exception vectors should be set up here.
@@ -102,7 +104,7 @@ Note that currently the on-board watchdog (production 1.2 boards only)
 | 2   | V9958 Video: VBLANK (Legacy, VPA)        |
 | 3   | ATA/IDE interface (Legacy, VPA)          |
 | 4   | MC68901 (Vectored, DTACK)                |
-| 5   | MC68681 DUART Expansion (Vectored, DTACK)|
+| 5   | MC68681 DUART Expansion (Legacy, VPA)    |
 | 6   | **Unallocated**                          |
 | 7   | **Unallocated**                          |
 
