@@ -28,12 +28,12 @@ DMAC that ends up being used.
 
 | Start   | Size (hex) | Size (dec) | Description                     |
 |--------:|-----------:|-----------:|:--------------------------------|
-|      $0 |   $1000    | 4KiB       | System reserved area (note 1)   |
+|      $0 |   $1000    |    4KiB    | System reserved area (note 1)   |
 |   $1000 |  $FF000    | 1020KiB    | On-board RAM                    |
-| $100000 | $E00000    | 15MiB      | Expansion RAM                   |
-| $F00000 |  $80000    | 512KiB     | Addressing "hole"               |
-| $F80000 |  $40000    | 256KiB     | I/O Space                       |
-| $FC0000 |  $40000    | 256KiB     | On-board ROM                    |
+| $100000 | $E00000    |   14MiB    | Expansion RAM                   |
+| $F00000 |  $80000    |  512KiB    | Addressing "hole"               |
+| $F80000 |  $40000    |  256KiB    | I/O Space                       |
+| $FC0000 |  $40000    |  256KiB    | On-board ROM                    |
 
 **Note 1**: The first 1K of the reserved area contains 256 exception vectors
 used directly by the CPU. Custom exception vectors should be set up here.
