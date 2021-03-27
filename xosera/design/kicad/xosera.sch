@@ -8,7 +8,7 @@ Title "Xosera <-> M68k Bus Interface"
 Date "2020-12-13"
 Rev "0"
 Comp ""
-Comment1 "Copyright ©2020 Xark, Ross Bamford, and Contributors"
+Comment1 "Copyright ©2020-2021 Xark and Contributors"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -118,7 +118,6 @@ NoConn ~ 1500 1000
 NoConn ~ 1500 1300
 NoConn ~ 1500 1400
 NoConn ~ 1500 1500
-NoConn ~ 2000 3200
 NoConn ~ 2000 3300
 NoConn ~ 2000 3400
 NoConn ~ 2000 3500
@@ -181,23 +180,23 @@ DTACK
 $Comp
 L 74xx:74LS245 IC1
 U 1 1 5F9320FF
-P 3350 4250
-F 0 "IC1" H 3350 5231 50  0000 C CNN
-F 1 "74HCT245" H 3350 5140 50  0000 C CNN
-F 2 "" H 3350 4250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 3350 4250 50  0001 C CNN
-	1    3350 4250
+P 3400 4650
+F 0 "IC1" H 3400 5631 50  0000 C CNN
+F 1 "74HCT245" H 3400 5540 50  0000 C CNN
+F 2 "" H 3400 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 3400 4650 50  0001 C CNN
+	1    3400 4650
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS245 IC2
 U 1 1 5F933841
-P 5450 4250
-F 0 "IC2" H 5450 5231 50  0000 C CNN
-F 1 "74HCT245" H 5450 5140 50  0000 C CNN
-F 2 "" H 5450 4250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 5450 4250 50  0001 C CNN
-	1    5450 4250
+P 5500 4650
+F 0 "IC2" H 5500 5631 50  0000 C CNN
+F 1 "74HCT245" H 5500 5540 50  0000 C CNN
+F 2 "" H 5500 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 5500 4650 50  0001 C CNN
+	1    5500 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -240,562 +239,311 @@ Wire Wire Line
 $Comp
 L Logic_Programmable:GAL16V8 IC3
 U 1 1 5F93B8A2
-P 7250 4250
-F 0 "IC3" H 7250 5131 50  0000 C CNN
-F 1 "ATF16V8BQL" H 7250 5040 50  0000 C CNN
-F 2 "" H 7250 4250 50  0001 C CNN
-F 3 "" H 7250 4250 50  0001 C CNN
-	1    7250 4250
+P 7300 4650
+F 0 "IC3" H 7300 5531 50  0000 C CNN
+F 1 "ATF16V8BQL" H 7300 5440 50  0000 C CNN
+F 2 "" H 7300 4650 50  0001 C CNN
+F 3 "" H 7300 4650 50  0001 C CNN
+	1    7300 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3350 3450 3700 3450
+	3400 3850 3750 3850
 Wire Wire Line
-	3700 3450 3700 3350
-Text GLabel 3700 3350 1    50   Input ~ 0
+	3750 3850 3750 3750
+Text GLabel 3750 3750 1    50   Input ~ 0
 3V3
 $Comp
 L power:GND #PWR03
 U 1 1 5F949047
-P 5950 5300
-F 0 "#PWR03" H 5950 5050 50  0001 C CNN
-F 1 "GND" H 5955 5127 50  0000 C CNN
-F 2 "" H 5950 5300 50  0001 C CNN
-F 3 "" H 5950 5300 50  0001 C CNN
-	1    5950 5300
+P 6000 5700
+F 0 "#PWR03" H 6000 5450 50  0001 C CNN
+F 1 "GND" H 6005 5527 50  0000 C CNN
+F 2 "" H 6000 5700 50  0001 C CNN
+F 3 "" H 6000 5700 50  0001 C CNN
+	1    6000 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3350 5050 3350 5200
+	3400 5450 3400 5600
 Wire Wire Line
-	3350 5200 4100 5200
+	3400 5600 4150 5600
 Wire Wire Line
-	5950 5200 5950 5300
+	6000 5600 6000 5700
 Wire Wire Line
-	5450 5050 5450 5200
-Connection ~ 5450 5200
+	5500 5450 5500 5600
+Connection ~ 5500 5600
 Wire Wire Line
-	5450 5200 5950 5200
+	5500 5600 6000 5600
 Wire Wire Line
-	5450 3450 5150 3450
+	5500 3850 5200 3850
 Wire Wire Line
-	5150 3450 5150 3350
-Text GLabel 5150 3350 1    50   Input ~ 0
+	5200 3850 5200 3750
+Text GLabel 5200 3750 1    50   Input ~ 0
 +5V
 Wire Wire Line
-	4100 4650 4100 5200
+	4150 5050 4150 5600
 Wire Wire Line
-	2450 4650 2450 5200
-Connection ~ 3350 5200
-Text GLabel 2850 3750 0    50   Output ~ 0
+	2500 5050 2500 5600
+Connection ~ 3400 5600
+Text GLabel 2900 4150 0    50   Output ~ 0
 UD_D0
-Text GLabel 2850 3850 0    50   Output ~ 0
+Text GLabel 2900 4250 0    50   Output ~ 0
 UD_D1
-Text GLabel 2850 3950 0    50   Output ~ 0
+Text GLabel 2900 4350 0    50   Output ~ 0
 UD_D2
-Text GLabel 2850 4050 0    50   Output ~ 0
+Text GLabel 2900 4450 0    50   Output ~ 0
 UD_D3
-Text GLabel 2850 4150 0    50   Output ~ 0
+Text GLabel 2900 4550 0    50   Output ~ 0
 UD_D4
-Text GLabel 2850 4250 0    50   Output ~ 0
+Text GLabel 2900 4650 0    50   Output ~ 0
 UD_D5
-Text GLabel 2850 4350 0    50   Output ~ 0
+Text GLabel 2900 4750 0    50   Output ~ 0
 UD_D6
-Text GLabel 2850 4450 0    50   Output ~ 0
+Text GLabel 2900 4850 0    50   Output ~ 0
 UD_D7
 Wire Wire Line
-	4100 4650 4950 4650
+	4150 5050 5000 5050
 Wire Wire Line
-	4100 5200 5450 5200
-Connection ~ 4100 5200
+	4150 5600 5500 5600
+Connection ~ 4150 5600
 $Comp
 L Device:R R5
 U 1 1 5F958476
-P 4100 3750
-F 0 "R5" V 3893 3750 50  0000 C CNN
-F 1 "R" V 3984 3750 50  0000 C CNN
-F 2 "" V 4030 3750 50  0001 C CNN
-F 3 "~" H 4100 3750 50  0001 C CNN
-	1    4100 3750
+P 4150 4150
+F 0 "R5" V 3943 4150 50  0000 C CNN
+F 1 "R" V 4034 4150 50  0000 C CNN
+F 2 "" V 4080 4150 50  0001 C CNN
+F 3 "~" H 4150 4150 50  0001 C CNN
+	1    4150 4150
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R6
 U 1 1 5F958F5F
-P 4100 3850
-F 0 "R6" V 3893 3850 50  0000 C CNN
-F 1 "R" V 3984 3850 50  0000 C CNN
-F 2 "" V 4030 3850 50  0001 C CNN
-F 3 "~" H 4100 3850 50  0001 C CNN
-	1    4100 3850
+P 4150 4250
+F 0 "R6" V 3943 4250 50  0000 C CNN
+F 1 "R" V 4034 4250 50  0000 C CNN
+F 2 "" V 4080 4250 50  0001 C CNN
+F 3 "~" H 4150 4250 50  0001 C CNN
+	1    4150 4250
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 5F9594D6
-P 4100 3950
-F 0 "R7" V 3893 3950 50  0000 C CNN
-F 1 "R" V 3984 3950 50  0000 C CNN
-F 2 "" V 4030 3950 50  0001 C CNN
-F 3 "~" H 4100 3950 50  0001 C CNN
-	1    4100 3950
+P 4150 4350
+F 0 "R7" V 3943 4350 50  0000 C CNN
+F 1 "R" V 4034 4350 50  0000 C CNN
+F 2 "" V 4080 4350 50  0001 C CNN
+F 3 "~" H 4150 4350 50  0001 C CNN
+	1    4150 4350
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R8
 U 1 1 5F959A84
-P 4100 4050
-F 0 "R8" V 3893 4050 50  0000 C CNN
-F 1 "R" V 3984 4050 50  0000 C CNN
-F 2 "" V 4030 4050 50  0001 C CNN
-F 3 "~" H 4100 4050 50  0001 C CNN
-	1    4100 4050
+P 4150 4450
+F 0 "R8" V 3943 4450 50  0000 C CNN
+F 1 "R" V 4034 4450 50  0000 C CNN
+F 2 "" V 4080 4450 50  0001 C CNN
+F 3 "~" H 4150 4450 50  0001 C CNN
+	1    4150 4450
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R9
 U 1 1 5F95A081
-P 4100 4150
-F 0 "R9" V 3893 4150 50  0000 C CNN
-F 1 "R" V 3984 4150 50  0000 C CNN
-F 2 "" V 4030 4150 50  0001 C CNN
-F 3 "~" H 4100 4150 50  0001 C CNN
-	1    4100 4150
+P 4150 4550
+F 0 "R9" V 3943 4550 50  0000 C CNN
+F 1 "R" V 4034 4550 50  0000 C CNN
+F 2 "" V 4080 4550 50  0001 C CNN
+F 3 "~" H 4150 4550 50  0001 C CNN
+	1    4150 4550
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 5F95A5A7
-P 4100 4250
-F 0 "R10" V 3893 4250 50  0000 C CNN
-F 1 "R" V 3984 4250 50  0000 C CNN
-F 2 "" V 4030 4250 50  0001 C CNN
-F 3 "~" H 4100 4250 50  0001 C CNN
-	1    4100 4250
+P 4150 4650
+F 0 "R10" V 3943 4650 50  0000 C CNN
+F 1 "R" V 4034 4650 50  0000 C CNN
+F 2 "" V 4080 4650 50  0001 C CNN
+F 3 "~" H 4150 4650 50  0001 C CNN
+	1    4150 4650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R12
 U 1 1 5F95AFD8
-P 4100 4450
-F 0 "R12" V 3893 4450 50  0000 C CNN
-F 1 "R" V 3984 4450 50  0000 C CNN
-F 2 "" V 4030 4450 50  0001 C CNN
-F 3 "~" H 4100 4450 50  0001 C CNN
-	1    4100 4450
+P 4150 4850
+F 0 "R12" V 3943 4850 50  0000 C CNN
+F 1 "R" V 4034 4850 50  0000 C CNN
+F 2 "" V 4080 4850 50  0001 C CNN
+F 3 "~" H 4150 4850 50  0001 C CNN
+	1    4150 4850
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R11
 U 1 1 5F95AB3A
-P 4100 4350
-F 0 "R11" V 3893 4350 50  0000 C CNN
-F 1 "R" V 3984 4350 50  0000 C CNN
-F 2 "" V 4030 4350 50  0001 C CNN
-F 3 "~" H 4100 4350 50  0001 C CNN
-	1    4100 4350
+P 4150 4750
+F 0 "R11" V 3943 4750 50  0000 C CNN
+F 1 "R" V 4034 4750 50  0000 C CNN
+F 2 "" V 4080 4750 50  0001 C CNN
+F 3 "~" H 4150 4750 50  0001 C CNN
+	1    4150 4750
 	0    1    1    0   
 $EndComp
-Text Notes 3950 4600 0    50   ~ 0
+Text Notes 4000 5000 0    50   ~ 0
 All 470R
 Wire Wire Line
-	3950 3750 3850 3750
+	4000 4150 3900 4150
 Wire Wire Line
-	3850 3850 3950 3850
+	3900 4250 4000 4250
 Wire Wire Line
-	3850 3950 3950 3950
+	3900 4350 4000 4350
 Wire Wire Line
-	3850 4050 3950 4050
+	3900 4450 4000 4450
 Wire Wire Line
-	3850 4150 3950 4150
+	3900 4550 4000 4550
 Wire Wire Line
-	3850 4250 3950 4250
+	3900 4650 4000 4650
 Wire Wire Line
-	3850 4350 3950 4350
+	3900 4750 4000 4750
 Wire Wire Line
-	3850 4450 3950 4450
-Text GLabel 4250 3750 2    50   Input ~ 0
+	3900 4850 4000 4850
+Text GLabel 4300 4150 2    50   Input ~ 0
 68_D8
-Text GLabel 4250 3850 2    50   Input ~ 0
+Text GLabel 4300 4250 2    50   Input ~ 0
 68_D9
-Text GLabel 4250 3950 2    50   Input ~ 0
+Text GLabel 4300 4350 2    50   Input ~ 0
 68_D10
-Text GLabel 4250 4050 2    50   Input ~ 0
+Text GLabel 4300 4450 2    50   Input ~ 0
 68_D11
-Text GLabel 4250 4150 2    50   Input ~ 0
+Text GLabel 4300 4550 2    50   Input ~ 0
 68_D12
-Text GLabel 4250 4250 2    50   Input ~ 0
+Text GLabel 4300 4650 2    50   Input ~ 0
 68_D13
-Text GLabel 4250 4350 2    50   Input ~ 0
+Text GLabel 4300 4750 2    50   Input ~ 0
 68_D14
-Text GLabel 4250 4450 2    50   Input ~ 0
+Text GLabel 4300 4850 2    50   Input ~ 0
 68_D15
-Text GLabel 4950 3750 0    50   Output ~ 0
+Text GLabel 5000 4150 0    50   Output ~ 0
 68_D8
-Text GLabel 4950 3850 0    50   Output ~ 0
+Text GLabel 5000 4250 0    50   Output ~ 0
 68_D9
-Text GLabel 4950 3950 0    50   Output ~ 0
+Text GLabel 5000 4350 0    50   Output ~ 0
 68_D10
-Text GLabel 4950 4050 0    50   Output ~ 0
+Text GLabel 5000 4450 0    50   Output ~ 0
 68_D11
-Text GLabel 4950 4150 0    50   Output ~ 0
+Text GLabel 5000 4550 0    50   Output ~ 0
 68_D12
-Text GLabel 4950 4250 0    50   Output ~ 0
+Text GLabel 5000 4650 0    50   Output ~ 0
 68_D13
-Text GLabel 4950 4350 0    50   Output ~ 0
+Text GLabel 5000 4750 0    50   Output ~ 0
 68_D14
-Text GLabel 4950 4450 0    50   Output ~ 0
+Text GLabel 5000 4850 0    50   Output ~ 0
 68_D15
-Text GLabel 5950 3750 2    50   Input ~ 0
+Text GLabel 6000 4150 2    50   Input ~ 0
 UD_D0
-Text GLabel 5950 3850 2    50   Input ~ 0
+Text GLabel 6000 4250 2    50   Input ~ 0
 UD_D1
-Text GLabel 5950 3950 2    50   Input ~ 0
+Text GLabel 6000 4350 2    50   Input ~ 0
 UD_D2
-Text GLabel 5950 4050 2    50   Input ~ 0
+Text GLabel 6000 4450 2    50   Input ~ 0
 UD_D3
-Text GLabel 5950 4150 2    50   Input ~ 0
+Text GLabel 6000 4550 2    50   Input ~ 0
 UD_D4
-Text GLabel 5950 4250 2    50   Input ~ 0
+Text GLabel 6000 4650 2    50   Input ~ 0
 UD_D5
-Text GLabel 5950 4350 2    50   Input ~ 0
+Text GLabel 6000 4750 2    50   Input ~ 0
 UD_D6
-Text GLabel 5950 4450 2    50   Input ~ 0
+Text GLabel 6000 4850 2    50   Input ~ 0
 UD_D7
-Text GLabel 2850 4750 0    50   Input ~ 0
+Text GLabel 2900 5150 0    50   Input ~ 0
 FPGA_W
-Text GLabel 4950 4750 0    50   Input ~ 0
+Text GLabel 5000 5150 0    50   Input ~ 0
 FPGA_R
-Text GLabel 6750 3750 0    50   Input ~ 0
-FPGA_CS
+Text GLabel 6800 4150 0    50   Input ~ 0
+SEL_1
 $Comp
 L Logic_Programmable:GAL16V8 IC4
 U 1 1 5F979042
-P 9000 4250
-F 0 "IC4" H 9000 5131 50  0000 C CNN
-F 1 "ATF16V8BQL" H 9000 5040 50  0000 C CNN
-F 2 "" H 9000 4250 50  0001 C CNN
-F 3 "" H 9000 4250 50  0001 C CNN
-	1    9000 4250
+P 9050 4650
+F 0 "IC4" H 9050 5531 50  0000 C CNN
+F 1 "ATF16V8BQL" H 9050 5440 50  0000 C CNN
+F 2 "" H 9050 4650 50  0001 C CNN
+F 3 "" H 9050 4650 50  0001 C CNN
+	1    9050 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5950 5200 7250 5200
+	6000 5600 7300 5600
 Wire Wire Line
-	9000 5200 9000 4950
-Connection ~ 5950 5200
+	9050 5600 9050 5350
+Connection ~ 6000 5600
 Wire Wire Line
-	7250 4950 7250 5200
-Connection ~ 7250 5200
+	7300 5350 7300 5600
+Connection ~ 7300 5600
 Wire Wire Line
-	7250 5200 9000 5200
+	7300 5600 9050 5600
 Wire Wire Line
-	5450 3450 6950 3450
+	5500 3850 7000 3850
 Wire Wire Line
-	6950 3450 6950 3550
+	7000 3850 7000 3950
 Wire Wire Line
-	6950 3550 7250 3550
-Connection ~ 5450 3450
+	7000 3950 7300 3950
+Connection ~ 5500 3850
 Wire Wire Line
-	7250 3550 9000 3550
-Connection ~ 7250 3550
-Text Notes 8750 5050 0    50   ~ 0
+	7300 3950 9050 3950
+Connection ~ 7300 3950
+Text Notes 8800 5450 0    50   ~ 0
 IC4 - DECODER
-Text GLabel 9500 3750 2    50   Output ~ 0
-FPGA_CS
-$Comp
-L Device:R R1
-U 1 1 5F98CB86
-P 3000 1250
-F 0 "R1" H 3070 1296 50  0000 L CNN
-F 1 "1K" H 3070 1205 50  0000 L CNN
-F 2 "" V 2930 1250 50  0001 C CNN
-F 3 "~" H 3000 1250 50  0001 C CNN
-	1    3000 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5F98D39F
-P 3550 1250
-F 0 "R3" H 3620 1296 50  0000 L CNN
-F 1 "1K" H 3620 1205 50  0000 L CNN
-F 2 "" V 3480 1250 50  0001 C CNN
-F 3 "~" H 3550 1250 50  0001 C CNN
-	1    3550 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R13
-U 1 1 5F98D99E
-P 4100 1250
-F 0 "R13" H 4170 1296 50  0000 L CNN
-F 1 "1K" H 4170 1205 50  0000 L CNN
-F 2 "" V 4030 1250 50  0001 C CNN
-F 3 "~" H 4100 1250 50  0001 C CNN
-	1    4100 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5F98E06A
-P 4650 1250
-F 0 "R15" H 4720 1296 50  0000 L CNN
-F 1 "1K" H 4720 1205 50  0000 L CNN
-F 2 "" V 4580 1250 50  0001 C CNN
-F 3 "~" H 4650 1250 50  0001 C CNN
-	1    4650 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R17
-U 1 1 5F98E953
-P 5250 1250
-F 0 "R17" H 5320 1296 50  0000 L CNN
-F 1 "1K" H 5320 1205 50  0000 L CNN
-F 2 "" V 5180 1250 50  0001 C CNN
-F 3 "~" H 5250 1250 50  0001 C CNN
-	1    5250 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5F98EF97
-P 3000 1700
-F 0 "R2" H 3070 1746 50  0000 L CNN
-F 1 "2K" H 3070 1655 50  0000 L CNN
-F 2 "" V 2930 1700 50  0001 C CNN
-F 3 "~" H 3000 1700 50  0001 C CNN
-	1    3000 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5F98F7F8
-P 3550 1700
-F 0 "R4" H 3620 1746 50  0000 L CNN
-F 1 "2K" H 3620 1655 50  0000 L CNN
-F 2 "" V 3480 1700 50  0001 C CNN
-F 3 "~" H 3550 1700 50  0001 C CNN
-	1    3550 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R14
-U 1 1 5F98FF43
-P 4100 1700
-F 0 "R14" H 4170 1746 50  0000 L CNN
-F 1 "2K" H 4170 1655 50  0000 L CNN
-F 2 "" V 4030 1700 50  0001 C CNN
-F 3 "~" H 4100 1700 50  0001 C CNN
-	1    4100 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R16
-U 1 1 5F9905A2
-P 4650 1700
-F 0 "R16" H 4720 1746 50  0000 L CNN
-F 1 "2K" H 4720 1655 50  0000 L CNN
-F 2 "" V 4580 1700 50  0001 C CNN
-F 3 "~" H 4650 1700 50  0001 C CNN
-	1    4650 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R18
-U 1 1 5F990D4C
-P 5250 1700
-F 0 "R18" H 5320 1746 50  0000 L CNN
-F 1 "2K" H 5320 1655 50  0000 L CNN
-F 2 "" V 5180 1700 50  0001 C CNN
-F 3 "~" H 5250 1700 50  0001 C CNN
-	1    5250 1700
-	1    0    0    -1  
-$EndComp
-Text GLabel 3000 1100 1    50   Input ~ 0
+Text GLabel 9550 4150 2    50   Output ~ 0
+SEL_1
+Text GLabel 6350 1450 2    50   Input ~ 0
 A1
-Text GLabel 3550 1100 1    50   Input ~ 0
+Text GLabel 6350 1550 2    50   Input ~ 0
 A2
-Text GLabel 4100 1100 1    50   Input ~ 0
+Text GLabel 6350 1650 2    50   Input ~ 0
 A3
-Text GLabel 4650 1100 1    50   Input ~ 0
+Text GLabel 6350 1750 2    50   Input ~ 0
 A4
-Text GLabel 5250 1100 1    50   Input ~ 0
-A5
-Wire Wire Line
-	3000 1850 3000 2000
-Wire Wire Line
-	5250 2000 5250 1850
-Wire Wire Line
-	4650 1850 4650 2000
-Connection ~ 4650 2000
-Wire Wire Line
-	4100 1850 4100 2000
-Connection ~ 4100 2000
-Wire Wire Line
-	4100 2000 4650 2000
-Wire Wire Line
-	3550 1850 3550 2000
-Wire Wire Line
-	3000 2000 3550 2000
-Connection ~ 3550 2000
-Wire Wire Line
-	3550 2000 4100 2000
-$Comp
-L power:GND #PWR02
-U 1 1 5F9ACF2B
-P 4900 2000
-F 0 "#PWR02" H 4900 1750 50  0001 C CNN
-F 1 "GND" H 4905 1827 50  0000 C CNN
-F 2 "" H 4900 2000 50  0001 C CNN
-F 3 "" H 4900 2000 50  0001 C CNN
-	1    4900 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3000 1400 3000 1500
-Wire Wire Line
-	3550 1400 3550 1500
-Wire Wire Line
-	4100 1400 4100 1500
-Wire Wire Line
-	4650 1400 4650 1500
-Wire Wire Line
-	5250 1400 5250 1500
-Wire Wire Line
-	3000 1500 3050 1500
-Connection ~ 3000 1500
-Wire Wire Line
-	3000 1500 3000 1550
-Wire Wire Line
-	3550 1500 3600 1500
-Connection ~ 3550 1500
-Wire Wire Line
-	3550 1500 3550 1550
-Wire Wire Line
-	4100 1500 4150 1500
-Connection ~ 4100 1500
-Wire Wire Line
-	4100 1500 4100 1550
-Wire Wire Line
-	4650 1500 4700 1500
-Connection ~ 4650 1500
-Wire Wire Line
-	4650 1500 4650 1550
-Wire Wire Line
-	5250 1500 5300 1500
-Connection ~ 5250 1500
-Wire Wire Line
-	5250 1500 5250 1550
-Text GLabel 3050 1500 2    50   Output ~ 0
-UD_A0
-Text GLabel 3600 1500 2    50   Output ~ 0
-UD_A1
-Text GLabel 4150 1500 2    50   Output ~ 0
-UD_A2
-Text GLabel 4700 1500 2    50   Output ~ 0
-UD_A3
-Text GLabel 5300 1500 2    50   Output ~ 0
-UD_A4
-Text GLabel 8500 3750 0    50   Input ~ 0
+Text GLabel 6350 1850 2    50   Input ~ 0
+A7
+Text GLabel 5350 1450 0    50   Output ~ 0
+UD_LOWBYTE
+Text GLabel 5350 1550 0    50   Output ~ 0
+UD_R0
+Text GLabel 5350 1650 0    50   Output ~ 0
+UD_R1
+Text GLabel 5350 1750 0    50   Output ~ 0
+UD_R2
+Text GLabel 5350 1850 0    50   Output ~ 0
+UD_R3
+Text GLabel 8550 4150 0    50   Input ~ 0
 A6
-Text GLabel 7750 3750 2    50   3State ~ 0
+Text GLabel 7800 4150 2    50   3State ~ 0
 ODTACK
-Text GLabel 7750 3850 2    50   3State ~ 0
+Text GLabel 7800 4250 2    50   3State ~ 0
 OVPA
-$Comp
-L Device:R R19
-U 1 1 5F9CE115
-P 5850 1250
-F 0 "R19" H 5920 1296 50  0000 L CNN
-F 1 "1K" H 5920 1205 50  0000 L CNN
-F 2 "" V 5780 1250 50  0001 C CNN
-F 3 "~" H 5850 1250 50  0001 C CNN
-	1    5850 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R20
-U 1 1 5F9CE11B
-P 5850 1700
-F 0 "R20" H 5920 1746 50  0000 L CNN
-F 1 "2K" H 5920 1655 50  0000 L CNN
-F 2 "" V 5780 1700 50  0001 C CNN
-F 3 "~" H 5850 1700 50  0001 C CNN
-	1    5850 1700
-	1    0    0    -1  
-$EndComp
-Text GLabel 5850 1100 1    50   Input ~ 0
+Text GLabel 6350 1950 2    50   Input ~ 0
 FPGA_CS
-Wire Wire Line
-	5850 2000 5850 1850
-Wire Wire Line
-	5850 1400 5850 1500
-Wire Wire Line
-	5850 1500 5900 1500
-Connection ~ 5850 1500
-Wire Wire Line
-	5850 1500 5850 1550
-Text GLabel 5900 1500 2    50   Output ~ 0
+Text GLabel 5350 1950 0    50   Output ~ 0
 UD_CS
-$Comp
-L Device:R R21
-U 1 1 5F9D1DB3
-P 6450 1250
-F 0 "R21" H 6520 1296 50  0000 L CNN
-F 1 "1K" H 6520 1205 50  0000 L CNN
-F 2 "" V 6380 1250 50  0001 C CNN
-F 3 "~" H 6450 1250 50  0001 C CNN
-	1    6450 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R22
-U 1 1 5F9D1DB9
-P 6450 1700
-F 0 "R22" H 6520 1746 50  0000 L CNN
-F 1 "2K" H 6520 1655 50  0000 L CNN
-F 2 "" V 6380 1700 50  0001 C CNN
-F 3 "~" H 6450 1700 50  0001 C CNN
-	1    6450 1700
-	1    0    0    -1  
-$EndComp
-Text GLabel 6450 1100 1    50   Input ~ 0
+Text GLabel 6350 2050 2    50   Input ~ 0
 RnW
-Wire Wire Line
-	6450 2000 6450 1850
-Wire Wire Line
-	6450 1400 6450 1500
-Wire Wire Line
-	6450 1500 6500 1500
-Connection ~ 6450 1500
-Wire Wire Line
-	6450 1500 6450 1550
-Text GLabel 6500 1500 2    50   Output ~ 0
+Text GLabel 5350 2050 0    50   Output ~ 0
 UD_RnW
-Wire Wire Line
-	5250 2000 5850 2000
-Connection ~ 5850 2000
-Wire Wire Line
-	5850 2000 6450 2000
-Wire Wire Line
-	4650 2000 4900 2000
-Wire Wire Line
-	5250 2000 4900 2000
-Connection ~ 5250 2000
-Connection ~ 4900 2000
-Text Notes 4700 1900 0    50   ~ 0
-2Kx8 pack
-Text GLabel 7750 4050 2    50   Output ~ 0
+Text GLabel 7800 4450 2    50   Output ~ 0
 FPGA_W
-Text GLabel 6750 4550 0    50   Input ~ 0
+Text GLabel 6800 4950 0    50   Input ~ 0
 UD_IRQ
-Text GLabel 7750 4150 2    50   3State ~ 0
+Text GLabel 7800 4550 2    50   3State ~ 0
 OIRQ
-NoConn ~ 6750 4650
-NoConn ~ 7750 4350
-NoConn ~ 7750 4450
+NoConn ~ 6800 5050
+NoConn ~ 7800 4750
 $Comp
 L Device:Jumper JP2
 U 1 1 5FA5CB0F
@@ -819,13 +567,13 @@ Text GLabel 8150 1850 0    50   BiDi ~ 0
 OIRQ
 Text Notes 8750 2050 0    50   ~ 0
 IPL TBD, or maybe use a tri-state buffer
-Text GLabel 7750 4250 2    50   Output ~ 0
+Text GLabel 7800 4650 2    50   Output ~ 0
 FPGA_R
 Wire Wire Line
-	2450 4650 2850 4650
+	2500 5050 2900 5050
 Wire Wire Line
-	2450 5200 3350 5200
-Text Notes 5000 4950 2    50   ~ 0
+	2500 5600 3400 5600
+Text Notes 5050 5350 2    50   ~ 0
 FPGA_R is /RnW
 $Comp
 L power:GND #PWR01
@@ -1005,50 +753,49 @@ F 3 "~" H 800 7000 50  0001 C CNN
 	1    800  7000
 	1    0    0    -1  
 $EndComp
-Text GLabel 8500 3850 0    50   Input ~ 0
+Text GLabel 8550 4250 0    50   Input ~ 0
 A7
-Text GLabel 8500 3950 0    50   Input ~ 0
+Text GLabel 8550 4350 0    50   Input ~ 0
 A8
-Text GLabel 8500 4050 0    50   Input ~ 0
+Text GLabel 8550 4450 0    50   Input ~ 0
 A9
-Text GLabel 8500 4150 0    50   Input ~ 0
+Text GLabel 8550 4550 0    50   Input ~ 0
 A10
-Text GLabel 8500 4250 0    50   Input ~ 0
+Text GLabel 8550 4650 0    50   Input ~ 0
 A11
-Text GLabel 8500 4350 0    50   Input ~ 0
+Text GLabel 8550 4750 0    50   Input ~ 0
 A12
-Text GLabel 8500 4450 0    50   Input ~ 0
+Text GLabel 8550 4850 0    50   Input ~ 0
 A13
-Text GLabel 8500 4550 0    50   Input ~ 0
+Text GLabel 8550 4950 0    50   Input ~ 0
 A14
-Text GLabel 8500 4650 0    50   Input ~ 0
+Text GLabel 8550 5050 0    50   Input ~ 0
 A17
-Text GLabel 9500 4350 2    50   Input ~ 0
+Text GLabel 9550 4750 2    50   Input ~ 0
 A16
-Text GLabel 9500 4250 2    50   Input ~ 0
+Text GLabel 9550 4650 2    50   Input ~ 0
 A15
-Text GLabel 9500 4150 2    50   Input ~ 0
-A18
-Text GLabel 9500 4050 2    50   Input ~ 0
+Text GLabel 9550 4550 2    50   Input ~ 0
+A5
+Text GLabel 9550 4450 2    50   Input ~ 0
 UDS
-Text GLabel 9500 3950 2    50   Input ~ 0
+Text GLabel 9550 4350 2    50   Input ~ 0
 LDS
-Text GLabel 9500 3850 2    50   Input ~ 0
+Text GLabel 9550 4250 2    50   Input ~ 0
 IOSEL
-NoConn ~ 9500 4450
-NoConn ~ 6750 4350
-NoConn ~ 6750 4250
-NoConn ~ 6750 4150
-NoConn ~ 7750 3950
-Text Notes 6950 5050 0    50   ~ 0
+NoConn ~ 9550 4850
+NoConn ~ 6800 4750
+NoConn ~ 6800 4650
+NoConn ~ 7800 4350
+Text Notes 7000 5450 0    50   ~ 0
 IC3 - GLUE
-Text GLabel 6750 4450 0    50   Input ~ 0
+Text GLabel 6800 4850 0    50   Input ~ 0
 RnW
-Text GLabel 6750 3850 0    50   Input ~ 0
+Text GLabel 6800 4250 0    50   Input ~ 0
 FC0
-Text GLabel 6750 3950 0    50   Input ~ 0
+Text GLabel 6800 4350 0    50   Input ~ 0
 FC1
-Text GLabel 6750 4050 0    50   Input ~ 0
+Text GLabel 6800 4450 0    50   Input ~ 0
 FC2
 $Comp
 L Device:Jumper JP3
@@ -1069,4 +816,60 @@ Text GLabel 9350 2450 2    50   3State ~ 0
 VPA
 Text GLabel 8150 2450 0    50   BiDi ~ 0
 OVPA
+$Comp
+L 74xx:74LS245 IC5
+U 1 1 6060561D
+P 5850 1950
+F 0 "IC5" H 5850 2931 50  0000 C CNN
+F 1 "74HCT245" H 5850 2840 50  0000 C CNN
+F 2 "" H 5850 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 5850 1950 50  0001 C CNN
+	1    5850 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 1150 6200 1150
+Wire Wire Line
+	6200 1150 6200 1050
+Text GLabel 6200 1050 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	5850 2750 5850 2800
+$Comp
+L power:GND #PWR0101
+U 1 1 6061C071
+P 5850 2900
+F 0 "#PWR0101" H 5850 2650 50  0001 C CNN
+F 1 "GND" H 5855 2727 50  0000 C CNN
+F 2 "" H 5850 2900 50  0001 C CNN
+F 3 "" H 5850 2900 50  0001 C CNN
+	1    5850 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 6350 2150 2    50   Input ~ 0
+RESET
+Text GLabel 2000 3700 2    50   3State ~ 0
+DTACK
+Wire Wire Line
+	5350 2350 5050 2350
+Wire Wire Line
+	5050 2350 5050 2450
+Wire Wire Line
+	5050 2800 5850 2800
+Connection ~ 5850 2800
+Wire Wire Line
+	5850 2800 5850 2900
+Wire Wire Line
+	5350 2450 5050 2450
+Connection ~ 5050 2450
+Wire Wire Line
+	5050 2450 5050 2800
+Text GLabel 5350 2150 0    50   Output ~ 0
+UD_RESET
+Text GLabel 2000 3200 2    50   Output ~ 0
+AS
+Text GLabel 6800 4550 0    50   Input ~ 0
+AS
+Text GLabel 7800 4850 2    50   Output ~ 0
+FPGA_CS
 $EndSCHEMATC
