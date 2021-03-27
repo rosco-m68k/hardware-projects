@@ -156,7 +156,7 @@ U 1 1 5F36AC4F
 P 10200 850
 F 0 "JP1" H 10200 1114 50  0000 C CNN
 F 1 "Jumper" H 10200 1023 50  0000 C CNN
-F 2 "rosco_m68k:pin-1X02" H 10200 850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 850 50  0001 C CNN
 F 3 "~" H 10200 850 50  0001 C CNN
 	1    10200 850 
 	1    0    0    -1  
@@ -261,10 +261,10 @@ Wire Wire Line
 	3900 6200 5250 6200
 Connection ~ 3900 6200
 $Comp
-L Device:R R5
+L Device:R R1
 U 1 1 5F958476
 P 3900 4750
-F 0 "R5" V 3900 4750 50  0000 C CNN
+F 0 "R1" V 3900 4750 50  0000 C CNN
 F 1 "R" V 3784 4750 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 4750 50  0001 C CNN
 F 3 "~" H 3900 4750 50  0001 C CNN
@@ -272,10 +272,10 @@ F 3 "~" H 3900 4750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R6
+L Device:R R2
 U 1 1 5F958F5F
 P 3900 4850
-F 0 "R6" V 3900 4850 50  0000 C CNN
+F 0 "R2" V 3900 4850 50  0000 C CNN
 F 1 "R" V 3784 4850 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 4850 50  0001 C CNN
 F 3 "~" H 3900 4850 50  0001 C CNN
@@ -283,10 +283,10 @@ F 3 "~" H 3900 4850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R7
+L Device:R R3
 U 1 1 5F9594D6
 P 3900 4950
-F 0 "R7" V 3900 4950 50  0000 C CNN
+F 0 "R3" V 3900 4950 50  0000 C CNN
 F 1 "R" V 3784 4950 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 4950 50  0001 C CNN
 F 3 "~" H 3900 4950 50  0001 C CNN
@@ -294,10 +294,10 @@ F 3 "~" H 3900 4950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R8
+L Device:R R4
 U 1 1 5F959A84
 P 3900 5050
-F 0 "R8" V 3900 5050 50  0000 C CNN
+F 0 "R4" V 3900 5050 50  0000 C CNN
 F 1 "R" V 3784 5050 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 5050 50  0001 C CNN
 F 3 "~" H 3900 5050 50  0001 C CNN
@@ -305,10 +305,10 @@ F 3 "~" H 3900 5050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R9
+L Device:R R5
 U 1 1 5F95A081
 P 3900 5150
-F 0 "R9" V 3900 5150 50  0000 C CNN
+F 0 "R5" V 3900 5150 50  0000 C CNN
 F 1 "R" V 3784 5150 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 5150 50  0001 C CNN
 F 3 "~" H 3900 5150 50  0001 C CNN
@@ -316,10 +316,10 @@ F 3 "~" H 3900 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R10
+L Device:R R6
 U 1 1 5F95A5A7
 P 3900 5250
-F 0 "R10" V 3900 5250 50  0000 C CNN
+F 0 "R6" V 3900 5250 50  0000 C CNN
 F 1 "R" V 3784 5250 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 5250 50  0001 C CNN
 F 3 "~" H 3900 5250 50  0001 C CNN
@@ -327,10 +327,10 @@ F 3 "~" H 3900 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R12
+L Device:R R8
 U 1 1 5F95AFD8
 P 3900 5450
-F 0 "R12" V 3900 5450 50  0000 C CNN
+F 0 "R8" V 3900 5450 50  0000 C CNN
 F 1 "R" V 3784 5450 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 5450 50  0001 C CNN
 F 3 "~" H 3900 5450 50  0001 C CNN
@@ -338,10 +338,10 @@ F 3 "~" H 3900 5450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R11
+L Device:R R7
 U 1 1 5F95AB3A
 P 3900 5350
-F 0 "R11" V 3900 5350 50  0000 C CNN
+F 0 "R7" V 3900 5350 50  0000 C CNN
 F 1 "R" V 3784 5350 50  0001 C CNN
 F 2 "rosco_m68k:R-0207_10" V 3830 5350 50  0001 C CNN
 F 3 "~" H 3900 5350 50  0001 C CNN
@@ -499,7 +499,7 @@ U 1 1 5FA5CB0F
 P 10200 1300
 F 0 "JP2" H 10200 1564 50  0000 C CNN
 F 1 "Jumper" H 10200 1473 50  0000 C CNN
-F 2 "rosco_m68k:pin-1X02" H 10200 1300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 1300 50  0001 C CNN
 F 3 "~" H 10200 1300 50  0001 C CNN
 	1    10200 1300
 	1    0    0    -1  
@@ -548,16 +548,16 @@ Wire Wire Line
 Text GLabel 4150 6500 1    50   UnSpc ~ 0
 3V3
 Wire Wire Line
-	2200 7350 3000 7350
+	2200 7350 2600 7350
 Wire Wire Line
-	2200 6650 3000 6650
+	2200 6650 2600 6650
 $Comp
 L Device:C C5
 U 1 1 5EBD8054
 P 2200 7000
 F 0 "C5" H 2315 7046 50  0000 L CNN
 F 1 "100nF" H 2315 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 2238 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 2238 6850 50  0001 C CNN
 F 3 "~" H 2200 7000 50  0001 C CNN
 	1    2200 7000
 	1    0    0    -1  
@@ -577,10 +577,10 @@ Connection ~ 3000 6650
 Wire Wire Line
 	3000 6850 3000 6650
 $Comp
-L Device:CP C7
+L Device:CP C8
 U 1 1 5ECA8C23
 P 3450 7000
-F 0 "C7" H 3568 7046 50  0000 L CNN
+F 0 "C8" H 3568 7046 50  0000 L CNN
 F 1 "220uF" H 3568 6955 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3488 6850 50  0001 C CNN
 F 3 "~" H 3450 7000 50  0001 C CNN
@@ -588,10 +588,10 @@ F 3 "~" H 3450 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C6
+L Device:CP C7
 U 1 1 5ECA8151
 P 3000 7000
-F 0 "C6" H 3118 7046 50  0000 L CNN
+F 0 "C7" H 3118 7046 50  0000 L CNN
 F 1 "100uF" H 3118 6955 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 3038 6850 50  0001 C CNN
 F 3 "~" H 3000 7000 50  0001 C CNN
@@ -603,7 +603,6 @@ Text GLabel 800  6450 1    50   UnSpc ~ 0
 Connection ~ 800  6650
 Wire Wire Line
 	800  6650 800  6450
-Connection ~ 2200 7350
 Wire Wire Line
 	2200 7150 2200 7350
 Wire Wire Line
@@ -638,7 +637,6 @@ Wire Wire Line
 	1850 6850 1850 6650
 Wire Wire Line
 	2200 6650 1850 6650
-Connection ~ 2200 6650
 Wire Wire Line
 	2200 6850 2200 6650
 Wire Wire Line
@@ -648,12 +646,12 @@ Wire Wire Line
 Wire Wire Line
 	800  6650 800  6850
 $Comp
-L Device:C C8
+L Device:C C9
 U 1 1 5EBD8730
 P 4150 7000
-F 0 "C8" H 4265 7046 50  0000 L CNN
+F 0 "C9" H 4265 7046 50  0000 L CNN
 F 1 "100nF" H 4265 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 4188 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 4188 6850 50  0001 C CNN
 F 3 "~" H 4150 7000 50  0001 C CNN
 	1    4150 7000
 	1    0    0    -1  
@@ -664,7 +662,7 @@ U 1 1 5EBD7BDB
 P 1850 7000
 F 0 "C4" H 1965 7046 50  0000 L CNN
 F 1 "100nF" H 1965 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 1888 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 1888 6850 50  0001 C CNN
 F 3 "~" H 1850 7000 50  0001 C CNN
 	1    1850 7000
 	1    0    0    -1  
@@ -675,7 +673,7 @@ U 1 1 5EBD76DD
 P 1500 7000
 F 0 "C3" H 1615 7046 50  0000 L CNN
 F 1 "100nF" H 1615 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 1538 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 1538 6850 50  0001 C CNN
 F 3 "~" H 1500 7000 50  0001 C CNN
 	1    1500 7000
 	1    0    0    -1  
@@ -686,7 +684,7 @@ U 1 1 5EBD70D8
 P 1150 7000
 F 0 "C2" H 1265 7046 50  0000 L CNN
 F 1 "100nF" H 1265 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 1188 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 1188 6850 50  0001 C CNN
 F 3 "~" H 1150 7000 50  0001 C CNN
 	1    1150 7000
 	1    0    0    -1  
@@ -697,7 +695,7 @@ U 1 1 5EBD6A2D
 P 800 7000
 F 0 "C1" H 915 7046 50  0000 L CNN
 F 1 "100nF" H 915 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 838 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 838 6850 50  0001 C CNN
 F 3 "~" H 800 7000 50  0001 C CNN
 	1    800  7000
 	1    0    0    -1  
@@ -752,7 +750,7 @@ U 1 1 5FDE8072
 P 10200 1900
 F 0 "JP3" H 10200 2164 50  0000 C CNN
 F 1 "Jumper" H 10200 2073 50  0000 C CNN
-F 2 "rosco_m68k:pin-1X02" H 10200 1900 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 1900 50  0001 C CNN
 F 3 "~" H 10200 1900 50  0001 C CNN
 	1    10200 1900
 	1    0    0    -1  
@@ -838,7 +836,7 @@ U 1 1 6066ED1B
 P 10200 2300
 F 0 "JP4" H 10200 2564 50  0000 C CNN
 F 1 "Jumper" H 10200 2473 50  0000 C CNN
-F 2 "rosco_m68k:pin-1X02" H 10200 2300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2300 50  0001 C CNN
 F 3 "~" H 10200 2300 50  0001 C CNN
 	1    10200 2300
 	1    0    0    -1  
@@ -855,7 +853,7 @@ U 1 1 60671C59
 P 10200 2750
 F 0 "JP5" H 10200 3014 50  0000 C CNN
 F 1 "Jumper" H 10200 2923 50  0000 C CNN
-F 2 "rosco_m68k:pin-1X02" H 10200 2750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2750 50  0001 C CNN
 F 3 "~" H 10200 2750 50  0001 C CNN
 	1    10200 2750
 	1    0    0    -1  
@@ -914,8 +912,6 @@ UD_R2
 NoConn ~ 3250 2350
 Text Notes 2550 2400 0    50   ~ 0
 Pin 6 has UD_R3
-NoConn ~ 5650 2750
-NoConn ~ 5650 2850
 Text GLabel 5650 2950 0    50   BiDi ~ 0
 UD_D0
 Text GLabel 5650 3050 0    50   BiDi ~ 0
@@ -938,7 +934,6 @@ NoConn ~ 6500 1550
 NoConn ~ 6500 1650
 NoConn ~ 6500 1750
 NoConn ~ 6500 1850
-NoConn ~ 6500 1950
 NoConn ~ 6500 2050
 Text GLabel 6500 2150 2    50   Output ~ 0
 HSYNC
@@ -983,7 +978,7 @@ U 1 1 606C15FC
 P 7950 2000
 F 0 "J4" H 8000 2417 50  0000 C CNN
 F 1 "PMOD_TOP" H 8000 2326 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Vertical" H 7950 2000 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 7950 2000 50  0001 C CNN
 F 3 "~" H 7950 2000 50  0001 C CNN
 	1    7950 2000
 	1    0    0    -1  
@@ -994,7 +989,7 @@ U 1 1 606C93D4
 P 7950 3100
 F 0 "J5" H 8000 3517 50  0000 C CNN
 F 1 "PMOD_BOTTOM" H 8000 3426 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Vertical" H 7950 3100 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 7950 3100 50  0001 C CNN
 F 3 "~" H 7950 3100 50  0001 C CNN
 	1    7950 3100
 	1    0    0    -1  
@@ -1077,23 +1072,23 @@ TODO! Not certain the HDMI pins\nare correct for the actual hardware - Check thi
 $Comp
 L Connector_Generic:Conn_02x04_Counter_Clockwise J6
 U 1 1 60719F6C
-P 10300 3450
-F 0 "J6" H 10350 3767 50  0000 C CNN
-F 1 "Conn_02x04_Counter_Clockwise" H 10350 3676 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10300 3450 50  0001 C CNN
-F 3 "~" H 10300 3450 50  0001 C CNN
-	1    10300 3450
+P 10300 3900
+F 0 "J6" H 10350 4217 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 10350 4126 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10300 3900 50  0001 C CNN
+F 3 "~" H 10300 3900 50  0001 C CNN
+	1    10300 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x04_Counter_Clockwise J7
 U 1 1 6071B045
-P 10300 4100
-F 0 "J7" H 10350 4417 50  0000 C CNN
-F 1 "Conn_02x04_Counter_Clockwise" H 10350 4326 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10300 4100 50  0001 C CNN
-F 3 "~" H 10300 4100 50  0001 C CNN
-	1    10300 4100
+P 10300 4550
+F 0 "J7" H 10350 4867 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 10350 4776 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10300 4550 50  0001 C CNN
+F 3 "~" H 10300 4550 50  0001 C CNN
+	1    10300 4550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1107,37 +1102,37 @@ F 3 "~" H 10300 5250 50  0001 C CNN
 	1    10300 5250
 	1    0    0    -1  
 $EndComp
-Text GLabel 10100 3350 0    50   UnSpc ~ 0
+Text GLabel 10100 3800 0    50   UnSpc ~ 0
 3V3
-Text GLabel 10100 3450 0    50   UnSpc ~ 0
+Text GLabel 10100 3900 0    50   UnSpc ~ 0
 3V3
-Text GLabel 10100 3550 0    50   UnSpc ~ 0
+Text GLabel 10100 4000 0    50   UnSpc ~ 0
 3V3
-Text GLabel 10100 3650 0    50   UnSpc ~ 0
+Text GLabel 10100 4100 0    50   UnSpc ~ 0
 3V3
-Text GLabel 10600 3350 2    50   UnSpc ~ 0
+Text GLabel 10600 3800 2    50   UnSpc ~ 0
 GND
-Text GLabel 10600 3450 2    50   UnSpc ~ 0
-GND
-Text GLabel 10600 3550 2    50   UnSpc ~ 0
-GND
-Text GLabel 10600 3650 2    50   UnSpc ~ 0
+Text GLabel 10600 3900 2    50   UnSpc ~ 0
 GND
 Text GLabel 10600 4000 2    50   UnSpc ~ 0
 GND
 Text GLabel 10600 4100 2    50   UnSpc ~ 0
 GND
-Text GLabel 10600 4200 2    50   UnSpc ~ 0
+Text GLabel 10600 4450 2    50   UnSpc ~ 0
 GND
-Text GLabel 10600 4300 2    50   UnSpc ~ 0
+Text GLabel 10600 4550 2    50   UnSpc ~ 0
 GND
-Text GLabel 10100 4000 0    50   UnSpc ~ 0
+Text GLabel 10600 4650 2    50   UnSpc ~ 0
+GND
+Text GLabel 10600 4750 2    50   UnSpc ~ 0
+GND
+Text GLabel 10100 4450 0    50   UnSpc ~ 0
 5V
-Text GLabel 10100 4100 0    50   UnSpc ~ 0
+Text GLabel 10100 4550 0    50   UnSpc ~ 0
 5V
-Text GLabel 10100 4200 0    50   UnSpc ~ 0
+Text GLabel 10100 4650 0    50   UnSpc ~ 0
 5V
-Text GLabel 10100 4300 0    50   UnSpc ~ 0
+Text GLabel 10100 4750 0    50   UnSpc ~ 0
 5V
 Text GLabel 6550 5550 0    50   Input ~ 0
 UD_IRQ
@@ -1158,23 +1153,23 @@ GND
 Text GLabel 10600 5450 2    50   UnSpc ~ 0
 3V3
 $Comp
-L Device:C C9
+L Device:C C10
 U 1 1 607305DC
 P 4650 7000
-F 0 "C9" H 4765 7046 50  0000 L CNN
+F 0 "C10" H 4765 7046 50  0000 L CNN
 F 1 "100nF" H 4765 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 4688 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 4688 6850 50  0001 C CNN
 F 3 "~" H 4650 7000 50  0001 C CNN
 	1    4650 7000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C10
+L Device:C C11
 U 1 1 607330BC
 P 5150 7000
-F 0 "C10" H 5265 7046 50  0000 L CNN
+F 0 "C11" H 5265 7046 50  0000 L CNN
 F 1 "100nF" H 5265 6955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 5188 6850 50  0001 C CNN
+F 2 "rosco_m68k:C2.5-3" H 5188 6850 50  0001 C CNN
 F 3 "~" H 5150 7000 50  0001 C CNN
 	1    5150 7000
 	1    0    0    -1  
@@ -1200,4 +1195,71 @@ Wire Wire Line
 Wire Wire Line
 	4650 7350 5150 7350
 Connection ~ 4650 7350
+$Comp
+L Device:Jumper JP6
+U 1 1 606027E5
+P 10200 3200
+F 0 "JP6" H 10200 3464 50  0000 C CNN
+F 1 "Jumper" H 10200 3373 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 3200 50  0001 C CNN
+F 3 "~" H 10200 3200 50  0001 C CNN
+	1    10200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 3200 9600 3200
+Wire Wire Line
+	10500 3200 10800 3200
+Text GLabel 10800 3200 2    50   UnSpc ~ 0
+GND
+Text GLabel 9600 3200 0    50   UnSpc ~ 0
+JBODGE_GND
+Text GLabel 6500 1950 2    50   UnSpc ~ 0
+JBODGE_GND
+$Comp
+L Device:C C6
+U 1 1 60636CE2
+P 2600 7000
+F 0 "C6" H 2715 7046 50  0000 L CNN
+F 1 "100nF" H 2715 6955 50  0000 L CNN
+F 2 "rosco_m68k:C2.5-3" H 2638 6850 50  0001 C CNN
+F 3 "~" H 2600 7000 50  0001 C CNN
+	1    2600 7000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 6650
+Connection ~ 2200 7350
+Wire Wire Line
+	2600 6850 2600 6650
+Connection ~ 2600 6650
+Wire Wire Line
+	2600 6650 3000 6650
+Wire Wire Line
+	2600 7150 2600 7350
+Connection ~ 2600 7350
+Wire Wire Line
+	2600 7350 3000 7350
+Text GLabel 5650 2750 0    50   Output ~ 0
+AUDIO_L
+Text GLabel 5650 2850 0    50   Output ~ 0
+AUDIO_R
+$Comp
+L Connector:Conn_01x04_Male J9
+U 1 1 6068E5A7
+P 7750 1100
+F 0 "J9" H 7858 1381 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 7858 1290 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7750 1100 50  0001 C CNN
+F 3 "~" H 7750 1100 50  0001 C CNN
+	1    7750 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 7950 1300 2    50   Input ~ 0
+AUDIO_L
+Text GLabel 7950 1000 2    50   Input ~ 0
+AUDIO_R
+Text GLabel 7950 1100 2    50   Input ~ 0
+GND
+Text GLabel 7950 1200 2    50   Input ~ 0
+GND
 $EndSCHEMATC
