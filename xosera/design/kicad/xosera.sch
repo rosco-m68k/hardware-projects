@@ -885,11 +885,10 @@ $EndComp
 Text Notes 5750 4000 0    50   ~ 0
 Upduino 3.0\nRGB Jumper Cut\nOSC Jumper Shorted
 NoConn ~ 5650 1450
-NoConn ~ 5650 1550
 NoConn ~ 5650 1650
 Text GLabel 5650 1350 0    50   UnSpc ~ 0
 GND
-Text GLabel 5650 1750 0    50   UnSpc ~ 0
+Text GLabel 5650 1550 0    50   UnSpc ~ 0
 UD_RESET
 Text GLabel 5650 1850 0    50   UnSpc ~ 0
 UD_CS
@@ -1262,4 +1261,5 @@ Text GLabel 7950 1100 2    50   Input ~ 0
 GND
 Text GLabel 7950 1200 2    50   Input ~ 0
 GND
+NoConn ~ 5650 1750
 $EndSCHEMATC
