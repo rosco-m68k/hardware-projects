@@ -16,10 +16,10 @@
   12   | NC       | NC
   13   | A16      | Input
   14   | A15      | Input
-  15   | A18      | Input
+  15   | A5       | Input
   16   | UDS      | Input
   17   | LDS      | Input
-  18   | /IOSEL   | Input
-  19   | /SEL     | Output
+  18   | IOSEL    | Input
+  19   | SEL      | Output
   20   | VCC      | VCC
 

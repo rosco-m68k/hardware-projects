@@ -1,16 +1,16 @@
 
 
-Pin 19 = /SEL         XOR = 0   AC1 = 1
+Pin 19 = SEL          XOR = 0   AC1 = 1
   0  ---- ---- ---- ---- ---- ---- ---- ----
-  1  -xx- -x-x -xx- -x-x -x-x -x-x -x-x -x-x
-  2  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+  1  -xx- -x-x -xx- -x-x -xx- -x-x -x-x -x-x
+  2  x--x -x-x -xx- -x-x -x-x -x-x -x-x -x-x
   3  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   4  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   5  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   6  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   7  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 18 = /IOSEL       XOR = 0   AC1 = 1
+Pin 18 = IOSEL        XOR = 0   AC1 = 1
   8  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   9  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  10  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -40,7 +40,7 @@ Pin 16 = UDS          XOR = 0   AC1 = 1
  30  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  31  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 15 = A18          XOR = 0   AC1 = 1
+Pin 15 = A5           XOR = 0   AC1 = 1
  32  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  33  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  34  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx

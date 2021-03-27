@@ -1,14 +1,15 @@
 GAL16V8
 UARTGLUE
 
-FPGACS   FC0  FC1   FC2     NC    NC      NC    RnW   UDIRQ     GND
-NC       NC   PPDT  FPGAR   OIRQ  FPGAW   PPVP  VPA   ODTACK    VCC
+FSEL  FC0    FC1    FC2     AS    NC      NC    RnW   UDIRQ     GND
+NC    FPGACS PPDT   FPGAR   OIRQ  FPGAW   PPVP  VPA   ODTACK    VCC
 
-FPGAR      = RnW
-FPGAW      = /RnW
+/FPGAR     = /FSEL * /AS * RnW
+/FPGAW     = /FSEL * /AS * /RnW
 OIRQ       = UDIRQ
+/FPGACS    = /FSEL * /AS
 
-/PPDT      = /FPGACS
+/PPDT      = /FSEL * /AS
 ODTACK.T   = GND
 ODTACK.E   = /PPDT
 

@@ -30,9 +30,9 @@ Pin 17 = PPVP         XOR = 0   AC1 = 1
  22  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  23  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 16 = FPGAW        XOR = 1   AC1 = 1
+Pin 16 = FPGAW        XOR = 0   AC1 = 1
  24  ---- ---- ---- ---- ---- ---- ---- ----
- 25  ---- ---- ---- ---- ---- ---- -x-- ----
+ 25  ---x ---- ---- -x-- ---- ---- -x-- ----
  26  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  27  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  28  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -50,9 +50,9 @@ Pin 15 = OIRQ         XOR = 1   AC1 = 1
  38  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  39  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 14 = FPGAR        XOR = 1   AC1 = 1
+Pin 14 = FPGAR        XOR = 0   AC1 = 1
  40  ---- ---- ---- ---- ---- ---- ---- ----
- 41  ---- ---- ---- ---- ---- ---- x--- ----
+ 41  ---x ---- ---- -x-- ---- ---- x--- ----
  42  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  43  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  44  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -62,7 +62,7 @@ Pin 14 = FPGAR        XOR = 1   AC1 = 1
 
 Pin 13 = PPDT         XOR = 0   AC1 = 1
  48  ---- ---- ---- ---- ---- ---- ---- ----
- 49  ---x ---- ---- ---- ---- ---- ---- ----
+ 49  ---x ---- ---- -x-- ---- ---- ---- ----
  50  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  51  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  52  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -70,9 +70,9 @@ Pin 13 = PPDT         XOR = 0   AC1 = 1
  54  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  55  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 12 = NC           XOR = 0   AC1 = 0
- 56  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 57  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+Pin 12 = FPGACS       XOR = 0   AC1 = 1
+ 56  ---- ---- ---- ---- ---- ---- ---- ----
+ 57  ---x ---- ---- -x-- ---- ---- ---- ----
  58  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  59  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  60  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
