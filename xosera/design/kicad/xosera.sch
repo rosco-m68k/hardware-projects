@@ -239,22 +239,22 @@ Wire Wire Line
 Wire Wire Line
 	2250 5650 2250 6200
 Connection ~ 3150 6200
-Text GLabel 2650 4750 0    50   Output ~ 0
-UD_D0
-Text GLabel 2650 4850 0    50   Output ~ 0
-UD_D1
-Text GLabel 2650 4950 0    50   Output ~ 0
-UD_D2
-Text GLabel 2650 5050 0    50   Output ~ 0
-UD_D3
-Text GLabel 2650 5150 0    50   Output ~ 0
-UD_D4
-Text GLabel 2650 5250 0    50   Output ~ 0
-UD_D5
-Text GLabel 2650 5350 0    50   Output ~ 0
-UD_D6
 Text GLabel 2650 5450 0    50   Output ~ 0
-UD_D7
+BUS_DATA0
+Text GLabel 2650 5350 0    50   Output ~ 0
+BUS_DATA1
+Text GLabel 2650 5250 0    50   Output ~ 0
+BUS_DATA2
+Text GLabel 2650 5150 0    50   Output ~ 0
+BUS_DATA3
+Text GLabel 2650 5050 0    50   Output ~ 0
+BUS_DATA4
+Text GLabel 2650 4950 0    50   Output ~ 0
+BUS_DATA5
+Text GLabel 2650 4850 0    50   Output ~ 0
+BUS_DATA6
+Text GLabel 2650 4750 0    50   Output ~ 0
+BUS_DATA7
 Wire Wire Line
 	3900 5650 4750 5650
 Wire Wire Line
@@ -366,54 +366,54 @@ Wire Wire Line
 	3650 5350 3750 5350
 Wire Wire Line
 	3650 5450 3750 5450
-Text GLabel 4050 4750 2    50   Input ~ 0
-68_D8
-Text GLabel 4050 4850 2    50   Input ~ 0
-68_D9
-Text GLabel 4050 4950 2    50   Input ~ 0
-68_D10
-Text GLabel 4050 5050 2    50   Input ~ 0
-68_D11
-Text GLabel 4050 5150 2    50   Input ~ 0
-68_D12
-Text GLabel 4050 5250 2    50   Input ~ 0
-68_D13
-Text GLabel 4050 5350 2    50   Input ~ 0
-68_D14
 Text GLabel 4050 5450 2    50   Input ~ 0
-68_D15
-Text GLabel 4750 4750 0    50   Output ~ 0
 68_D8
-Text GLabel 4750 4850 0    50   Output ~ 0
+Text GLabel 4050 5350 2    50   Input ~ 0
 68_D9
-Text GLabel 4750 4950 0    50   Output ~ 0
+Text GLabel 4050 5250 2    50   Input ~ 0
 68_D10
-Text GLabel 4750 5050 0    50   Output ~ 0
+Text GLabel 4050 5150 2    50   Input ~ 0
 68_D11
-Text GLabel 4750 5150 0    50   Output ~ 0
+Text GLabel 4050 5050 2    50   Input ~ 0
 68_D12
-Text GLabel 4750 5250 0    50   Output ~ 0
+Text GLabel 4050 4950 2    50   Input ~ 0
 68_D13
-Text GLabel 4750 5350 0    50   Output ~ 0
+Text GLabel 4050 4850 2    50   Input ~ 0
 68_D14
-Text GLabel 4750 5450 0    50   Output ~ 0
+Text GLabel 4050 4750 2    50   Input ~ 0
 68_D15
-Text GLabel 5750 4750 2    50   Input ~ 0
-UD_D0
-Text GLabel 5750 4850 2    50   Input ~ 0
-UD_D1
-Text GLabel 5750 4950 2    50   Input ~ 0
-UD_D2
-Text GLabel 5750 5050 2    50   Input ~ 0
-UD_D3
-Text GLabel 5750 5150 2    50   Input ~ 0
-UD_D4
-Text GLabel 5750 5250 2    50   Input ~ 0
-UD_D5
-Text GLabel 5750 5350 2    50   Input ~ 0
-UD_D6
+Text GLabel 4750 5450 0    50   Output ~ 0
+68_D8
+Text GLabel 4750 5350 0    50   Output ~ 0
+68_D9
+Text GLabel 4750 5250 0    50   Output ~ 0
+68_D10
+Text GLabel 4750 5150 0    50   Output ~ 0
+68_D11
+Text GLabel 4750 5050 0    50   Output ~ 0
+68_D12
+Text GLabel 4750 4950 0    50   Output ~ 0
+68_D13
+Text GLabel 4750 4850 0    50   Output ~ 0
+68_D14
+Text GLabel 4750 4750 0    50   Output ~ 0
+68_D15
 Text GLabel 5750 5450 2    50   Input ~ 0
-UD_D7
+BUS_DATA0
+Text GLabel 5750 5350 2    50   Input ~ 0
+BUS_DATA1
+Text GLabel 5750 5250 2    50   Input ~ 0
+BUS_DATA2
+Text GLabel 5750 5150 2    50   Input ~ 0
+BUS_DATA3
+Text GLabel 5750 5050 2    50   Input ~ 0
+BUS_DATA4
+Text GLabel 5750 4950 2    50   Input ~ 0
+BUS_DATA5
+Text GLabel 5750 4850 2    50   Input ~ 0
+BUS_DATA6
+Text GLabel 5750 4750 2    50   Input ~ 0
+BUS_DATA7
 Text GLabel 2650 5750 0    50   Input ~ 0
 FPGA_W
 Text GLabel 4750 5750 0    50   Input ~ 0
@@ -466,13 +466,13 @@ A4
 Text GLabel 4250 2350 2    50   Input ~ 0
 A7
 Text GLabel 3250 1950 0    50   Output ~ 0
-UD_LOWBYTE
+BUS_BYTESEL
 Text GLabel 3250 2050 0    50   Output ~ 0
-UD_R0
+BUS_REG_NUM0
 Text GLabel 3250 2150 0    50   Output ~ 0
-UD_R1
+BUS_REG_NUM1
 Text GLabel 3250 2250 0    50   Output ~ 0
-UD_R2
+BUS_REG_NUM2
 Text GLabel 8300 4750 0    50   Input ~ 0
 A6
 Text GLabel 7550 4750 2    50   3State ~ 0
@@ -482,11 +482,11 @@ OVPA
 Text GLabel 4250 2450 2    50   Input ~ 0
 FPGA_CS
 Text GLabel 3250 2450 0    50   Output ~ 0
-UD_CS
+BUS_SEL_N
 Text GLabel 4250 2550 2    50   Input ~ 0
 RnW
 Text GLabel 3250 2550 0    50   Output ~ 0
-UD_RnW
+BUS_RD_NWR
 Text GLabel 7550 5050 2    50   Output ~ 0
 FPGA_W
 Text GLabel 7550 5150 2    50   3State ~ 0
@@ -812,7 +812,7 @@ Connection ~ 2950 2950
 Wire Wire Line
 	2950 2950 2950 3300
 Text GLabel 3250 2650 0    50   Output ~ 0
-UD_RESET
+BUS_RESET
 Text GLabel 2000 3200 2    50   Output ~ 0
 AS
 Text GLabel 6550 5150 0    50   Input ~ 0
@@ -889,44 +889,41 @@ NoConn ~ 5650 1650
 Text GLabel 5650 1350 0    50   UnSpc ~ 0
 GND
 Text GLabel 5650 1550 0    50   UnSpc ~ 0
-UD_RESET
+BUS_RESET
+Text GLabel 5650 1750 0    50   UnSpc ~ 0
+BUS_SEL_N
 Text GLabel 5650 1850 0    50   UnSpc ~ 0
-UD_CS
-Text GLabel 5650 1950 0    50   UnSpc ~ 0
-UD_RnW
+BUS_RD_NWR
 Text GLabel 5650 2050 0    50   UnSpc ~ 0
 UD_5V
 Text GLabel 4950 2150 0    50   UnSpc ~ 0
 3V3
 Text GLabel 5650 2250 0    50   UnSpc ~ 0
 GND
+Text GLabel 5650 1950 0    50   Input ~ 0
+BUS_BYTESEL
 Text GLabel 5650 2350 0    50   Input ~ 0
-UD_LOWBYTE
+BUS_REG_NUM0
 Text GLabel 5650 2450 0    50   Input ~ 0
-UD_R0
+BUS_REG_NUM1
 Text GLabel 5650 2550 0    50   Input ~ 0
-UD_R1
-Text GLabel 5650 2650 0    50   Input ~ 0
-UD_R2
-NoConn ~ 3250 2350
-Text Notes 2550 2400 0    50   ~ 0
-Pin 6 has UD_R3
+BUS_REG_NUM2
 Text GLabel 5650 2950 0    50   BiDi ~ 0
-UD_D0
+BUS_DATA0
 Text GLabel 5650 3050 0    50   BiDi ~ 0
-UD_D1
+BUS_DATA1
 Text GLabel 5650 3150 0    50   BiDi ~ 0
-UD_D2
+BUS_DATA2
 Text GLabel 5650 3250 0    50   BiDi ~ 0
-UD_D3
+BUS_DATA3
 Text GLabel 5650 3350 0    50   BiDi ~ 0
-UD_D4
+BUS_DATA4
 Text GLabel 5650 3450 0    50   BiDi ~ 0
-UD_D5
+BUS_DATA5
 Text GLabel 5650 3550 0    50   BiDi ~ 0
-UD_D6
+BUS_DATA6
 Text GLabel 5650 3650 0    50   BiDi ~ 0
-UD_D7
+BUS_DATA7
 NoConn ~ 6500 1350
 NoConn ~ 6500 1450
 NoConn ~ 6500 1550
@@ -935,35 +932,35 @@ NoConn ~ 6500 1750
 NoConn ~ 6500 1850
 NoConn ~ 6500 2050
 Text GLabel 6500 2150 2    50   Output ~ 0
-HSYNC
+VGA_HS
 Text GLabel 6500 2250 2    50   Output ~ 0
-VSYNC
+VGA_VS
 Text GLabel 6500 2350 2    50   Output ~ 0
-RGB_R3
+VGA_R3
 Text GLabel 6500 2450 2    50   Output ~ 0
-RGB_G3
+VGA_G3
 Text GLabel 6500 2550 2    50   Output ~ 0
-RGB_B3
+VGA_B3
 Text GLabel 6500 2650 2    50   Output ~ 0
-RGB_R2
+VGA_R2
 Text GLabel 6500 2750 2    50   Output ~ 0
-RGB_G2
+VGA_G2
 Text GLabel 6500 2850 2    50   Output ~ 0
-RGB_B2
+VGA_B2
 Text GLabel 6500 2950 2    50   Output ~ 0
-RGB_R1
+VGA_R1
 Text GLabel 6500 3050 2    50   Output ~ 0
-RGB_G1
+VGA_G1
 Text GLabel 6500 3150 2    50   Output ~ 0
-RGB_B1
+VGA_B1
 Text GLabel 6500 3250 2    50   Output ~ 0
-RGB_R0
+VGA_R0
 Text GLabel 6500 3350 2    50   Output ~ 0
-RGB_G0
+VGA_G0
 Text GLabel 6500 3450 2    50   Output ~ 0
-RGB_B0
+VGA_B0
 Text GLabel 6500 3550 2    50   Output ~ 0
-HDMI_EN
+DVI_EN
 Text GLabel 6500 3650 2    50   Output ~ 0
 HDMI_CLK
 Connection ~ 10700 2300
@@ -972,7 +969,7 @@ Wire Wire Line
 Wire Wire Line
 	950  900  1500 900 
 $Comp
-L Connector_Generic:Conn_02x06_Top_Bottom J4
+L Connector_Generic:Conn_02x06_Odd_Even J4
 U 1 1 606C15FC
 P 7950 2000
 F 0 "J4" H 8000 2417 50  0000 C CNN
@@ -983,7 +980,7 @@ F 3 "~" H 7950 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x06_Top_Bottom J5
+L Connector_Generic:Conn_02x06_Odd_Even J5
 U 1 1 606C93D4
 P 7950 3100
 F 0 "J5" H 8000 3517 50  0000 C CNN
@@ -993,53 +990,53 @@ F 3 "~" H 7950 3100 50  0001 C CNN
 	1    7950 3100
 	1    0    0    -1  
 $EndComp
-Text GLabel 7750 1800 0    50   Input ~ 0
-RGB_B0
-Text GLabel 7750 1900 0    50   Input ~ 0
-RGB_B1
-Text GLabel 7750 2000 0    50   Input ~ 0
-RGB_B2
+Text GLabel 7750 2300 0    50   Input ~ 0
+VGA_B0
+Text GLabel 7750 2200 0    50   Input ~ 0
+VGA_B1
 Text GLabel 7750 2100 0    50   Input ~ 0
-RGB_B3
-Text GLabel 7750 2200 0    50   UnSpc ~ 0
+VGA_B2
+Text GLabel 7750 2000 0    50   Input ~ 0
+VGA_B3
+Text GLabel 7750 1900 0    50   UnSpc ~ 0
 GND
-Text GLabel 7750 2300 0    50   UnSpc ~ 0
+Text GLabel 7750 1800 0    50   UnSpc ~ 0
 3V3
-Text GLabel 7750 2900 0    50   Input ~ 0
-HSYNC
-Text GLabel 7750 3000 0    50   Input ~ 0
-VSYNC
-Text GLabel 7750 3300 0    50   UnSpc ~ 0
+Text GLabel 7750 3400 0    50   Input ~ 0
+VGA_HS
+Text GLabel 7750 3300 0    50   Input ~ 0
+VGA_VS
+Text GLabel 7750 3000 0    50   UnSpc ~ 0
 GND
-Text GLabel 7750 3400 0    50   UnSpc ~ 0
+Text GLabel 7750 2900 0    50   UnSpc ~ 0
 3V3
-Text GLabel 8250 1800 2    50   Input ~ 0
-RGB_R0
-Text GLabel 8250 1900 2    50   Input ~ 0
-RGB_R1
-Text GLabel 8250 2000 2    50   Input ~ 0
-RGB_R2
+Text GLabel 8250 2300 2    50   Input ~ 0
+VGA_R0
+Text GLabel 8250 2200 2    50   Input ~ 0
+VGA_R1
 Text GLabel 8250 2100 2    50   Input ~ 0
-RGB_R3
-Text GLabel 8250 2900 2    50   Input ~ 0
-RGB_G0
-Text GLabel 8250 3000 2    50   Input ~ 0
-RGB_G1
-Text GLabel 8250 3100 2    50   Input ~ 0
-RGB_G2
+VGA_R2
+Text GLabel 8250 2000 2    50   Input ~ 0
+VGA_R3
+Text GLabel 8250 3400 2    50   Input ~ 0
+VGA_G0
+Text GLabel 8250 3300 2    50   Input ~ 0
+VGA_G1
 Text GLabel 8250 3200 2    50   Input ~ 0
-RGB_G3
-Text GLabel 8250 2200 2    50   UnSpc ~ 0
+VGA_G2
+Text GLabel 8250 3100 2    50   Input ~ 0
+VGA_G3
+Text GLabel 8250 1900 2    50   UnSpc ~ 0
 GND
-Text GLabel 8250 2300 2    50   UnSpc ~ 0
+Text GLabel 8250 1800 2    50   UnSpc ~ 0
 3V3
-Text GLabel 8250 3300 2    50   UnSpc ~ 0
+Text GLabel 8250 3000 2    50   UnSpc ~ 0
 GND
-Text GLabel 8250 3400 2    50   UnSpc ~ 0
+Text GLabel 8250 2900 2    50   UnSpc ~ 0
 3V3
 Text Notes 6250 1400 2    50   ~ 0
 USB TOP
-Text Notes 8550 2200 3    50   ~ 0
+Text Notes 8750 2250 3    50   ~ 0
 VGA/HDMI RIGHT
 NoConn ~ 2000 2600
 $Comp
@@ -1062,9 +1059,9 @@ Wire Wire Line
 	5100 2150 5650 2150
 Text GLabel 1500 2400 0    50   Output ~ 0
 LDS
-Text GLabel 7750 3100 0    50   Input ~ 0
-HDMI_EN
 Text GLabel 7750 3200 0    50   Input ~ 0
+DVI_EN
+Text GLabel 7750 3100 0    50   Input ~ 0
 HDMI_CLK
 Text Notes 7250 3650 0    50   ~ 0
 TODO! Not certain the HDMI pins\nare correct for the actual hardware - Check this!
@@ -1138,9 +1135,9 @@ UD_IRQ
 Text GLabel 10600 5150 2    50   Output ~ 0
 UD_IRQ
 Text GLabel 10100 5150 0    50   Input ~ 0
-HSYNC
+VGA_HS
 Text GLabel 10100 5350 0    50   Input ~ 0
-VSYNC
+VGA_VS
 Text GLabel 10100 5250 0    50   UnSpc ~ 0
 GND
 Text GLabel 10100 5450 0    50   UnSpc ~ 0
@@ -1261,5 +1258,10 @@ Text GLabel 7950 1100 2    50   Input ~ 0
 GND
 Text GLabel 7950 1200 2    50   Input ~ 0
 GND
-NoConn ~ 5650 1750
+Text GLabel 3250 2350 0    50   Output ~ 0
+BUS_REG_NUM3
+Text GLabel 5650 2650 0    50   Input ~ 0
+BUS_REG_NUM3
+Text Notes 5550 1000 0    50   ~ 0
+All BUS_xxx signals are 3V3\nUpduino-compatible signals
 $EndSCHEMATC
