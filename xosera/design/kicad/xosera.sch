@@ -962,7 +962,7 @@ VGA_B0
 Text GLabel 6500 3550 2    50   Output ~ 0
 DVI_EN
 Text GLabel 6500 3650 2    50   Output ~ 0
-HDMI_CLK
+DV_CLK
 Connection ~ 10700 2300
 Wire Wire Line
 	10700 2300 10800 2300
@@ -1062,7 +1062,7 @@ LDS
 Text GLabel 7750 3200 0    50   Input ~ 0
 DVI_EN
 Text GLabel 7750 3100 0    50   Input ~ 0
-HDMI_CLK
+DV_CLK
 Text Notes 7250 3650 0    50   ~ 0
 TODO! Not certain the HDMI pins\nare correct for the actual hardware - Check this!
 $Comp
