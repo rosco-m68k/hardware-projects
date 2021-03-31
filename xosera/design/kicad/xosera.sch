@@ -455,23 +455,23 @@ Text Notes 8550 6050 0    50   ~ 0
 IC4 - DECODER
 Text GLabel 9300 4750 2    50   Output ~ 0
 SEL_1
-Text GLabel 4250 1950 2    50   Input ~ 0
+Text GLabel 4250 2500 2    50   Input ~ 0
 A1
-Text GLabel 4250 2050 2    50   Input ~ 0
+Text GLabel 4250 2600 2    50   Input ~ 0
 A2
-Text GLabel 4250 2150 2    50   Input ~ 0
+Text GLabel 4250 2700 2    50   Input ~ 0
 A3
-Text GLabel 4250 2250 2    50   Input ~ 0
+Text GLabel 4250 2800 2    50   Input ~ 0
 A4
-Text GLabel 4250 2350 2    50   Input ~ 0
+Text GLabel 4250 2900 2    50   Input ~ 0
 A7
-Text GLabel 3250 1950 0    50   Output ~ 0
+Text GLabel 3250 2500 0    50   Output ~ 0
 BUS_BYTESEL
-Text GLabel 3250 2050 0    50   Output ~ 0
+Text GLabel 3250 2600 0    50   Output ~ 0
 BUS_REG_NUM0
-Text GLabel 3250 2150 0    50   Output ~ 0
+Text GLabel 3250 2700 0    50   Output ~ 0
 BUS_REG_NUM1
-Text GLabel 3250 2250 0    50   Output ~ 0
+Text GLabel 3250 2800 0    50   Output ~ 0
 BUS_REG_NUM2
 Text GLabel 8300 4750 0    50   Input ~ 0
 A6
@@ -479,13 +479,13 @@ Text GLabel 7550 4750 2    50   3State ~ 0
 ODTACK
 Text GLabel 7550 4850 2    50   3State ~ 0
 OVPA
-Text GLabel 4250 2450 2    50   Input ~ 0
+Text GLabel 4250 3000 2    50   Input ~ 0
 FPGA_CS
-Text GLabel 3250 2450 0    50   Output ~ 0
+Text GLabel 3250 3000 0    50   Output ~ 0
 BUS_SEL_N
-Text GLabel 4250 2550 2    50   Input ~ 0
+Text GLabel 4250 3100 2    50   Input ~ 0
 RnW
-Text GLabel 3250 2550 0    50   Output ~ 0
+Text GLabel 3250 3100 0    50   Output ~ 0
 BUS_RD_NWR
 Text GLabel 7550 5050 2    50   Output ~ 0
 FPGA_W
@@ -766,52 +766,52 @@ OVPA
 $Comp
 L 74xx:74LS245 IC5
 U 1 1 6060561D
-P 3750 2450
-F 0 "IC5" H 3750 3431 50  0000 C CNN
-F 1 "74HCT245" H 3750 3340 50  0000 C CNN
-F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 3750 2450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 3750 2450 50  0001 C CNN
-	1    3750 2450
+P 3750 3000
+F 0 "IC5" H 3750 3981 50  0000 C CNN
+F 1 "74HCT245" H 3750 3890 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 3750 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 3750 3000 50  0001 C CNN
+	1    3750 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 1650 4100 1650
+	3750 2200 4100 2200
 Wire Wire Line
-	4100 1650 4100 1550
-Text GLabel 4100 1550 1    50   Input ~ 0
+	4100 2200 4100 2100
+Text GLabel 4100 2100 1    50   Input ~ 0
 3V3
 Wire Wire Line
-	3750 3250 3750 3300
+	3750 3800 3750 3850
 $Comp
 L power:GND #PWR0101
 U 1 1 6061C071
-P 3750 3400
-F 0 "#PWR0101" H 3750 3150 50  0001 C CNN
-F 1 "GND" H 3755 3227 50  0000 C CNN
-F 2 "" H 3750 3400 50  0001 C CNN
-F 3 "" H 3750 3400 50  0001 C CNN
-	1    3750 3400
+P 3750 3950
+F 0 "#PWR0101" H 3750 3700 50  0001 C CNN
+F 1 "GND" H 3755 3777 50  0000 C CNN
+F 2 "" H 3750 3950 50  0001 C CNN
+F 3 "" H 3750 3950 50  0001 C CNN
+	1    3750 3950
 	1    0    0    -1  
 $EndComp
-Text GLabel 4250 2650 2    50   Input ~ 0
+Text GLabel 4250 3200 2    50   Input ~ 0
 RESET
 Text GLabel 2000 3700 2    50   3State ~ 0
 DTACK
 Wire Wire Line
-	3250 2850 2950 2850
+	3250 3400 2950 3400
 Wire Wire Line
-	2950 2850 2950 2950
+	2950 3400 2950 3500
 Wire Wire Line
-	2950 3300 3750 3300
-Connection ~ 3750 3300
+	2950 3850 3750 3850
+Connection ~ 3750 3850
 Wire Wire Line
-	3750 3300 3750 3400
+	3750 3850 3750 3950
 Wire Wire Line
-	3250 2950 2950 2950
-Connection ~ 2950 2950
+	3250 3500 2950 3500
+Connection ~ 2950 3500
 Wire Wire Line
-	2950 2950 2950 3300
-Text GLabel 3250 2650 0    50   Output ~ 0
+	2950 3500 2950 3850
+Text GLabel 3250 3200 0    50   Output ~ 0
 BUS_RESET
 Text GLabel 2000 3200 2    50   Output ~ 0
 AS
@@ -1258,10 +1258,91 @@ Text GLabel 7950 1100 2    50   Input ~ 0
 GND
 Text GLabel 7950 1200 2    50   Input ~ 0
 GND
-Text GLabel 3250 2350 0    50   Output ~ 0
+Text GLabel 3250 2900 0    50   Output ~ 0
 BUS_REG_NUM3
 Text GLabel 5650 2650 0    50   Input ~ 0
 BUS_REG_NUM3
 Text Notes 5550 1000 0    50   ~ 0
 All BUS_xxx signals are 3V3\nUpduino-compatible signals
+$Comp
+L Connector:Conn_01x08_Male TP1
+U 1 1 60633B4A
+P 850 4800
+F 0 "TP1" H 958 5281 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 958 5190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 850 4800 50  0001 C CNN
+F 3 "~" H 850 4800 50  0001 C CNN
+	1    850  4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male TP2
+U 1 1 6063609C
+P 850 5800
+F 0 "TP2" H 958 6281 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 958 6190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 850 5800 50  0001 C CNN
+F 3 "~" H 850 5800 50  0001 C CNN
+	1    850  5800
+	1    0    0    -1  
+$EndComp
+Text GLabel 1050 5200 2    50   Input ~ 0
+68_D8
+Text GLabel 1050 5100 2    50   Input ~ 0
+68_D9
+Text GLabel 1050 5000 2    50   Input ~ 0
+68_D10
+Text GLabel 1050 4900 2    50   Input ~ 0
+68_D11
+Text GLabel 1050 4800 2    50   Input ~ 0
+68_D12
+Text GLabel 1050 4700 2    50   Input ~ 0
+68_D13
+Text GLabel 1050 4600 2    50   Input ~ 0
+68_D14
+Text GLabel 1050 4500 2    50   Input ~ 0
+68_D15
+Text GLabel 1050 5500 2    50   Input ~ 0
+BUS_DATA7
+Text GLabel 1050 5600 2    50   Input ~ 0
+BUS_DATA6
+Text GLabel 1050 5700 2    50   Input ~ 0
+BUS_DATA5
+Text GLabel 1050 5800 2    50   Input ~ 0
+BUS_DATA4
+Text GLabel 1050 5900 2    50   Input ~ 0
+BUS_DATA3
+Text GLabel 1050 6000 2    50   Input ~ 0
+BUS_DATA2
+Text GLabel 1050 6100 2    50   Input ~ 0
+BUS_DATA1
+Text GLabel 1050 6200 2    50   Input ~ 0
+BUS_DATA0
+$Comp
+L Connector:Conn_01x08_Male TP3
+U 1 1 6064AB6C
+P 3400 1250
+F 0 "TP3" H 3508 1731 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 3508 1640 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3400 1250 50  0001 C CNN
+F 3 "~" H 3400 1250 50  0001 C CNN
+	1    3400 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3600 950  2    50   Input ~ 0
+BUS_BYTESEL
+Text GLabel 3600 1050 2    50   Input ~ 0
+BUS_REG_NUM0
+Text GLabel 3600 1150 2    50   Input ~ 0
+BUS_REG_NUM1
+Text GLabel 3600 1250 2    50   Input ~ 0
+BUS_REG_NUM2
+Text GLabel 3600 1350 2    50   Input ~ 0
+BUS_REG_NUM3
+Text GLabel 3600 1450 2    50   Input ~ 0
+BUS_SEL_N
+Text GLabel 3600 1550 2    50   Input ~ 0
+BUS_RD_NWR
+Text GLabel 3600 1650 2    50   Input ~ 0
+BUS_RESET
 $EndSCHEMATC
