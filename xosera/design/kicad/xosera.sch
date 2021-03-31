@@ -482,7 +482,7 @@ OVPA
 Text GLabel 4250 3000 2    50   Input ~ 0
 FPGA_CS
 Text GLabel 3250 3000 0    50   Output ~ 0
-BUS_SEL_N
+BUS_CS_N
 Text GLabel 4250 3100 2    50   Input ~ 0
 RnW
 Text GLabel 3250 3100 0    50   Output ~ 0
@@ -812,7 +812,7 @@ Connection ~ 2950 3500
 Wire Wire Line
 	2950 3500 2950 3850
 Text GLabel 3250 3200 0    50   Output ~ 0
-BUS_RESET
+BUS_RESET_N
 Text GLabel 2000 3200 2    50   Output ~ 0
 AS
 Text GLabel 6550 5150 0    50   Input ~ 0
@@ -889,9 +889,9 @@ NoConn ~ 5650 1650
 Text GLabel 5650 1350 0    50   UnSpc ~ 0
 GND
 Text GLabel 5650 1550 0    50   UnSpc ~ 0
-BUS_RESET
+BUS_RESET_N
 Text GLabel 5650 1750 0    50   UnSpc ~ 0
-BUS_SEL_N
+BUS_CS_N
 Text GLabel 5650 1850 0    50   UnSpc ~ 0
 BUS_RD_NWR
 Text GLabel 5650 2050 0    50   UnSpc ~ 0
@@ -960,7 +960,7 @@ VGA_G0
 Text GLabel 6500 3450 2    50   Output ~ 0
 VGA_B0
 Text GLabel 6500 3550 2    50   Output ~ 0
-DVI_EN
+DV_EN
 Text GLabel 6500 3650 2    50   Output ~ 0
 DV_CLK
 Connection ~ 10700 2300
@@ -1060,7 +1060,7 @@ Wire Wire Line
 Text GLabel 1500 2400 0    50   Output ~ 0
 LDS
 Text GLabel 7750 3200 0    50   Input ~ 0
-DVI_EN
+DV_EN
 Text GLabel 7750 3100 0    50   Input ~ 0
 DV_CLK
 Text Notes 7250 3650 0    50   ~ 0
@@ -1340,9 +1340,9 @@ BUS_REG_NUM2
 Text GLabel 3600 1350 2    50   Input ~ 0
 BUS_REG_NUM3
 Text GLabel 3600 1450 2    50   Input ~ 0
-BUS_SEL_N
+BUS_CS_N
 Text GLabel 3600 1550 2    50   Input ~ 0
 BUS_RD_NWR
 Text GLabel 3600 1650 2    50   Input ~ 0
-BUS_RESET
+BUS_RESET_N
 $EndSCHEMATC
