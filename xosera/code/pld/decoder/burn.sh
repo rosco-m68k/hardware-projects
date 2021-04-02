@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
 
-minipro -p ATF16V8BQL -w ic4_dec.jed
+minipro -p ATF16V8BQL -w ic3_dec.jed
 

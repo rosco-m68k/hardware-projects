@@ -190,10 +190,10 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 5250 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Logic_Programmable:GAL16V8 IC3
+L Logic_Programmable:GAL16V8 IC4
 U 1 1 5F93B8A2
 P 7050 5250
-F 0 "IC3" H 7050 6131 50  0000 C CNN
+F 0 "IC4" H 7050 6131 50  0000 C CNN
 F 1 "ATF16V8BQL" H 7050 6040 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 7050 5250 50  0001 C CNN
 F 3 "" H 7050 5250 50  0001 C CNN
@@ -421,10 +421,10 @@ FPGA_R
 Text GLabel 6550 4750 0    50   Input ~ 0
 SEL_1
 $Comp
-L Logic_Programmable:GAL16V8 IC4
+L Logic_Programmable:GAL16V8 IC3
 U 1 1 5F979042
 P 8800 5250
-F 0 "IC4" H 8800 6131 50  0000 C CNN
+F 0 "IC3" H 8800 6131 50  0000 C CNN
 F 1 "ATF16V8BQL" H 8800 6040 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 8800 5250 50  0001 C CNN
 F 3 "" H 8800 5250 50  0001 C CNN
@@ -452,7 +452,7 @@ Wire Wire Line
 	7050 4550 8800 4550
 Connection ~ 7050 4550
 Text Notes 8550 6050 0    50   ~ 0
-IC4 - DECODER
+IC3 - DECODER
 Text GLabel 9300 4750 2    50   Output ~ 0
 SEL_1
 Text GLabel 4250 2500 2    50   Input ~ 0
@@ -735,7 +735,7 @@ NoConn ~ 6550 5350
 NoConn ~ 6550 5250
 NoConn ~ 7550 4950
 Text Notes 6750 6050 0    50   ~ 0
-IC3 - GLUE
+IC4 - GLUE
 Text GLabel 6550 5450 0    50   Input ~ 0
 RnW
 Text GLabel 6550 4850 0    50   Input ~ 0
