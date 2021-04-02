@@ -960,7 +960,7 @@ VGA_G0
 Text GLabel 6500 3450 2    50   Output ~ 0
 VGA_B0
 Text GLabel 6500 3550 2    50   Output ~ 0
-DV_EN
+DV_DE
 Text GLabel 6500 3650 2    50   Output ~ 0
 DV_CLK
 Connection ~ 10700 2300
@@ -1060,7 +1060,7 @@ Wire Wire Line
 Text GLabel 1500 2400 0    50   Output ~ 0
 LDS
 Text GLabel 7750 3200 0    50   Input ~ 0
-DV_EN
+DV_DE
 Text GLabel 7750 3100 0    50   Input ~ 0
 DV_CLK
 Text Notes 7250 3650 0    50   ~ 0
