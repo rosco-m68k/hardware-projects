@@ -231,7 +231,7 @@ SETUP_VRAM_WRITE:
 ;   D0.B  Possibly trashed
 ;
 ; Register alloc in function:
-;   A0    Xosera data register
+;   A0    Xosera base
 ;   A1    Buffer
 ;   D1.W  CURPOS (buffer pointer)
 ;   D2.W  DISPLAYSTART (start pointer)
@@ -356,12 +356,12 @@ SZHEADER      dc.b    "                                ___ ___ _",13
               dc.b    " ___ ___ ___ __ ___       _____|  _| . | |_",13
               dc.b    "|  _| . |_ -| _| . |     |     | . | . | '_|",13
               dc.b    "|_| |___|___|__|___|_____|_|_|_|___|___|_,_|",13
-              dc.b    "+Xosera v0.01      |_____|Firmware 1.3-BETA1",13
+              dc.b    "Xosera v0.01       |_____|Firmware 1.3-BETA1",13
               dc.b    13,13, 0
 SZ_CR         dc.b    $D, 0
 
     section .bss
 CURPOS        dc.w      0 
 DISPLAYSTART  dc.w      0
-BUFFER        ds.b      400000
+BUFFER        ds.b      4000
 
