@@ -12,9 +12,11 @@ TERMHEIGHT  equ   30
 DISPLAYSIZE equ   TERMWIDTH*TERMHEIGHT
 
 ; Attribute / Char pairs used for various things
-CLEARCHAR   equ   $0000                   ; Clear screen / empty space
+CLEARCHAR   equ   $08B2                   ; Clear screen / empty space
+DCLEARCHAR  equ   $40B2                   ; Clear screen (when dead)
 BORDERCHAR  equ   $06DB                   ; Playfield border
-SNAKECHAR   equ   $03DB                   ; Snake
+DBORDERCHAR equ   $0CDB                   ; Playfield border (when dead)
+SNAKECHAR   equ   $02DB                   ; Snake
 
 ; Each segment of the snake is represented by a single DWORD,
 ; the four bytes are arranged as follows:
@@ -35,6 +37,7 @@ kmain::
     lea     R_XVID_BASE,A0
     move.w  #CLEARCHAR,D0
     bsr.w   CLEAR_SCREEN
+    move.w  #BORDERCHAR,D0
     bsr.w   DRAW_PLAYFIELD
 
     lea     SNAKEARRAY,A1
@@ -51,7 +54,11 @@ kmain::
     bsr.w   COLLIDE_SNAKE
     tst.b   D1
     beq.s   .MGL_START
-
+    
+    move.w  #DCLEARCHAR,D0
+    bsr.w   CLEAR_SCREEN
+    move.w  #DBORDERCHAR,D0
+    bsr.w   DRAW_PLAYFIELD
     bsr.w   GAME_OVER
     rts
 
@@ -293,7 +300,7 @@ CONTROL_SNAKE:
     bra.s   .DONE
 
 .CHECKDOWN
-    cmp.b   #'s',D1                     ; Is it a 'a'?
+    cmp.b   #'s',D1                     ; Is it a 's'?
     bne.s   .CHECKLEFT                  ; Nope
 
     move.b  #3,(SNAKE_D,A1)             ; Yes, go down
@@ -335,12 +342,12 @@ CLEAR_SCREEN:
     
 ; Args: 
 ;   A0   - Xosera base
+;   D0.W - Attribute & character word
 ;
 DRAW_PLAYFIELD:
     movem.w D0-D2,-(A7)
     clr.w   D1
     movep.w D1,(R_XVID_WR_ADDR,A0)      ; Start writing at 0
-    move.w  #BORDERCHAR,D0
 
     bsr.s   .DRAWLINE                   ; Branch to line func for top
 
@@ -374,7 +381,7 @@ DRAW_PLAYFIELD:
     rts
 
 GAME_OVER:
-    move.w  #1528,D1
+    move.w  #1525,D1
     movep.w D1,(R_XVID_WR_ADDR,A0)      ; Set write address
 
     lea     GAMEOVER,A1
@@ -421,12 +428,15 @@ SNAKEARRAY_TAIL:
     dc.b    $2                          ; Moving up
     dc.b    $04                         ; No prev, next is DW4.
 
+    section .rodata
     ifd DEBUG
 SZGOTKEY  dc.b  "GOTKEY"
     endif
 
     align 2
-GAMEOVER  dc.b  $40,"G",$40," ",$40,"A",$40," ",$40,"M",$40," ",$40,"E",$40," ",$40," ",$40," "
+GAMEOVER  dc.b  $40,$b1,$40,$b0
+          dc.b  $40,"G",$40," ",$40,"A",$40," ",$40,"M",$40," ",$40,"E",$40," ",$40," ",$40," "
           dc.b  $40,"O",$40," ",$40,"V",$40," ",$40,"E",$40," ",$40,"R"
+          dc.b  $40,$b0,$40,$b1
 GAMEOVER_END
 
