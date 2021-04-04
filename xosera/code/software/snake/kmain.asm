@@ -44,7 +44,8 @@ kmain::
 .MGL:
     move.w  #CLEARCHAR,D0
     bsr.s   DRAW_SNAKE
-    
+
+    bsr.w   CONTROL_SNAKE    
     bsr.s   MOVE_SNAKE
 
     bsr.w   COLLIDE_SNAKE
@@ -261,6 +262,61 @@ COLLIDE_SNAKE:
     rts
 
 ; Args: 
+;   A0    - Xosera base
+;   A1    - Snake head
+;
+CONTROL_SNAKE:
+    movem.l D0-D1/A0-A2,-(A7)     
+
+    move.l  #7,D0                       ; Check input
+    trap    #15
+
+    tst.b   D1                          ; Anything pending?
+    beq.s   .DONE                       ; Nope...
+
+    ifd DEBUG
+    movem.l D0-D2/A0-A2,-(A7)
+    move.l  #0,D0
+    move.w  #6,D1
+    lea     SZGOTKEY,A1
+    trap    #15
+    movem.l (A7)+,D0-D2/A0-A2
+    endif
+
+    move.l  #5,D0                       ; Yes! Read it
+    trap    #15
+
+    cmp.b   #'w',D1                     ; Is it a 'w'?
+    bne.s   .CHECKDOWN                  ; Nope
+
+    move.b  #2,(SNAKE_D,A1)             ; Yes, go up
+    bra.s   .DONE
+
+.CHECKDOWN
+    cmp.b   #'s',D1                     ; Is it a 'a'?
+    bne.s   .CHECKLEFT                  ; Nope
+
+    move.b  #3,(SNAKE_D,A1)             ; Yes, go down
+    bra.s   .DONE
+    
+.CHECKLEFT
+    cmp.b   #'a',D1                     ; Is it a 'a'?
+    bne.s   .CHECKRIGHT                 ; Nope
+
+    move.b  #0,(SNAKE_D,A1)             ; Yes, go left
+    bra.s   .DONE
+
+.CHECKRIGHT
+    cmp.b   #'d',D1                     ; Is it a 'd'?
+    bne.s   .DONE                       ; Nope 
+
+    move.b  #1,(SNAKE_D,A1)             ; Yes, go right
+
+.DONE
+    movem.l (A7)+,D0-D1/A0-A2
+    rts
+    
+; Args: 
 ;   A0   - Xosera base
 ;   D0.W - Clear attr / char
 ;
@@ -365,7 +421,10 @@ SNAKEARRAY_TAIL:
     dc.b    $2                          ; Moving up
     dc.b    $04                         ; No prev, next is DW4.
 
-SZDONE    dc.b  "Done", 0
+    ifd DEBUG
+SZGOTKEY  dc.b  "GOTKEY"
+    endif
+
     align 2
 GAMEOVER  dc.b  $40,"G",$40," ",$40,"A",$40," ",$40,"M",$40," ",$40,"E",$40," ",$40," ",$40," "
           dc.b  $40,"O",$40," ",$40,"V",$40," ",$40,"E",$40," ",$40,"R"
