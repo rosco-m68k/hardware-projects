@@ -2,10 +2,10 @@
 
 Pin 19 = /SEL         XOR = 0   AC1 = 1
   0  ---- ---- ---- ---- ---- ---- ---- ----
-  1  -xx- -x-x -x-x -x-x -xx- -x-x -x-x -x-x
-  2  -xx- -x-x -x-x -xx- -x-x -x-x -x-x -x-x
-  3  -xx- -x-x -x-x -xx- -xx- -x-x -x-x -x-x
-  4  -xx- -x-x -xx- -x-x -x-x -x-x -x-x -x-x
+  1  x--x -x-x -xx- -x-x -xx- -x-x -x-x -x-x
+  2  x--x -x-x -xx- -xx- -x-x -x-x -x-x -x-x
+  3  x--x -x-x -xx- -xx- -xx- -x-x -x-x -x-x
+  4  x-x- -x-x -x-x -x-x -x-x -x-x -x-x -x-x
   5  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   6  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   7  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
