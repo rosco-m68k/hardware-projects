@@ -1,0 +1,22 @@
+GAL16V8
+UARTGLUE
+
+IOSEL  UDS    FC0    FC1    FC2    IRQ    A1    A2    A3    GND
+NC     NC     SELIN  VPA    IACK   PPVPA  NC    NC    NC    VCC
+
+/SELIN     = /IOSEL * /UDS
+/PPVPA     = /IRQ * FC0 * FC1 * FC2 * A1 * /A2 * A3
+VPA.T      = GND
+VPA.E      = /PPVPA
+IACK       = VCC
+
+DESCRIPTION
+
+MC68681 DUART Select / IACK glue
+
+Note: in this version, IACK is held high and legacy IACK cycles used 
+via VPA. The low address bits are factored in to only acknowledge
+the IRQ used by the DUART.
+
+Copyright (c)2020 Ross Bamford. See LICENSE.
+
