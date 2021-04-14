@@ -23,7 +23,7 @@ DWDISPLAYSIZE     equ   DISPLAYSIZE/4
 ; Initialize the console
 XVID_CON_INIT::
     movem.l D0-D1/A0-A1,-(A7)
-    move.l  #R_XVID_BASE,A0                   ; Use A0 as port base register
+    move.l  #XVID_BASE,A0                   ; Use A0 as port base register
 
     ori.w   #$0200,SR                         ; No interrupts during init...
 
@@ -162,7 +162,7 @@ BUFFERFLIP:
 
     ; Set up to write VRAM at 0x0
     clr.w   D1
-    movep.w D1,(R_XVID_WR_ADDR,A0)            ; Setup VRAM write
+    movep.w D1,(XVID_WR_ADDR,A0)            ; Setup VRAM write
     
 .GOGOGO    
     move.w  DISPLAYSTART,D0
@@ -173,7 +173,7 @@ BUFFERFLIP:
     clr.w   D2
     move.b  (A1,D0),D2
     or.w    #$1f00,D2
-    movep.w D2,(R_XVID_DATA,A0)
+    movep.w D2,(XVID_DATA,A0)
     addq.w  #1,D0
     cmpi.w  #DISPLAYSIZE,D0
     bne.s   .COPY
@@ -217,7 +217,7 @@ SETUP_VRAM_WRITE:
     addi.w  #DISPLAYSIZE,D3
 
 .WRITEVRAM
-    movep.w D3,(R_XVID_WR_ADDR,A0)       ; Setup VRAM write
+    movep.w D3,(XVID_WR_ADDR,A0)       ; Setup VRAM write
     move.w  (A7)+,D3
     rts
 
@@ -246,7 +246,7 @@ XVID_CON_PUTCHAR::
 .NOTIGNORED
     movem.l D1-D2/A0-A1,-(A7)
     
-    move.l  #R_XVID_BASE,A0               ; Use A0 as Xosera base
+    move.l  #XVID_BASE,A0               ; Use A0 as Xosera base
     move.w  CURPOS,D1                     ; Load current pointer
  
     ; Is this a carriage-return?
@@ -286,7 +286,7 @@ XVID_CON_PUTCHAR::
     bsr.w   SETUP_VRAM_WRITE              ; Clear from VRAM
 
     move.w  #$1f20,D0
-    movep.w D0,(R_XVID_DATA,A0)           ; Overwrite character
+    movep.w D0,(XVID_DATA,A0)           ; Overwrite character
 
     andi.w  #~$0200,SR                    ; Go ahead with the interrupts...
     move.b  #0,(A1,D1)                    ; Clear from buffer
@@ -308,7 +308,7 @@ XVID_CON_PUTCHAR::
 
     and.w   #$00FF,D0
     or.w    #$1F00,D0
-    movep.w D0,(R_XVID_DATA,A0)           ; And write,
+    movep.w D0,(XVID_DATA,A0)           ; And write,
     andi.w  #~$0200,SR                    ; Go ahead with the interrupts...
     
     addq.w  #1,D1

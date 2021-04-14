@@ -20,10 +20,10 @@ kmain::
     clr.l   D1
     trap    #15
 
-    move.l  #R_XVID_BASE,A0           ; Load base address
+    move.l  #XVID_BASE,A0           ; Load base address
     clr.w   D0
-    movep.w D0,(R_XVID_WR_ADDR,A0)
-    add.l   #R_XVID_DATA,A0           ; Point directly to data reg
+    movep.w D0,(XVID_WR_ADDR,A0)
+    add.l   #XVID_DATA,A0           ; Point directly to data reg
     move.l  #$40c,A1                  ; Reload this as e68k is _still_ trashing it :(
 
     move.w  #32768,D0

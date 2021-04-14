@@ -7,16 +7,16 @@
     include "../xosera_equates.asm"
 
 kmain::
-    move.l  #R_XVID_BASE,A0           ; Load base address
+    move.l  #XVID_BASE,A0           ; Load base address
     clr.l   D0
     clr.l   D1
 
 .LOOP:
     move.w  #$aaaa,D0
-    movep.w D1,(R_XVID_WR_ADDR,A0)
-    movep.w D0,(R_XVID_DATA,A0)
-    movep.w D1,(R_XVID_RD_ADDR,A0)
-    movep.w (R_XVID_DATA,A0),D0
+    movep.w D1,(XVID_WR_ADDR,A0)
+    movep.w D0,(XVID_DATA,A0)
+    movep.w D1,(XVID_RD_ADDR,A0)
+    movep.w (XVID_DATA,A0),D0
     addi.w  #1,D1
     cmp.w   #8000,D1
     blt.s   .NORESET

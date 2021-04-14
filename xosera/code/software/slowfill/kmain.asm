@@ -7,15 +7,14 @@
     include "../xosera_equates.asm"
 
 kmain::
-    move.l  #R_XVID_BASE,A0           ; Load base address
+    move.l  #XVID_BASE,A0             ; Load base address
     move.l  #CHARS,A1                 ; Load character pointer
 
 .MAINLOOP
     move.l  #3180,D1                  ; 106*30 iterations...
-    move.l  #1000,D1                  ; 106*30 iterations...
     move.w  #0000,D0                  ; Start at address 0
-    movep.w D0,(R_XVID_WR_ADDR,A0)    
-    move.b  #$1e,(R_XVID_DATA,A0)     ; Set text attribute
+    movep.w D0,(XVID_WR_ADDR,A0)    
+    move.b  #$1e,(XVID_DATA,A0)       ; Set text attribute
 
     bra.s   .NEXTCHARS
 
@@ -23,7 +22,7 @@ kmain::
     clr.w   D0
     move.b  (A1),D0
     ori.w   #$1f00,D0     
-    movep.w D0,(R_XVID_DATA,A0)       ; Prints char
+    movep.w D0,(XVID_DATA,A0)         ; Prints char
 
 .NEXTCHARS
     dbra    D1,.CHARSLOOP
@@ -67,6 +66,6 @@ kmain::
     bra.s   .MAINLOOP 
 
     section .data
-CHARS     dc.b  "dfhj"
+CHARS     dc.b  "Xosera"
 CHARSEND
 

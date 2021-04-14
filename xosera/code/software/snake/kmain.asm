@@ -34,7 +34,7 @@ SNAKE_D     equ   2
 SNAKE_N     equ   3
  
 kmain::
-    lea     R_XVID_BASE,A0
+    lea     XVID_BASE,A0
     move.w  #CLEARCHAR,D0
     bsr.w   CLEAR_SCREEN
     move.w  #BORDERCHAR,D0
@@ -94,8 +94,8 @@ DRAW_SNAKE:
     mulu.w  #TERMWIDTH,D1               ; Multiply line length
     move.b  (SNAKE_X,A2),D2             ; Get X pos
     add.w   D2,D1                       ; Add it
-    movep.w D1,(R_XVID_WR_ADDR,A0)      ; Set write address
-    movep.w D0,(R_XVID_DATA,A0)         ; And draw segment
+    movep.w D1,(XVID_WR_ADDR,A0)        ; Set write address
+    movep.w D0,(XVID_DATA,A0)           ; And draw segment
 
     ifd DEBUG
     bsr.s   .PRINTSEGADDR
@@ -261,8 +261,8 @@ COLLIDE_SNAKE:
     mulu.w  #TERMWIDTH,D1               ; Multiply line length
     move.b  (SNAKE_X,A1),D2             ; Get X pos
     add.w   D2,D1                       ; Add it
-    movep.w D1,(R_XVID_RD_ADDR,A0)      ; Set read address
-    movep.w (R_XVID_DATA,A0),D1         ; And read it
+    movep.w D1,(XVID_RD_ADDR,A0)        ; Set read address
+    movep.w (XVID_DATA,A0),D1           ; And read it
 
     eor.w   #CLEARCHAR,D1
     move.l  (A7)+,D2
@@ -330,11 +330,11 @@ CONTROL_SNAKE:
 CLEAR_SCREEN:
     move.w  D1,-(A7)                    ; Stash D1
     clr.w   D1
-    movep.w D1,(R_XVID_WR_ADDR,A0)      ; Start writing at 0
+    movep.w D1,(XVID_WR_ADDR,A0)        ; Start writing at 0
     move.w  #DISPLAYSIZE,D1
     bra.s   .LOOP
 .LOOPBODY
-    movep.w D0,(R_XVID_DATA,A0)         ; Clear attr and char
+    movep.w D0,(XVID_DATA,A0)           ; Clear attr and char
 .LOOP
     dbra.w  D1,.LOOPBODY
     move.w  (A7)+,D1
@@ -347,7 +347,7 @@ CLEAR_SCREEN:
 DRAW_PLAYFIELD:
     movem.w D0-D2,-(A7)
     clr.w   D1
-    movep.w D1,(R_XVID_WR_ADDR,A0)      ; Start writing at 0
+    movep.w D1,(XVID_WR_ADDR,A0)        ; Start writing at 0
 
     bsr.s   .DRAWLINE                   ; Branch to line func for top
 
@@ -357,11 +357,11 @@ DRAW_PLAYFIELD:
     bra.s   .SIDELINE_LOOP
 .SIDELINE_LOOPBODY
     move.w  #TERMWIDTH-1,D2
-    movep.w D2,(R_XVID_WR_INC,A0)       ; Set incremement to whole line
-    movep.w D0,(R_XVID_DATA,A0)         ; Write left border...
+    movep.w D2,(XVID_WR_INC,A0)         ; Set incremement to whole line
+    movep.w D0,(XVID_DATA,A0)           ; Write left border...
     move.w  #1,D2
-    movep.w D2,(R_XVID_WR_INC,A0)       ; Increment back to 1
-    movep.w D0,(R_XVID_DATA,A0)         ; ... and write right border
+    movep.w D2,(XVID_WR_INC,A0)         ; Increment back to 1
+    movep.w D0,(XVID_DATA,A0)           ; ... and write right border
 .SIDELINE_LOOP
     dbra.w  D1,.SIDELINE_LOOPBODY
 
@@ -375,14 +375,14 @@ DRAW_PLAYFIELD:
     move.w  #TERMWIDTH,D1
     bra.s   .DRAWLINE_LOOP
 .DRAWLINE_LOOPBODY
-    movep.w D0,(R_XVID_DATA,A0)         ; Write border char
+    movep.w D0,(XVID_DATA,A0)           ; Write border char
 .DRAWLINE_LOOP
     dbra.w  D1,.DRAWLINE_LOOPBODY
     rts
 
 GAME_OVER:
     move.w  #1525,D1
-    movep.w D1,(R_XVID_WR_ADDR,A0)      ; Set write address
+    movep.w D1,(XVID_WR_ADDR,A0)        ; Set write address
 
     lea     GAMEOVER,A1
 .LOOP
@@ -390,7 +390,7 @@ GAME_OVER:
     beq.s   .DONE
   
     move.w  (A1)+,D1 
-    movep.w D1,(R_XVID_DATA,A0)       ; Write next word
+    movep.w D1,(XVID_DATA,A0)           ; Write next word
     bra.s   .LOOP
 .DONE    
     rts 
