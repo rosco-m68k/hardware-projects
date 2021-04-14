@@ -1,0 +1,16 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"J9";"PinHeader_1x04_P2.54mm_Vertical";1;"Conn_01x04_Male";;;
+2;"J3";"PinSocket_1x24_P2.54mm_Vertical";1;"Upduino_RHS";;;
+3;"J2";"PinSocket_1x24_P2.54mm_Vertical";1;"Upduino_LHS";;;
+4;"TP3,TP2,TP1";"PinHeader_1x08_P2.54mm_Vertical";3;"Conn_01x08_Male";;;
+5;"J1";"pin-2X32";1;"Conn_02x32_Odd_Even";;;
+6;"J5";"PinSocket_2x06_P2.54mm_Horizontal";1;"PMOD_BOTTOM";;;
+7;"J4";"PinSocket_2x06_P2.54mm_Horizontal";1;"PMOD_TOP";;;
+8;"JP6,JP5,JP4,JP3,JP2,JP1";"PinHeader_1x02_P2.54mm_Vertical";6;"Jumper";;;
+9;"C6,C11,C10,C9,C5,C4,C3,C2,C1";"C2.5-3";9;"100nF";;;
+10;"R8,R7,R6,R5,R4,R3,R2,R1";"R-0207_10";8;"R";;;
+11;"J8,J7,J6";"PinHeader_2x04_P2.54mm_Vertical";3;"Conn_02x04_Counter_Clockwise";;;
+12;"IC5,IC2,IC1";"DIP-20_W7.62mm_Socket_LongPads";3;"74HCT245";;;
+13;"IC3,IC4";"DIP-20_W7.62mm_Socket_LongPads";2;"ATF16V8BQL";;;
+14;"C8";"CP_Radial_D6.3mm_P2.50mm";1;"220uF";;;
+15;"C7";"CP_Radial_D5.0mm_P2.50mm";1;"100uF";;;
