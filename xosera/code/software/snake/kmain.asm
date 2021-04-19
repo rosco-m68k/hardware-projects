@@ -12,11 +12,11 @@ TERMHEIGHT  equ   30
 DISPLAYSIZE equ   TERMWIDTH*TERMHEIGHT
 
 ; Attribute / Char pairs used for various things
-CLEARCHAR   equ   $08B2                   ; Clear screen / empty space
-DCLEARCHAR  equ   $40B2                   ; Clear screen (when dead)
-BORDERCHAR  equ   $06DB                   ; Playfield border
-DBORDERCHAR equ   $0CDB                   ; Playfield border (when dead)
-SNAKECHAR   equ   $02DB                   ; Snake
+CLEARCHAR   equ   $0820                   ; Clear screen / empty space
+DCLEARCHAR  equ   $4020                   ; Clear screen (when dead)
+BORDERCHAR  equ   $0607                   ; Playfield border
+DBORDERCHAR equ   $0C07                   ; Playfield border (when dead)
+SNAKECHAR   equ   $02DF                   ; Snake
 
 ; Each segment of the snake is represented by a single DWORD,
 ; the four bytes are arranged as follows:
@@ -434,9 +434,9 @@ SZGOTKEY  dc.b  "GOTKEY"
     endif
 
     align 2
-GAMEOVER  dc.b  $40,$b1,$40,$b0
+GAMEOVER  dc.b  $40,$2d,$40,$3d
           dc.b  $40,"G",$40," ",$40,"A",$40," ",$40,"M",$40," ",$40,"E",$40," ",$40," ",$40," "
           dc.b  $40,"O",$40," ",$40,"V",$40," ",$40,"E",$40," ",$40,"R"
-          dc.b  $40,$b0,$40,$b1
+          dc.b  $40,$3d,$40,$2d
 GAMEOVER_END
 

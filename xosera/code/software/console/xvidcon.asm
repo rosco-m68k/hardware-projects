@@ -172,7 +172,7 @@ BUFFERFLIP:
 .COPYLOOP
     clr.w   D2
     move.b  (A1,D0),D2
-    or.w    #$1f00,D2
+    or.w    #$0A00,D2
     movep.w D2,(XVID_DATA,A0)
     addq.w  #1,D0
     cmpi.w  #DISPLAYSIZE,D0
@@ -285,8 +285,8 @@ XVID_CON_PUTCHAR::
 
     bsr.w   SETUP_VRAM_WRITE              ; Clear from VRAM
 
-    move.w  #$1f20,D0
-    movep.w D0,(XVID_DATA,A0)           ; Overwrite character
+    move.w  #$0A20,D0
+    movep.w D0,(XVID_DATA,A0)             ; Overwrite character
 
     andi.w  #~$0200,SR                    ; Go ahead with the interrupts...
     move.b  #0,(A1,D1)                    ; Clear from buffer
@@ -307,8 +307,8 @@ XVID_CON_PUTCHAR::
     bsr.w   SETUP_VRAM_WRITE              ; Setup to write to correct position for D2
 
     and.w   #$00FF,D0
-    or.w    #$1F00,D0
-    movep.w D0,(XVID_DATA,A0)           ; And write,
+    or.w    #$0A00,D0
+    movep.w D0,(XVID_DATA,A0)             ; And write,
     andi.w  #~$0200,SR                    ; Go ahead with the interrupts...
     
     addq.w  #1,D1
@@ -356,7 +356,7 @@ SZHEADER      dc.b    "                                ___ ___ _",13
               dc.b    " ___ ___ ___ __ ___       _____|  _| . | |_",13
               dc.b    "|  _| . |_ -| _| . |     |     | . | . | '_|",13
               dc.b    "|_| |___|___|__|___|_____|_|_|_|___|___|_,_|",13
-              dc.b    "Xosera v0.01       |_____|Firmware 1.3-BETA1",13
+              dc.b    "Xosera v0.12       |_____|      Firmware 1.3",13
               dc.b    13,13, 0
 SZ_CR         dc.b    $D, 0
 
