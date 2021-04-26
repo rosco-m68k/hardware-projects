@@ -52,3 +52,15 @@ XVID_BLIT_CTRL    equ   $34           ; Blitter control             (WO)
 XVID_UNUSED_1     equ   $38           ; Unused at present           
 XVID_UNUSED_2     equ   $3C           ; Unused at present
 
+XVID_AUX_VID_W_DISPSTART equ $0000    ; display start address
+XVID_AUX_VID_W_TILEWIDTH equ $0001    ; tile line width (usually WIDTH/8)
+XVID_AUX_VID_W_SCROLLXY  equ $0002    ; [10:8] H fine scroll, [3:0] V fine scroll
+XVID_AUX_VID_W_FONTCTRL  equ $0003    ; [9:8] 2KB font bank, [3:0] font height
+XVID_AUX_VID_R_WIDTH     equ $0000    ; display resolution width
+XVID_AUX_VID_R_HEIGHT    equ $0001    ; display resolution height
+XVID_AUX_VID_R_FEATURES  equ $0002    ; [15] = 1 (test)
+XVID_AUX_VID_R_SCANLINE  equ $0003    ; [15] V blank, [14:11] zero [10:0] V line
+XVID_AUX_W_FONT          equ $4000    ; 0x4000-0x5FFF 8K byte font memory (even byte [15:8] ignored)
+XVID_AUX_W_COLORTBL      equ $8000    ; 0x8000-0x80FF 256 word color lookup table (0xXRGB)
+XVID_AUX_W_AUD           equ $C000    ; 0xC000-0x??? TODO (audio registers)
+
