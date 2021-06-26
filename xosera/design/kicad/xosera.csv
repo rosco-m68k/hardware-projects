@@ -1,6 +1,6 @@
 "Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
-1;"JP7,JP6,JP5,JP4,JP3,JP2,JP1";"PinHeader_1x02_P2.54mm_Vertical";7;"Jumper";;;
-2;"J9";"PinHeader_1x04_P2.54mm_Vertical";1;"Conn_01x04_Male";;;
+1;"J9";"PinHeader_1x06_P2.54mm_Vertical";1;"Conn_01x06_Male";;;
+2;"JP7,JP6,JP5,JP4,JP3,JP2,JP1";"PinHeader_1x02_P2.54mm_Vertical";7;"Jumper";;;
 3;"IC1,IC5,IC2";"DIP-20_W7.62mm_Socket_LongPads";3;"74HCT245";;;
 4;"Q1";"TO-92_HandSolder";1;"2N3904";;;
 5;"IC6";"DIP-14_W7.62mm_Socket_LongPads";1;"74LS74";;;

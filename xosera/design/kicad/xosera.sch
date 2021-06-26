@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Xosera <-> M68k Bus Interface"
-Date "2020-12-13"
-Rev "0"
+Date "2021-06-26"
+Rev "1"
 Comp ""
 Comment1 "Prototype with Upduino & PMOD"
 Comment2 "Copyright ©2020-2021 Xark and Contributors"
@@ -910,7 +910,6 @@ NoConn ~ 6350 1200
 NoConn ~ 6350 1300
 NoConn ~ 6350 1400
 NoConn ~ 6350 1500
-NoConn ~ 6350 1600
 NoConn ~ 6350 1800
 Text GLabel 6350 1900 2    50   Output ~ 0
 VGA_HS
@@ -1216,25 +1215,6 @@ Text GLabel 5500 2500 0    50   Output ~ 0
 AUDIO_L
 Text GLabel 5500 2600 0    50   Output ~ 0
 AUDIO_R
-$Comp
-L Connector:Conn_01x04_Male J9
-U 1 1 6068E5A7
-P 7600 950
-F 0 "J9" H 7708 1231 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 7708 1140 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7600 950 50  0001 C CNN
-F 3 "~" H 7600 950 50  0001 C CNN
-	1    7600 950 
-	1    0    0    -1  
-$EndComp
-Text GLabel 7800 1150 2    50   Input ~ 0
-AUDIO_L
-Text GLabel 7800 850  2    50   Input ~ 0
-AUDIO_R
-Text GLabel 7800 950  2    50   Input ~ 0
-GND
-Text GLabel 7800 1050 2    50   Input ~ 0
-GND
 Text GLabel 3250 2900 0    50   Output ~ 0
 BUS_REG_NUM3
 Text GLabel 5500 2400 0    50   Input ~ 0
@@ -1475,4 +1455,29 @@ Wire Wire Line
 	10500 3250 10650 3250
 Wire Wire Line
 	9750 3250 9900 3250
+Text GLabel 6350 1600 2    50   BiDi ~ 0
+GPIO_10
+Text GLabel 7800 1050 2    50   Input ~ 0
+GND
+Text GLabel 7800 950  2    50   Input ~ 0
+GND
+Text GLabel 7800 1150 2    50   Input ~ 0
+AUDIO_R
+Text GLabel 7800 850  2    50   Input ~ 0
+AUDIO_L
+$Comp
+L Connector:Conn_01x06_Male J9
+U 1 1 6068E5A7
+P 7600 950
+F 0 "J9" H 7708 1231 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 7700 1300 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7600 950 50  0001 C CNN
+F 3 "~" H 7600 950 50  0001 C CNN
+	1    7600 950 
+	1    0    0    -1  
+$EndComp
+Text GLabel 7800 750  2    50   UnSpc ~ 0
+3V3
+Text GLabel 7800 1250 2    50   BiDi ~ 0
+GPIO_10
 $EndSCHEMATC
