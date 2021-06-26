@@ -46,7 +46,7 @@ elsewhere by setting VBR appropriately.
 
 **Note** that, on revision one boards, all odd addresses in IO space are 
 allocated to the MC68901, rendering them unusable for other IO devices.
-This limitation is no longer present on revision 1 boards, however must be
+This limitation is no longer present on revision 1.2 boards, however must be
 borne in mind if you wish to develop r1-compatible expansions. The MOVEP
 instruction can help when programming for expansions mapped at all-even 
 addresses.
@@ -59,9 +59,10 @@ addresses.
 | $F80031-$F8003F | Odd      | MC68901 MFP (First few registers shadowed)     |
 | $F80028-$F8002E | Even     | Reserved                                       |
 | $F80040-$F8005F | Both     | ATA/IDE Interface Board                        |
-| $F80060-$F800a7 | Both     | Available (note 1)                             |
-| $F800a8-$F800c6 | Even     | MC68681 DUART Expansion Board (r2)             |
-| $F800c7-$FBFFFF | Both     | Available (note 1)                             |
+| $F80060-$F8009E | Even     | Reserved (for Xosera)                          |
+| $F8009F-$F800A7 | Both     | Available (note 1)                             |
+| $F800A8-$F800C6 | Even     | MC68681 DUART Expansion Board (r2)             |
+| $F800C7-$FBFFFF | Both     | Available (note 1)                             |
 
 **Note 1**: When adding your reserved address range(s), please update the 
 'available' row to reflect your changes. Remember that on r1 boards, only 
