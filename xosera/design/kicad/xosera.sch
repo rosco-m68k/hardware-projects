@@ -189,17 +189,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 5250 5250 50  0001 C CNN
 	1    5250 5250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Logic_Programmable:GAL16V8 IC4
-U 1 1 5F93B8A2
-P 7050 5250
-F 0 "IC4" H 7050 6131 50  0000 C CNN
-F 1 "ATF16V8BQL" H 7050 6040 50  0000 C CNN
-F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 7050 5250 50  0001 C CNN
-F 3 "" H 7050 5250 50  0001 C CNN
-	1    7050 5250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3150 4450 3500 4450
 Wire Wire Line
@@ -445,12 +434,7 @@ Wire Wire Line
 	5250 4450 6750 4450
 Wire Wire Line
 	6750 4450 6750 4550
-Wire Wire Line
-	6750 4550 7050 4550
 Connection ~ 5250 4450
-Wire Wire Line
-	7050 4550 8800 4550
-Connection ~ 7050 4550
 Text Notes 8550 6050 0    50   ~ 0
 IC3 - DECODER
 Text GLabel 9300 4750 2    50   Output ~ 0
@@ -491,7 +475,6 @@ Text GLabel 7550 5050 2    50   Output ~ 0
 FPGA_W
 Text GLabel 7550 5150 2    50   3State ~ 0
 OIRQ
-NoConn ~ 6550 5650
 NoConn ~ 7550 5350
 $Comp
 L Device:Jumper JP2
@@ -731,8 +714,6 @@ LDS
 Text GLabel 9300 4850 2    50   Input ~ 0
 IOSEL
 NoConn ~ 9300 5450
-NoConn ~ 6550 5350
-NoConn ~ 6550 5250
 NoConn ~ 7550 4950
 Text Notes 6750 6050 0    50   ~ 0
 IC4 - GLUE
@@ -822,12 +803,12 @@ FPGA_CS
 $Comp
 L Connector:Conn_01x24_Female J3
 U 1 1 6066B678
-P 6300 2450
-F 0 "J3" H 6200 3800 50  0000 C CNN
-F 1 "Upduino_RHS" H 6200 3700 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x24_P2.54mm_Vertical" H 6300 2450 50  0001 C CNN
-F 3 "~" H 6300 2450 50  0001 C CNN
-	1    6300 2450
+P 6150 2200
+F 0 "J3" H 6050 3550 50  0000 C CNN
+F 1 "Upduino_RHS" H 6050 3450 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x24_P2.54mm_Vertical" H 6150 2200 50  0001 C CNN
+F 3 "~" H 6150 2200 50  0001 C CNN
+	1    6150 2200
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -874,196 +855,194 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x24_Female J2
 U 1 1 60646C00
-P 5850 2450
-F 0 "J2" H 5700 3800 50  0000 L CNN
-F 1 "Upduino_LHS" H 5550 3700 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x24_P2.54mm_Vertical" H 5850 2450 50  0001 C CNN
-F 3 "~" H 5850 2450 50  0001 C CNN
-	1    5850 2450
+P 5700 2200
+F 0 "J2" H 5550 3550 50  0000 L CNN
+F 1 "Upduino_LHS" H 5400 3450 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x24_P2.54mm_Vertical" H 5700 2200 50  0001 C CNN
+F 3 "~" H 5700 2200 50  0001 C CNN
+	1    5700 2200
 	1    0    0    -1  
 $EndComp
-Text Notes 5750 4000 0    50   ~ 0
+Text Notes 5600 3750 0    50   ~ 0
 Upduino 3.0\nRGB Jumper Cut\nOSC Jumper Shorted
-NoConn ~ 5650 1450
-NoConn ~ 5650 1650
-Text GLabel 5650 1350 0    50   UnSpc ~ 0
+NoConn ~ 5500 1200
+NoConn ~ 5500 1400
+Text GLabel 5500 1100 0    50   UnSpc ~ 0
 GND
-Text GLabel 5650 1550 0    50   UnSpc ~ 0
+Text GLabel 5500 1300 0    50   UnSpc ~ 0
 BUS_RESET_N
-Text GLabel 5650 1750 0    50   UnSpc ~ 0
+Text GLabel 5500 1500 0    50   UnSpc ~ 0
 BUS_CS_N
-Text GLabel 5650 1850 0    50   UnSpc ~ 0
+Text GLabel 5500 1600 0    50   UnSpc ~ 0
 BUS_RD_NWR
-Text GLabel 5650 2050 0    50   UnSpc ~ 0
+Text GLabel 5500 1800 0    50   UnSpc ~ 0
 UD_5V
-Text GLabel 4950 2150 0    50   UnSpc ~ 0
+Text GLabel 4800 1900 0    50   UnSpc ~ 0
 3V3
-Text GLabel 5650 2250 0    50   UnSpc ~ 0
+Text GLabel 5500 2000 0    50   UnSpc ~ 0
 GND
-Text GLabel 5650 1950 0    50   Input ~ 0
+Text GLabel 5500 1700 0    50   Input ~ 0
 BUS_BYTESEL
-Text GLabel 5650 2350 0    50   Input ~ 0
+Text GLabel 5500 2100 0    50   Input ~ 0
 BUS_REG_NUM0
-Text GLabel 5650 2450 0    50   Input ~ 0
+Text GLabel 5500 2200 0    50   Input ~ 0
 BUS_REG_NUM1
-Text GLabel 5650 2550 0    50   Input ~ 0
+Text GLabel 5500 2300 0    50   Input ~ 0
 BUS_REG_NUM2
-Text GLabel 5650 2950 0    50   BiDi ~ 0
+Text GLabel 5500 2700 0    50   BiDi ~ 0
 BUS_DATA0
-Text GLabel 5650 3050 0    50   BiDi ~ 0
+Text GLabel 5500 2800 0    50   BiDi ~ 0
 BUS_DATA1
-Text GLabel 5650 3150 0    50   BiDi ~ 0
+Text GLabel 5500 2900 0    50   BiDi ~ 0
 BUS_DATA2
-Text GLabel 5650 3250 0    50   BiDi ~ 0
+Text GLabel 5500 3000 0    50   BiDi ~ 0
 BUS_DATA3
-Text GLabel 5650 3350 0    50   BiDi ~ 0
+Text GLabel 5500 3100 0    50   BiDi ~ 0
 BUS_DATA4
-Text GLabel 5650 3450 0    50   BiDi ~ 0
+Text GLabel 5500 3200 0    50   BiDi ~ 0
 BUS_DATA5
-Text GLabel 5650 3550 0    50   BiDi ~ 0
+Text GLabel 5500 3300 0    50   BiDi ~ 0
 BUS_DATA6
-Text GLabel 5650 3650 0    50   BiDi ~ 0
+Text GLabel 5500 3400 0    50   BiDi ~ 0
 BUS_DATA7
-NoConn ~ 6500 1350
-NoConn ~ 6500 1450
-NoConn ~ 6500 1550
-NoConn ~ 6500 1650
-NoConn ~ 6500 1750
-NoConn ~ 6500 1850
-NoConn ~ 6500 2050
-Text GLabel 6500 2150 2    50   Output ~ 0
+NoConn ~ 6350 1100
+NoConn ~ 6350 1200
+NoConn ~ 6350 1300
+NoConn ~ 6350 1400
+NoConn ~ 6350 1500
+NoConn ~ 6350 1600
+NoConn ~ 6350 1800
+Text GLabel 6350 1900 2    50   Output ~ 0
 VGA_HS
-Text GLabel 6500 2250 2    50   Output ~ 0
+Text GLabel 6350 2000 2    50   Output ~ 0
 VGA_VS
-Text GLabel 6500 2350 2    50   Output ~ 0
+Text GLabel 6350 2100 2    50   Output ~ 0
 VGA_R3
-Text GLabel 6500 2450 2    50   Output ~ 0
+Text GLabel 6350 2200 2    50   Output ~ 0
 VGA_G3
-Text GLabel 6500 2550 2    50   Output ~ 0
+Text GLabel 6350 2300 2    50   Output ~ 0
 VGA_B3
-Text GLabel 6500 2650 2    50   Output ~ 0
+Text GLabel 6350 2400 2    50   Output ~ 0
 VGA_R2
-Text GLabel 6500 2750 2    50   Output ~ 0
+Text GLabel 6350 2500 2    50   Output ~ 0
 VGA_G2
-Text GLabel 6500 2850 2    50   Output ~ 0
+Text GLabel 6350 2600 2    50   Output ~ 0
 VGA_B2
-Text GLabel 6500 2950 2    50   Output ~ 0
+Text GLabel 6350 2700 2    50   Output ~ 0
 VGA_R1
-Text GLabel 6500 3050 2    50   Output ~ 0
+Text GLabel 6350 2800 2    50   Output ~ 0
 VGA_G1
-Text GLabel 6500 3150 2    50   Output ~ 0
+Text GLabel 6350 2900 2    50   Output ~ 0
 VGA_B1
-Text GLabel 6500 3250 2    50   Output ~ 0
+Text GLabel 6350 3000 2    50   Output ~ 0
 VGA_R0
-Text GLabel 6500 3350 2    50   Output ~ 0
+Text GLabel 6350 3100 2    50   Output ~ 0
 VGA_G0
-Text GLabel 6500 3450 2    50   Output ~ 0
+Text GLabel 6350 3200 2    50   Output ~ 0
 VGA_B0
-Text GLabel 6500 3550 2    50   Output ~ 0
+Text GLabel 6350 3300 2    50   Output ~ 0
 DV_DE
-Text GLabel 6500 3650 2    50   Output ~ 0
+Text GLabel 6350 3400 2    50   Output ~ 0
 DV_CLK
 Connection ~ 10700 2300
 Wire Wire Line
 	10700 2300 10800 2300
-Wire Wire Line
-	950  900  1500 900 
 $Comp
 L Connector_Generic:Conn_02x06_Odd_Even J4
 U 1 1 606C15FC
-P 7950 2000
-F 0 "J4" H 8000 2417 50  0000 C CNN
-F 1 "PMOD_TOP" H 8000 2326 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 7950 2000 50  0001 C CNN
-F 3 "~" H 7950 2000 50  0001 C CNN
-	1    7950 2000
+P 7850 1750
+F 0 "J4" H 7900 2167 50  0000 C CNN
+F 1 "PMOD_TOP" H 7900 2076 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 7850 1750 50  0001 C CNN
+F 3 "~" H 7850 1750 50  0001 C CNN
+	1    7850 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x06_Odd_Even J5
 U 1 1 606C93D4
-P 7950 3100
-F 0 "J5" H 8000 3517 50  0000 C CNN
-F 1 "PMOD_BOTTOM" H 8000 3426 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 7950 3100 50  0001 C CNN
-F 3 "~" H 7950 3100 50  0001 C CNN
-	1    7950 3100
+P 7850 2700
+F 0 "J5" H 7900 3117 50  0000 C CNN
+F 1 "PMOD_BOTTOM" H 7900 3026 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 7850 2700 50  0001 C CNN
+F 3 "~" H 7850 2700 50  0001 C CNN
+	1    7850 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 7750 2300 0    50   Input ~ 0
+Text GLabel 7650 2050 0    50   Input ~ 0
 VGA_B0
-Text GLabel 7750 2200 0    50   Input ~ 0
+Text GLabel 7650 1950 0    50   Input ~ 0
 VGA_B1
-Text GLabel 7750 2100 0    50   Input ~ 0
+Text GLabel 7650 1850 0    50   Input ~ 0
 VGA_B2
-Text GLabel 7750 2000 0    50   Input ~ 0
+Text GLabel 7650 1750 0    50   Input ~ 0
 VGA_B3
-Text GLabel 7750 1900 0    50   UnSpc ~ 0
+Text GLabel 7650 1650 0    50   UnSpc ~ 0
 GND
-Text GLabel 7750 1800 0    50   UnSpc ~ 0
+Text GLabel 7650 1550 0    50   UnSpc ~ 0
 3V3
-Text GLabel 7750 3400 0    50   Input ~ 0
+Text GLabel 7650 3000 0    50   Input ~ 0
 VGA_HS
-Text GLabel 7750 3300 0    50   Input ~ 0
+Text GLabel 7650 2900 0    50   Input ~ 0
 VGA_VS
-Text GLabel 7750 3000 0    50   UnSpc ~ 0
+Text GLabel 7650 2600 0    50   UnSpc ~ 0
 GND
-Text GLabel 7750 2900 0    50   UnSpc ~ 0
+Text GLabel 7650 2500 0    50   UnSpc ~ 0
 3V3
-Text GLabel 8250 2300 2    50   Input ~ 0
+Text GLabel 8150 2050 2    50   Input ~ 0
 VGA_R0
-Text GLabel 8250 2200 2    50   Input ~ 0
+Text GLabel 8150 1950 2    50   Input ~ 0
 VGA_R1
-Text GLabel 8250 2100 2    50   Input ~ 0
+Text GLabel 8150 1850 2    50   Input ~ 0
 VGA_R2
-Text GLabel 8250 2000 2    50   Input ~ 0
+Text GLabel 8150 1750 2    50   Input ~ 0
 VGA_R3
-Text GLabel 8250 3400 2    50   Input ~ 0
+Text GLabel 8150 3000 2    50   Input ~ 0
 VGA_G0
-Text GLabel 8250 3300 2    50   Input ~ 0
+Text GLabel 8150 2900 2    50   Input ~ 0
 VGA_G1
-Text GLabel 8250 3200 2    50   Input ~ 0
+Text GLabel 8150 2800 2    50   Input ~ 0
 VGA_G2
-Text GLabel 8250 3100 2    50   Input ~ 0
+Text GLabel 8150 2700 2    50   Input ~ 0
 VGA_G3
-Text GLabel 8250 1900 2    50   UnSpc ~ 0
+Text GLabel 8150 1650 2    50   UnSpc ~ 0
 GND
-Text GLabel 8250 1800 2    50   UnSpc ~ 0
+Text GLabel 8150 1550 2    50   UnSpc ~ 0
 3V3
-Text GLabel 8250 3000 2    50   UnSpc ~ 0
+Text GLabel 8150 2600 2    50   UnSpc ~ 0
 GND
-Text GLabel 8250 2900 2    50   UnSpc ~ 0
+Text GLabel 8150 2500 2    50   UnSpc ~ 0
 3V3
-Text Notes 6250 1400 2    50   ~ 0
+Text Notes 6100 1150 2    50   ~ 0
 USB TOP
-Text Notes 8750 2250 3    50   ~ 0
+Text Notes 8650 2000 3    50   ~ 0
 VGA/HDMI RIGHT
 NoConn ~ 2000 2600
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 6070D6CE
-P 5100 1650
-F 0 "#FLG0101" H 5100 1725 50  0001 C CNN
-F 1 "PWR_FLAG" H 5100 1823 50  0000 C CNN
-F 2 "" H 5100 1650 50  0001 C CNN
-F 3 "~" H 5100 1650 50  0001 C CNN
-	1    5100 1650
+P 4950 1400
+F 0 "#FLG0101" H 4950 1475 50  0001 C CNN
+F 1 "PWR_FLAG" H 4950 1573 50  0000 C CNN
+F 2 "" H 4950 1400 50  0001 C CNN
+F 3 "~" H 4950 1400 50  0001 C CNN
+	1    4950 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 2150 5100 2150
+	4800 1900 4950 1900
 Wire Wire Line
-	5100 1650 5100 2150
-Connection ~ 5100 2150
+	4950 1400 4950 1900
+Connection ~ 4950 1900
 Wire Wire Line
-	5100 2150 5650 2150
+	4950 1900 5500 1900
 Text GLabel 1500 2400 0    50   Output ~ 0
 LDS
-Text GLabel 7750 3200 0    50   Input ~ 0
+Text GLabel 7650 2800 0    50   Input ~ 0
 DV_DE
-Text GLabel 7750 3100 0    50   Input ~ 0
+Text GLabel 7650 2700 0    50   Input ~ 0
 DV_CLK
-Text Notes 7250 3650 0    50   ~ 0
+Text Notes 7150 3250 0    50   ~ 0
 TODO! Not certain the HDMI pins\nare correct for the actual hardware - Check this!
 $Comp
 L Connector_Generic:Conn_02x04_Counter_Clockwise J6
@@ -1210,7 +1189,7 @@ Text GLabel 10800 3200 2    50   UnSpc ~ 0
 GND
 Text GLabel 9600 3200 0    50   UnSpc ~ 0
 JBODGE_GND
-Text GLabel 6500 1950 2    50   UnSpc ~ 0
+Text GLabel 6350 1700 2    50   UnSpc ~ 0
 JBODGE_GND
 $Comp
 L Device:C C6
@@ -1235,34 +1214,34 @@ Wire Wire Line
 Connection ~ 2600 7350
 Wire Wire Line
 	2600 7350 3000 7350
-Text GLabel 5650 2750 0    50   Output ~ 0
+Text GLabel 5500 2500 0    50   Output ~ 0
 AUDIO_L
-Text GLabel 5650 2850 0    50   Output ~ 0
+Text GLabel 5500 2600 0    50   Output ~ 0
 AUDIO_R
 $Comp
 L Connector:Conn_01x04_Male J9
 U 1 1 6068E5A7
-P 7750 1100
-F 0 "J9" H 7858 1381 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 7858 1290 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7750 1100 50  0001 C CNN
-F 3 "~" H 7750 1100 50  0001 C CNN
-	1    7750 1100
+P 7600 950
+F 0 "J9" H 7708 1231 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 7708 1140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7600 950 50  0001 C CNN
+F 3 "~" H 7600 950 50  0001 C CNN
+	1    7600 950 
 	1    0    0    -1  
 $EndComp
-Text GLabel 7950 1300 2    50   Input ~ 0
+Text GLabel 7800 1150 2    50   Input ~ 0
 AUDIO_L
-Text GLabel 7950 1000 2    50   Input ~ 0
+Text GLabel 7800 850  2    50   Input ~ 0
 AUDIO_R
-Text GLabel 7950 1100 2    50   Input ~ 0
+Text GLabel 7800 950  2    50   Input ~ 0
 GND
-Text GLabel 7950 1200 2    50   Input ~ 0
+Text GLabel 7800 1050 2    50   Input ~ 0
 GND
 Text GLabel 3250 2900 0    50   Output ~ 0
 BUS_REG_NUM3
-Text GLabel 5650 2650 0    50   Input ~ 0
+Text GLabel 5500 2400 0    50   Input ~ 0
 BUS_REG_NUM3
-Text Notes 5550 1000 0    50   ~ 0
+Text Notes 5400 750  0    50   ~ 0
 All BUS_xxx signals are 3V3\nUpduino-compatible signals
 $Comp
 L Connector:Conn_01x08_Male TP1
@@ -1321,28 +1300,133 @@ BUS_DATA0
 $Comp
 L Connector:Conn_01x08_Male TP3
 U 1 1 6064AB6C
-P 3400 1250
-F 0 "TP3" H 3508 1731 50  0000 C CNN
-F 1 "Conn_01x08_Male" H 3508 1640 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3400 1250 50  0001 C CNN
-F 3 "~" H 3400 1250 50  0001 C CNN
-	1    3400 1250
+P 3050 1350
+F 0 "TP3" H 3158 1831 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 3158 1740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3050 1350 50  0001 C CNN
+F 3 "~" H 3050 1350 50  0001 C CNN
+	1    3050 1350
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 950  2    50   Input ~ 0
+Text GLabel 3250 1050 2    50   Input ~ 0
 BUS_BYTESEL
-Text GLabel 3600 1050 2    50   Input ~ 0
+Text GLabel 3250 1150 2    50   Input ~ 0
 BUS_REG_NUM0
-Text GLabel 3600 1150 2    50   Input ~ 0
+Text GLabel 3250 1250 2    50   Input ~ 0
 BUS_REG_NUM1
-Text GLabel 3600 1250 2    50   Input ~ 0
+Text GLabel 3250 1350 2    50   Input ~ 0
 BUS_REG_NUM2
-Text GLabel 3600 1350 2    50   Input ~ 0
+Text GLabel 3250 1450 2    50   Input ~ 0
 BUS_REG_NUM3
-Text GLabel 3600 1450 2    50   Input ~ 0
+Text GLabel 3250 1550 2    50   Input ~ 0
 BUS_CS_N
-Text GLabel 3600 1550 2    50   Input ~ 0
+Text GLabel 3250 1650 2    50   Input ~ 0
 BUS_RD_NWR
-Text GLabel 3600 1650 2    50   Input ~ 0
+Text GLabel 3250 1750 2    50   Input ~ 0
 BUS_RESET_N
+$Comp
+L rosco_m68k:GAL22V10 IC4
+U 1 1 60CFB9DC
+P 7050 5250
+F 0 "IC4" H 7050 6131 50  0000 C CNN
+F 1 "GAL22V10" H 7050 6040 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W7.62mm_LongPads" H 7050 5250 50  0001 C CNN
+F 3 "" H 7050 5250 50  0001 C CNN
+	1    7050 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4550 7050 4550
+Connection ~ 7050 4550
+Wire Wire Line
+	7050 4550 8800 4550
+Text GLabel 6550 5250 0    50   Input ~ 0
+A1
+Text GLabel 6550 5350 0    50   Input ~ 0
+A2
+Text GLabel 6550 5650 0    50   Input ~ 0
+A3
+$Comp
+L 74xx:74LS74 IC6
+U 1 1 60D12D20
+P 7150 3900
+F 0 "IC6" H 7150 4381 50  0000 C CNN
+F 1 "74LS74" H 7150 4290 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 7150 3900 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 7150 3900 50  0001 C CNN
+	1    7150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 60D18FD6
+P 7950 3800
+F 0 "Q1" H 8140 3846 50  0000 L CNN
+F 1 "2N3904" H 8140 3755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8150 3725 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7950 3800 50  0001 L CNN
+	1    7950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 60D232A8
+P 7600 3800
+F 0 "R9" V 7393 3800 50  0000 C CNN
+F 1 "18K" V 7484 3800 50  0000 C CNN
+F 2 "rosco_m68k:R-0207_10" V 7530 3800 50  0001 C CNN
+F 3 "~" H 7600 3800 50  0001 C CNN
+	1    7600 3800
+	0    1    1    0   
+$EndComp
+Text GLabel 6850 3800 0    50   UnSpc ~ 0
+5V
+Text GLabel 6850 3900 0    50   Input ~ 0
+OIRQ
+NoConn ~ 7450 4000
+NoConn ~ 5800 5950
+NoConn ~ 6150 6250
+Text GLabel 6550 5750 0    50   Input ~ 0
+A4
+Text GLabel 7550 5750 2    50   Input ~ 0
+A5
+Text GLabel 7550 5650 2    50   Input ~ 0
+A7
+Text GLabel 7550 5550 2    50   Output ~ 0
+IRQRS
+Text GLabel 7000 4300 0    50   Input ~ 0
+IRQRS
+Wire Wire Line
+	7000 4300 7150 4300
+Wire Wire Line
+	7150 4300 7150 4200
+Text GLabel 6900 3550 1    50   UnSpc ~ 0
+GND
+Wire Wire Line
+	6900 3550 6900 3600
+Wire Wire Line
+	6900 3600 7150 3600
+Text GLabel 8050 4000 3    50   UnSpc ~ 0
+GND
+Text GLabel 8050 3600 1    50   3State ~ 0
+IPL1
+Text Notes 7750 4250 2    50   ~ 0
+TODO\nCalc\nThis\nValue\nProperly
+$Comp
+L 74xx:74LS74 IC6
+U 3 1 60D60650
+P 8700 3850
+F 0 "IC6" H 8930 3896 50  0000 L CNN
+F 1 "74LS74" H 8930 3805 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 8700 3850 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 8700 3850 50  0001 C CNN
+	3    8700 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  900  1500 900 
+Text GLabel 8700 3450 1    50   UnSpc ~ 0
+5V
+Text GLabel 8700 4250 3    50   UnSpc ~ 0
+GND
 $EndSCHEMATC

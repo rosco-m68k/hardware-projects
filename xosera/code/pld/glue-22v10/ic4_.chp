@@ -1,0 +1,29 @@
+
+
+                                GAL22V10
+
+                          -------\___/-------
+                     FSEL |  1           24 | VCC
+                          |                 |
+                      FC0 |  2           23 | ODTACK
+                          |                 |
+                      FC1 |  3           22 | VPA
+                          |                 |
+                      FC2 |  4           21 | PPVPA
+                          |                 |
+                       AS |  5           20 | FPGAW
+                          |                 |
+                       A1 |  6           19 | OIRQ
+                          |                 |
+                       A2 |  7           18 | FPGAR
+                          |                 |
+                      RnW |  8           17 | PPDT
+                          |                 |
+                    UDIRQ |  9           16 | FPGACS
+                          |                 |
+                       A3 | 10           15 | IRQRS
+                          |                 |
+                       A4 | 11           14 | A7
+                          |                 |
+                      GND | 12           13 | A5
+                          -------------------
