@@ -1,0 +1,18 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"REF**";"CE-Logo_8.5x6mm_SilkScreen";1;"CE-Logo_8.5x6mm_SilkScreen";;;
+2;"REF**";"WEEE-Logo_4.2x6mm_SilkScreen";1;"WEEE-Logo_4.2x6mm_SilkScreen";;;
+3;"J1";"DIL64";1;"MC68010P10";;;
+4;"IC2";"DIL20";1;"ATF16V8BQL";;;
+5;"IC1";"MC68020RC";1;"MC68020RC";;;
+6;"H1";"MountingHole_3.2mm_M3";1;"MountingHole";;;
+7;"REF**";"SM-rosco_m68k_logo";1;"SM-rosco_m68k_logo";;;
+8;"RN2";"R_Array_SIP9";1;"R_Network08";;;
+9;"RN1";"R_Array_SIP9";1;"10K";;;
+10;"R3";"0207_10";1;"10K";;;
+11;"R2,R1";"0207_10";2;"4K7";;;
+12;"Q1";"Oscillator_DIP-8";1;"5H8ET-12.000";;;
+13;"JP1";"PinHeader_2x02_P2.54mm_Vertical";1;"Conn_02x02_Odd_Even";;;
+14;"J3";"PinHeader_2x04_P2.54mm_Vertical";1;"Conn_02x04_Odd_Even";;;
+15;"J2";"PinHeader_2x08_P2.54mm_Vertical";1;"Conn_02x08_Odd_Even";;;
+16;"C13,C12,C11,C10,C9,C8,C7,C6,C5,C4,C3,C1";"C2.5-3";12;"100nF";;;
+17;"C2";"E2,5-5";1;"100uF";;;
