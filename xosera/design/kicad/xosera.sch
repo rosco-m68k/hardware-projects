@@ -717,7 +717,7 @@ NoConn ~ 9300 5450
 NoConn ~ 7550 4950
 Text Notes 6750 6050 0    50   ~ 0
 IC4 - GLUE
-Text GLabel 6550 5450 0    50   Input ~ 0
+Text GLabel 6550 5650 0    50   Input ~ 0
 RnW
 Text GLabel 6550 4850 0    50   Input ~ 0
 FC0
@@ -969,41 +969,41 @@ F 3 "~" H 7850 2700 50  0001 C CNN
 	1    7850 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 7650 2050 0    50   Input ~ 0
+Text GLabel 8150 2050 2    50   Input ~ 0
 VGA_B0
-Text GLabel 7650 1950 0    50   Input ~ 0
+Text GLabel 8150 1950 2    50   Input ~ 0
 VGA_B1
-Text GLabel 7650 1850 0    50   Input ~ 0
+Text GLabel 8150 1850 2    50   Input ~ 0
 VGA_B2
-Text GLabel 7650 1750 0    50   Input ~ 0
+Text GLabel 8150 1750 2    50   Input ~ 0
 VGA_B3
 Text GLabel 7650 1650 0    50   UnSpc ~ 0
 GND
 Text GLabel 7650 1550 0    50   UnSpc ~ 0
 3V3
-Text GLabel 7650 3000 0    50   Input ~ 0
+Text GLabel 8150 3000 2    50   Input ~ 0
 VGA_HS
-Text GLabel 7650 2900 0    50   Input ~ 0
+Text GLabel 8150 2900 2    50   Input ~ 0
 VGA_VS
 Text GLabel 7650 2600 0    50   UnSpc ~ 0
 GND
 Text GLabel 7650 2500 0    50   UnSpc ~ 0
 3V3
-Text GLabel 8150 2050 2    50   Input ~ 0
+Text GLabel 7650 2050 0    50   Input ~ 0
 VGA_R0
-Text GLabel 8150 1950 2    50   Input ~ 0
+Text GLabel 7650 1950 0    50   Input ~ 0
 VGA_R1
-Text GLabel 8150 1850 2    50   Input ~ 0
+Text GLabel 7650 1850 0    50   Input ~ 0
 VGA_R2
-Text GLabel 8150 1750 2    50   Input ~ 0
+Text GLabel 7650 1750 0    50   Input ~ 0
 VGA_R3
-Text GLabel 8150 3000 2    50   Input ~ 0
+Text GLabel 7650 3000 0    50   Input ~ 0
 VGA_G0
-Text GLabel 8150 2900 2    50   Input ~ 0
+Text GLabel 7650 2900 0    50   Input ~ 0
 VGA_G1
-Text GLabel 8150 2800 2    50   Input ~ 0
+Text GLabel 7650 2800 0    50   Input ~ 0
 VGA_G2
-Text GLabel 8150 2700 2    50   Input ~ 0
+Text GLabel 7650 2700 0    50   Input ~ 0
 VGA_G3
 Text GLabel 8150 1650 2    50   UnSpc ~ 0
 GND
@@ -1038,9 +1038,9 @@ Wire Wire Line
 	4950 1900 5500 1900
 Text GLabel 1500 2400 0    50   Output ~ 0
 LDS
-Text GLabel 7650 2800 0    50   Input ~ 0
+Text GLabel 8150 2800 2    50   Input ~ 0
 DV_DE
-Text GLabel 7650 2700 0    50   Input ~ 0
+Text GLabel 8150 2700 2    50   Input ~ 0
 DV_CLK
 Text Notes 7150 3250 0    50   ~ 0
 TODO! Not certain the HDMI pins\nare correct for the actual hardware - Check this!
@@ -1109,7 +1109,7 @@ Text GLabel 10100 4650 0    50   UnSpc ~ 0
 5V
 Text GLabel 10100 4750 0    50   UnSpc ~ 0
 5V
-Text GLabel 6550 5550 0    50   Input ~ 0
+Text GLabel 6550 5750 0    50   Input ~ 0
 UD_IRQ
 Text GLabel 10600 5150 2    50   Output ~ 0
 UD_IRQ
@@ -1344,7 +1344,7 @@ Text GLabel 6550 5250 0    50   Input ~ 0
 A1
 Text GLabel 6550 5350 0    50   Input ~ 0
 A2
-Text GLabel 6550 5650 0    50   Input ~ 0
+Text GLabel 6550 5450 0    50   Input ~ 0
 A3
 $Comp
 L 74xx:74LS74 IC6
@@ -1363,7 +1363,7 @@ U 1 1 60D18FD6
 P 7950 3800
 F 0 "Q1" H 8140 3846 50  0000 L CNN
 F 1 "2N3904" H 8140 3755 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8150 3725 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 8150 3725 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7950 3800 50  0001 L CNN
 	1    7950 3800
 	1    0    0    -1  
@@ -1386,7 +1386,7 @@ OIRQ
 NoConn ~ 7450 4000
 NoConn ~ 5800 5950
 NoConn ~ 6150 6250
-Text GLabel 6550 5750 0    50   Input ~ 0
+Text GLabel 6550 5550 0    50   Input ~ 0
 A4
 Text GLabel 7550 5750 2    50   Input ~ 0
 A5

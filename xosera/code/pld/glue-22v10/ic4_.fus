@@ -29,7 +29,7 @@ Pin 22 = VPA          S0 = 1   S1 = 0
 
 Pin 21 = PPVPA        S0 = 0   S1 = 0
  21  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 22  ---- x--- x--- x--- ---- -x-- x--- ---- x--- -x-- ----
+ 22  ---- x--- x--- x--- ---- -x-- x--- -x-- ---- ---- x---
  23  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  24  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  25  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -44,7 +44,7 @@ Pin 21 = PPVPA        S0 = 0   S1 = 0
 
 Pin 20 = FPGAW        S0 = 0   S1 = 0
  34  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 35  -x-- ---- ---- ---- -x-- ---- ---- -x-- ---- ---- ----
+ 35  -x-- ---- ---- ---- -x-- ---- ---- ---- ---- -x-- ----
  36  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  37  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  38  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -61,7 +61,7 @@ Pin 20 = FPGAW        S0 = 0   S1 = 0
 
 Pin 19 = OIRQ         S0 = 0   S1 = 0
  49  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 50  ---- ---- ---- ---- ---- ---- ---- ---- x--- ---- ----
+ 50  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- x---
  51  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  52  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  53  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -80,7 +80,7 @@ Pin 19 = OIRQ         S0 = 0   S1 = 0
 
 Pin 18 = FPGAR        S0 = 0   S1 = 0
  66  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 67  -x-- ---- ---- ---- -x-- ---- ---- x--- ---- ---- ----
+ 67  -x-- ---- ---- ---- -x-- ---- ---- ---- ---- x--- ----
  68  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  69  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  70  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -131,7 +131,7 @@ Pin 16 = FPGACS       S0 = 0   S1 = 0
 
 Pin 15 = IRQRS        S0 = 0   S1 = 0
 111  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-112  ---- ---- ---- ---- ---- ---x ---- ---- ---- -x-x -x-x
+112  ---- ---- ---- ---- ---- ---x ---- -x-- -x-- ---x ---x
 113  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 114  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 115  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
