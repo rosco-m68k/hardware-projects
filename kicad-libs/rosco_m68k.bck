@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74ALVC164245
+D 16-bit dual supply translating transceiver; 3-state
+K transceiver,line,driver,bus
+F https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-NXP/DSANXP01000798.pdf
+$ENDCMP
+#
+#End Doc Library
