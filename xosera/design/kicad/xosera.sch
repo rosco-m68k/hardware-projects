@@ -96,12 +96,12 @@ $EndComp
 $Comp
 L power:PWR_FLAG #VCC01
 U 1 1 5EB06E82
-P 10700 2300
-F 0 "#VCC01" H 10700 2375 50  0001 C CNN
-F 1 "PWR_FLAG" H 10700 2473 50  0001 C CNN
-F 2 "" H 10700 2300 50  0001 C CNN
-F 3 "~" H 10700 2300 50  0001 C CNN
-	1    10700 2300
+P 10700 2100
+F 0 "#VCC01" H 10700 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 10700 2273 50  0001 C CNN
+F 2 "" H 10700 2100 50  0001 C CNN
+F 3 "~" H 10700 2100 50  0001 C CNN
+	1    10700 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -479,25 +479,25 @@ NoConn ~ 7550 5350
 $Comp
 L Device:Jumper JP2
 U 1 1 5FA5CB0F
-P 10200 1300
-F 0 "JP2" H 10200 1564 50  0000 C CNN
-F 1 "Jumper" H 10200 1473 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 1300 50  0001 C CNN
-F 3 "~" H 10200 1300 50  0001 C CNN
-	1    10200 1300
+P 10200 1200
+F 0 "JP2" H 10200 1464 50  0000 C CNN
+F 1 "Jumper" H 10200 1373 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 1200 50  0001 C CNN
+F 3 "~" H 10200 1200 50  0001 C CNN
+	1    10200 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 1300 9600 1300
+	9900 1200 9600 1200
 Wire Wire Line
-	10500 1300 10800 1300
-Text GLabel 10800 1300 2    50   3State ~ 0
+	10500 1200 10800 1200
+Text GLabel 10800 1200 2    50   3State ~ 0
 IPL1
 Text GLabel 9600 850  0    50   BiDi ~ 0
 ODTACK
-Text GLabel 9600 1300 0    50   BiDi ~ 0
+Text GLabel 9600 1200 0    50   BiDi ~ 0
 OIRQ
-Text Notes 9400 1450 0    50   ~ 0
+Text Notes 9400 1350 0    50   ~ 0
 IPL TBD, or maybe use a tri-state buffer
 Text GLabel 7550 5250 2    50   Output ~ 0
 FPGA_R
@@ -728,21 +728,21 @@ FC2
 $Comp
 L Device:Jumper JP3
 U 1 1 5FDE8072
-P 10200 1900
-F 0 "JP3" H 10200 2164 50  0000 C CNN
-F 1 "Jumper" H 10200 2073 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 1900 50  0001 C CNN
-F 3 "~" H 10200 1900 50  0001 C CNN
-	1    10200 1900
+P 10200 1700
+F 0 "JP3" H 10200 1964 50  0000 C CNN
+F 1 "Jumper" H 10200 1873 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 1700 50  0001 C CNN
+F 3 "~" H 10200 1700 50  0001 C CNN
+	1    10200 1700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 1900 9600 1900
+	9900 1700 9600 1700
 Wire Wire Line
-	10500 1900 10800 1900
-Text GLabel 10800 1900 2    50   3State ~ 0
+	10500 1700 10800 1700
+Text GLabel 10800 1700 2    50   3State ~ 0
 VPA
-Text GLabel 9600 1900 0    50   BiDi ~ 0
+Text GLabel 9600 1700 0    50   BiDi ~ 0
 OVPA
 $Comp
 L 74xx:74LS245 IC5
@@ -793,7 +793,7 @@ Connection ~ 2950 3500
 Wire Wire Line
 	2950 3500 2950 3850
 Text GLabel 3250 3200 0    50   Output ~ 0
-BUS_RESET_N
+JBUS_RESET_N
 Text GLabel 2000 3200 2    50   Output ~ 0
 AS
 Text GLabel 6550 5150 0    50   Input ~ 0
@@ -814,44 +814,44 @@ $EndComp
 $Comp
 L Device:Jumper JP4
 U 1 1 6066ED1B
-P 10200 2300
-F 0 "JP4" H 10200 2564 50  0000 C CNN
-F 1 "Jumper" H 10200 2473 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2300 50  0001 C CNN
-F 3 "~" H 10200 2300 50  0001 C CNN
-	1    10200 2300
+P 10200 2100
+F 0 "JP4" H 10200 2364 50  0000 C CNN
+F 1 "Jumper" H 10200 2273 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2100 50  0001 C CNN
+F 3 "~" H 10200 2100 50  0001 C CNN
+	1    10200 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 2300 9600 2300
+	9900 2100 9600 2100
 Wire Wire Line
-	10500 2300 10650 2300
-Text GLabel 9600 2300 0    50   UnSpc ~ 0
+	10500 2100 10650 2100
+Text GLabel 9600 2100 0    50   UnSpc ~ 0
 UD_5V
 $Comp
 L Device:Jumper JP5
 U 1 1 60671C59
-P 10200 2750
-F 0 "JP5" H 10200 3014 50  0000 C CNN
-F 1 "Jumper" H 10200 2923 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2750 50  0001 C CNN
-F 3 "~" H 10200 2750 50  0001 C CNN
-	1    10200 2750
+P 10200 2550
+F 0 "JP5" H 10200 2814 50  0000 C CNN
+F 1 "Jumper" H 10200 2723 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2550 50  0001 C CNN
+F 3 "~" H 10200 2550 50  0001 C CNN
+	1    10200 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 2750 9600 2750
-Text GLabel 10800 2300 2    50   UnSpc ~ 0
+	9900 2550 9600 2550
+Text GLabel 10800 2100 2    50   UnSpc ~ 0
 5V
-Text GLabel 9600 2750 0    50   UnSpc ~ 0
+Text GLabel 9600 2550 0    50   UnSpc ~ 0
 ROSCO_5V
 Wire Wire Line
-	10500 2750 10650 2750
+	10500 2550 10650 2550
 Wire Wire Line
-	10650 2750 10650 2300
-Connection ~ 10650 2300
+	10650 2550 10650 2100
+Connection ~ 10650 2100
 Wire Wire Line
-	10650 2300 10700 2300
+	10650 2100 10700 2100
 $Comp
 L Connector:Conn_01x24_Female J2
 U 1 1 60646C00
@@ -944,9 +944,9 @@ Text GLabel 6350 3300 2    50   Output ~ 0
 DV_DE
 Text GLabel 6350 3400 2    50   Output ~ 0
 DV_CLK
-Connection ~ 10700 2300
+Connection ~ 10700 2100
 Wire Wire Line
-	10700 2300 10800 2300
+	10700 2100 10800 2100
 $Comp
 L Connector_Generic:Conn_02x06_Odd_Even J4
 U 1 1 606C15FC
@@ -1042,8 +1042,6 @@ Text GLabel 8150 2800 2    50   Input ~ 0
 DV_DE
 Text GLabel 8150 2700 2    50   Input ~ 0
 DV_CLK
-Text Notes 7150 3250 0    50   ~ 0
-TODO! Not certain the HDMI pins\nare correct for the actual hardware - Check this!
 $Comp
 L Connector_Generic:Conn_02x04_Counter_Clockwise J6
 U 1 1 60719F6C
@@ -1173,21 +1171,21 @@ Connection ~ 4650 7350
 $Comp
 L Device:Jumper JP6
 U 1 1 606027E5
-P 10200 3200
-F 0 "JP6" H 10200 3464 50  0000 C CNN
-F 1 "Jumper" H 10200 3373 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 3200 50  0001 C CNN
-F 3 "~" H 10200 3200 50  0001 C CNN
-	1    10200 3200
+P 10200 2900
+F 0 "JP6" H 10200 3164 50  0000 C CNN
+F 1 "Jumper" H 10200 3073 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 2900 50  0001 C CNN
+F 3 "~" H 10200 2900 50  0001 C CNN
+	1    10200 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 3200 9600 3200
+	9900 2900 9600 2900
 Wire Wire Line
-	10500 3200 10800 3200
-Text GLabel 10800 3200 2    50   UnSpc ~ 0
+	10500 2900 10800 2900
+Text GLabel 10800 2900 2    50   UnSpc ~ 0
 GND
-Text GLabel 9600 3200 0    50   UnSpc ~ 0
+Text GLabel 9600 2900 0    50   UnSpc ~ 0
 JBODGE_GND
 Text GLabel 6350 1700 2    50   UnSpc ~ 0
 JBODGE_GND
@@ -1323,7 +1321,7 @@ BUS_CS_N
 Text GLabel 3250 1650 2    50   Input ~ 0
 BUS_RD_NWR
 Text GLabel 3250 1750 2    50   Input ~ 0
-BUS_RESET_N
+JBUS_RESET_N
 $Comp
 L rosco_m68k:GAL22V10 IC4
 U 1 1 60CFB9DC
@@ -1401,7 +1399,7 @@ Wire Wire Line
 Wire Wire Line
 	7150 4300 7150 4200
 Text GLabel 6900 3550 1    50   UnSpc ~ 0
-GND
+5V
 Wire Wire Line
 	6900 3550 6900 3600
 Wire Wire Line
@@ -1429,4 +1427,52 @@ Text GLabel 8700 3450 1    50   UnSpc ~ 0
 5V
 Text GLabel 8700 4250 3    50   UnSpc ~ 0
 GND
+$Comp
+L 74xx:74LS74 IC6
+U 2 1 60D7C1C9
+P 4600 3950
+F 0 "IC6" H 4600 4431 50  0000 C CNN
+F 1 "74LS74" H 4600 4340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 4600 3950 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4600 3950 50  0001 C CNN
+	2    4600 3950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 3850 0    50   UnSpc ~ 0
+GND
+Text GLabel 4300 3950 0    50   UnSpc ~ 0
+GND
+Wire Wire Line
+	4600 3650 4350 3650
+Wire Wire Line
+	4350 3650 4350 3600
+Text GLabel 4350 3600 1    50   UnSpc ~ 0
+5V
+Text GLabel 4250 4300 0    50   UnSpc ~ 0
+5V
+Wire Wire Line
+	4250 4300 4600 4300
+Wire Wire Line
+	4600 4300 4600 4250
+NoConn ~ 4900 3850
+NoConn ~ 4900 4050
+$Comp
+L Device:Jumper JP7
+U 1 1 60DA5E6F
+P 10200 3250
+F 0 "JP7" H 10200 3514 50  0000 C CNN
+F 1 "Jumper" H 10200 3423 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10200 3250 50  0001 C CNN
+F 3 "~" H 10200 3250 50  0001 C CNN
+	1    10200 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 9750 3250 0    50   Input ~ 0
+JBUS_RESET_N
+Text GLabel 10650 3250 2    50   Output ~ 0
+BUS_RESET_N
+Wire Wire Line
+	10500 3250 10650 3250
+Wire Wire Line
+	9750 3250 9900 3250
 $EndSCHEMATC
