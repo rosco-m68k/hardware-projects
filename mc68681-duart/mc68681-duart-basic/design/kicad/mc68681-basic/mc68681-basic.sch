@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ROSCO_M68K MC68681 DUART EXPANSION"
-Date "2021-03-01"
-Rev "2"
+Date "2021-06-26"
+Rev "2.1"
 Comp "The Really Old School Company Limited"
 Comment1 ""
 Comment2 "See https://github.com/rosco-m68k/hardware-projects/blob/master/LICENCE.hardware.txt"
@@ -266,9 +266,9 @@ GND
 Text GLabel 2500 3400 2    50   Output ~ 0
 CTSA
 Text GLabel 2500 3700 2    50   Input ~ 0
-TXDA
+TXDCA
 Text GLabel 2500 3600 2    50   Output ~ 0
-RXDA
+RXDCA
 NoConn ~ 2500 3800
 Text GLabel 10550 5350 2    50   UnSpc ~ 0
 VCC
@@ -285,9 +285,9 @@ GND
 Text GLabel 2500 4250 2    50   Output ~ 0
 CTSB
 Text GLabel 2500 4550 2    50   Input ~ 0
-TXDB
+TXDCB
 Text GLabel 2500 4450 2    50   Output ~ 0
-RXDB
+RXDCB
 NoConn ~ 2500 4650
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J2
@@ -1196,4 +1196,80 @@ Wire Wire Line
 Connection ~ 10250 4900
 Wire Wire Line
 	8750 5250 9550 5250
+Text GLabel 5650 6100 0    50   Input ~ 0
+RXDCA
+$Comp
+L Device:CP1_Small C16
+U 1 1 60D6C450
+P 5900 6100
+F 0 "C16" V 6128 6100 50  0000 C CNN
+F 1 "10uF" V 6037 6100 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 5900 6100 50  0001 C CNN
+F 3 "~" H 5900 6100 50  0001 C CNN
+	1    5900 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1_Small C17
+U 1 1 60D6DFF3
+P 5900 6450
+F 0 "C17" V 5672 6450 50  0000 C CNN
+F 1 "10uF" V 5763 6450 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 5900 6450 50  0001 C CNN
+F 3 "~" H 5900 6450 50  0001 C CNN
+	1    5900 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C18
+U 1 1 60D73E6D
+P 5900 6800
+F 0 "C18" V 6128 6800 50  0000 C CNN
+F 1 "10uF" V 6037 6800 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 5900 6800 50  0001 C CNN
+F 3 "~" H 5900 6800 50  0001 C CNN
+	1    5900 6800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1_Small C19
+U 1 1 60D797B1
+P 5900 7200
+F 0 "C19" V 5672 7200 50  0000 C CNN
+F 1 "10uF" V 5763 7200 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 5900 7200 50  0001 C CNN
+F 3 "~" H 5900 7200 50  0001 C CNN
+	1    5900 7200
+	0    1    1    0   
+$EndComp
+Text GLabel 5650 6800 0    50   Input ~ 0
+RXDCB
+Text GLabel 6150 6450 2    50   Input ~ 0
+TXDA
+Text GLabel 6150 7200 2    50   Input ~ 0
+TXDB
+Text GLabel 6150 6100 2    50   Output ~ 0
+RXDA
+Text GLabel 6150 6800 2    50   Output ~ 0
+RXDB
+Text GLabel 5650 6450 0    50   Output ~ 0
+TXDCA
+Text GLabel 5650 7200 0    50   Output ~ 0
+TXDCB
+Wire Wire Line
+	5650 6100 5800 6100
+Wire Wire Line
+	6000 6100 6150 6100
+Wire Wire Line
+	5650 6450 5800 6450
+Wire Wire Line
+	6000 6450 6150 6450
+Wire Wire Line
+	5650 6800 5800 6800
+Wire Wire Line
+	6000 6800 6150 6800
+Wire Wire Line
+	5650 7200 5800 7200
+Wire Wire Line
+	6000 7200 6150 7200
 $EndSCHEMATC
