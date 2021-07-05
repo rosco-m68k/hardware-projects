@@ -1,0 +1,5 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"J5,J4";"PinHeader_1x16_P2.54mm_Vertical";2;"Conn_01x16_Male";;;
+2;"J3,J2,J1";"PinHeader_1x14_P2.54mm_Vertical";3;"Conn_01x14_Male";;;
+3;"U3,U2";"DIP-32_W15.24mm_LongPads";2;"SST39SF040";;;
+4;"U1";"DIP-32_W15.24mm_LongPads";1;"AS6C4008-55PCN";;;
