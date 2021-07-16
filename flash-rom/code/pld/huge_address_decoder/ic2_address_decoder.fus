@@ -21,10 +21,10 @@ Pin 18 = IACK         XOR = 0   AC1 = 1
  15  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
 Pin 17 = EXPSEL       XOR = 0   AC1 = 0
- 16  ---- x--- -xx- -x-- -x-- ---- ---- ---x
- 17  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 18  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 19  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 16  ---- ---- -xx- ---- x--- ---- ---- ---x
+ 17  ---- ---- --x- x--- -x-- ---- ---- ---x
+ 18  ---- x--- --x- ---- -x-- ---- ---- ---x
+ 19  ---- ---- x-x- -x-- ---- ---- ---- ---x
  20  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  21  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  22  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx

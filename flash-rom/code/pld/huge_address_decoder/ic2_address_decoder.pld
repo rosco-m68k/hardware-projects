@@ -14,7 +14,10 @@ AS    EVENRAM   ODDRAM    EVENROM   ODDROM    IOSEL   EXPSEL    IACK  NC      VC
 
 /IOSEL        = IACK * /AS * A23 * A22 * A21 * A20
 
-/EXPSEL       = IACK * /AS * /A23 * /A22 * /A21 * A20
+/EXPSEL       = IACK * /AS * A23 * /A21
+              + IACK * /AS * /A23 * A22
+              + IACK * /AS * /A23 * A20
+              + IACK * /AS * /A22 * A21
 
 DESCRIPTION
 
