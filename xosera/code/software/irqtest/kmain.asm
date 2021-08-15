@@ -36,10 +36,6 @@ IRQ:
 
 .CONTINUE
     move.b  D1,COUNT                    ; Re-stash counter
-
-;    move.l  #XVID_BASE,A0               ; Finally, we need to clear the interrupt latch...
-;    move.b  (A0),D0                     ; ... by reaing from Xosera base
-
     movem.l (A7)+,D0-D7/A0-A6           ; And we're done.
     rte
 
