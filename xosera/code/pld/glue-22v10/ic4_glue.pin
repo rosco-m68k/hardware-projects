@@ -15,7 +15,7 @@
   11   | UDIRQ    | Input
   12   | GND      | GND
   13   | A5       | Input
-  14   | A7       | Input
+  14   | A7       | NC
   15   | IRQRS    | Output
   16   | FPGACS   | Output
   17   | PPDT     | Output

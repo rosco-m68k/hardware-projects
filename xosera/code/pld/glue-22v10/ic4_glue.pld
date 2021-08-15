@@ -17,7 +17,7 @@ ODTACK.E   = /PPDT
 VPA.T      = GND
 VPA.E      = /PPVPA
 
-/IRQRS     = /FPGAR * /A3 * /A4 * A5 * /A7
+/IRQRS     = FC0 * FC1 * FC2 * /AS * RnW * /A1 * A2 * /A3
 
 DESCRIPTION
 

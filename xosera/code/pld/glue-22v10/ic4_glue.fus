@@ -131,7 +131,7 @@ Pin 16 = FPGACS       S0 = 0   S1 = 0
 
 Pin 15 = IRQRS        S0 = 0   S1 = 0
 111  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-112  ---- ---- ---- ---- ---- ---x ---- -x-- -x-- ---x --x-
+112  ---- x--- x--- x--- -x-- -x-- x--- -x-- ---- x--- ----
 113  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 114  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 115  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
