@@ -18,7 +18,7 @@
 17;"J4";"PinSocket_2x06_P2.54mm_Horizontal";1;"PMOD_TOP";;;
 18;"C6,C11,C10,C9,C5,C4,C3,C2,C1";"C2.5-3";9;"100nF";;;
 19;"R8,R7,R6,R5,R4,R3,R2,R1";"R-0207_10";8;"R";;;
-20;"J9,J7,J8";"PinHeader_2x04_P2.54mm_Vertical";3;"Conn_02x04_Counter_Clockwise";;;
+20;"J7,J8";"PinHeader_2x04_P2.54mm_Vertical";2;"Conn_02x04_Counter_Clockwise";;;
 21;"IC3";"DIP-20_W7.62mm_Socket_LongPads";1;"ATF16V8BQL";;;
 22;"C8";"CP_Radial_D6.3mm_P2.50mm";1;"220uF";;;
 23;"C7";"CP_Radial_D5.0mm_P2.50mm";1;"100uF";;;

@@ -5,11 +5,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Xosera <-> M68k Bus Interface"
-Date "2021-08-13"
-Rev "2"
+Date "2021-08-15"
+Rev "p0"
 Comp ""
-Comment1 "Prototype with Upduino & PMOD"
-Comment2 "Copyright ©2020-2021 Xark and Contributors"
+Comment1 "UPduino + PMOD to m68k bus"
+Comment2 "Copyright ©2021 Xark and Contributors"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -1005,17 +1005,6 @@ F 3 "~" H 10300 4550 50  0001 C CNN
 	1    10300 4550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Counter_Clockwise J9
-U 1 1 6071C4F2
-P 10300 5250
-F 0 "J9" H 10350 5567 50  0000 C CNN
-F 1 "Conn_02x04_Counter_Clockwise" H 10350 5476 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10300 5250 50  0001 C CNN
-F 3 "~" H 10300 5250 50  0001 C CNN
-	1    10300 5250
-	1    0    0    -1  
-$EndComp
 Text GLabel 10100 3800 0    50   UnSpc ~ 0
 3V3
 Text GLabel 10100 3900 0    50   UnSpc ~ 0
@@ -1050,20 +1039,6 @@ Text GLabel 10100 4750 0    50   UnSpc ~ 0
 5V
 Text GLabel 6550 5750 0    50   Input ~ 0
 UD_IRQ
-Text GLabel 10100 5150 0    50   Input ~ 0
-VGA_HS
-Text GLabel 10100 5350 0    50   Input ~ 0
-VGA_VS
-Text GLabel 10100 5250 0    50   UnSpc ~ 0
-GND
-Text GLabel 10100 5450 0    50   UnSpc ~ 0
-GND
-Text GLabel 10600 5250 2    50   UnSpc ~ 0
-5V
-Text GLabel 10600 5350 2    50   UnSpc ~ 0
-GND
-Text GLabel 10600 5450 2    50   UnSpc ~ 0
-3V3
 $Comp
 L Device:C C10
 U 1 1 607305DC
@@ -1416,8 +1391,6 @@ Text GLabel 7800 750  2    50   UnSpc ~ 0
 3V3
 Text GLabel 7800 1250 2    50   UnSpc ~ 0
 5V
-Text GLabel 10600 5150 2    50   Input ~ 0
-UD_IRQ
 Text Notes 6400 1500 0    50   ~ 0
 UD_IRQ is active high!\nGlue latches into IC6 on \nrising edge.
 Text Notes 5950 6400 0    50   ~ 0
