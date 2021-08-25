@@ -52,15 +52,26 @@ XVID_BLIT_CTRL    equ   $34           ; Blitter control             (WO)
 XVID_UNUSED_1     equ   $38           ; Unused at present           
 XVID_UNUSED_2     equ   $3C           ; Unused at present
 
-XVID_AUX_VID_W_DISPSTART equ $0000    ; display start address
-XVID_AUX_VID_W_TILEWIDTH equ $0001    ; tile line width (usually WIDTH/8)
-XVID_AUX_VID_W_SCROLLXY  equ $0002    ; [10:8] H fine scroll, [3:0] V fine scroll
-XVID_AUX_VID_W_FONTCTRL  equ $0003    ; [9:8] 2KB font bank, [3:0] font height
-XVID_AUX_VID_R_WIDTH     equ $0000    ; display resolution width
-XVID_AUX_VID_R_HEIGHT    equ $0001    ; display resolution height
-XVID_AUX_VID_R_FEATURES  equ $0002    ; [15] = 1 (test)
-XVID_AUX_VID_R_SCANLINE  equ $0003    ; [15] V blank, [14:11] zero [10:0] V line
-XVID_AUX_W_FONT          equ $4000    ; 0x4000-0x5FFF 8K byte font memory (even byte [15:8] ignored)
-XVID_AUX_W_COLORTBL      equ $8000    ; 0x8000-0x80FF 256 word color lookup table (0xXRGB)
-XVID_AUX_W_AUD           equ $C000    ; 0xC000-0x??? TODO (audio registers)
+XV_AUX_VIDREG     equ   $0000         ; 0x0000-0x000F 16 word video registers (see below)
+XV_AUX_FONTMEM    equ   $4000         ; 0x4000-0x5FFF 4K words of font memory
+XV_AUX_COLORMEM   equ   $8000         ; 0x8000-0x80FF 256 word color lookup table (0xXRGB)
+XV_AUX_AUDMEM     equ   $C000         ; 0xC000-0x??? TODO (audio registers)
+
+; Xosera AUX video registers
+XVA_dispstart     equ   $0            ; Display start address
+XVA_dispwidth     equ   $1            ; Display width(?)
+XVA_scrollxy      equ   $2            ; [10:8] H fine scroll, [3:0] V fine scroll
+XVA_fontctrl      equ   $3            ; [9:8] 2KB font bank, [3:0] font height
+XVA_gfxctrl       equ   $4            ; [15:8] Colorbase [7] enable [6] bitmap (0 tiled, 1 bitmap) [5:4] bpp [3:2] H repeat [1:0] V repeat
+XVA_unused_5      equ   $5
+XVA_unused_6      equ   $6
+XVA_unused_7      equ   $7
+XVA_vidwidth      equ   $8            ; Display resolution width
+XVA_vidheight     equ   $9            ; Display resolution height
+XVA_features      equ   $A            ; [15] = 1 (test)
+XVA_scanline      equ   $B            ; [15] V blank, [14:11] zero [10:0] V line
+XVA_githash_h     equ   $C
+XVA_githash_l     equ   $D
+XVA_unused_e      equ   $E
+XVA_unused_f      equ   $F
 

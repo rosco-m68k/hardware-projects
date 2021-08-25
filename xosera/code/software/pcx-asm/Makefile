@@ -1,0 +1,66 @@
+# Make rosco_m68k programs
+# 
+# Copyright (c)2020 Ross Bamford
+# See LICENSE
+
+EXTRA_CFLAGS?=
+SYSINCDIR?=../../../../../rosco_m68k/code/software/libs/build/include
+SYSLIBDIR?=../../../../../rosco_m68k/code/software/libs/build/lib
+LIBS=-lmachine -lstart_serial
+DEFINES=-DROSCO_M68K
+CFLAGS=-std=c11 -ffreestanding -Wall -pedantic -Werror -I$(SYSINCDIR) 	\
+			 -mcpu=68010 -march=68010 -mtune=68010                      \
+			 -mno-align-int -mno-strict-align $(DEFINES)
+LDFLAGS=-T $(SYSLIBDIR)/ld/serial/rosco_m68k_program.ld -L $(SYSLIBDIR) \
+				-Map=$(MAP)
+ASFLAGS=-Felf -m68010 -quiet $(DEFINES)
+CC=m68k-elf-gcc
+LD=m68k-elf-ld
+OBJCOPY=m68k-elf-objcopy
+AS=vasmm68k_mot
+RM=rm -f
+
+KERMIT=kermit
+SERIAL?=/dev/modem
+BAUD?=9600
+
+# Output config
+BINARY_BASENAME=pcx-asm
+BINARY_EXT=bin
+MAP=$(BINARY_BASENAME).map
+BINARY=$(BINARY_BASENAME).$(BINARY_EXT)
+IMAGEBASE=x16pal
+IMAGEEXT=pcx
+IMAGEPCX=$(IMAGEBASE).$(IMAGEEXT)
+IMAGEBIN=$(IMAGEBASE).o
+
+OBJECTS=kmain.o x16pal.o
+
+all: $(BINARY)
+
+clean: 
+	$(RM) $(OBJECTS) $(BINARY) $(BINARY_ODD) $(BINARY_EVEN) $(MAP)
+
+load: $(BINARY)
+	kermit -i -l $(SERIAL) -b $(BAUD) -s $(BINARY)
+
+x16pal.o: x16pal.pcx
+	$(OBJCOPY) -I binary -B m68k -O elf32-m68k                               \
+		--rename-section .data=.rodata                                       \
+		--redefine-sym _binary_$(IMAGEBASE)_$(IMAGEEXT)_start=_image_start   \
+		--redefine-sym _binary_$(IMAGEBASE)_$(IMAGEEXT)_end=_image_end       \
+		--redefine-sym _binary_$(IMAGEBASE)_$(IMAGEEXT)_size=_image_size     \
+		$< $@
+
+%.o : %.c
+	$(CC) -c $(CFLAGS) $(EXTRA_CFLAGS) -o $@ $<
+
+%.o : %.asm
+	$(AS) $(ASFLAGS) -o $@ $<
+
+$(BINARY) : $(OBJECTS)
+	$(LD) $(LDFLAGS) $^ -o $@ $(LIBS)
+	chmod a-x $@
+
+.PHONY: all clean load
+
