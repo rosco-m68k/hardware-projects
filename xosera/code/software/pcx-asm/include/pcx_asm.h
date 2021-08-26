@@ -10,14 +10,14 @@
  * Copyright (c) 2021 Ross Bamford
  * MIT License
  *
- * PCX file format
+ * PCX file format (Assembly version)
  *
  * Note! All multi-byte members are little-endian.
  * ------------------------------------------------------------
  */
 
-#include <stdbool.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 // Encoding constants
 #define PCX_ENC_NONE        0
@@ -59,5 +59,5 @@ typedef struct {
          | ((palentry.g) & 0xF0)        \
          | ((palentry.b) & 0xF0 >> 4)))
 
-bool show_pcx(uint32_t buf_size, uint8_t *buf);
+bool show_pcx(volatile void *xosera_base, void *data, void *data_end, uint32_t vram_base);
 
