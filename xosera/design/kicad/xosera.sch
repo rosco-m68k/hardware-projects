@@ -817,7 +817,7 @@ Upduino 3.0\nRGB Jumper Cut\nOSC Jumper Shorted
 NoConn ~ 5500 1200
 NoConn ~ 5500 1400
 Text GLabel 5500 1100 0    50   UnSpc ~ 0
-GND
+PMGND
 Text GLabel 5500 1300 0    50   UnSpc ~ 0
 BUS_RESET_N
 Text GLabel 5500 1500 0    50   UnSpc ~ 0
@@ -926,7 +926,7 @@ VGA_B2
 Text GLabel 8150 1800 2    50   Input ~ 0
 VGA_B3
 Text GLabel 7650 1700 0    50   UnSpc ~ 0
-GND
+PMGND
 Text GLabel 7650 1600 0    50   UnSpc ~ 0
 3V3
 Text GLabel 8150 3050 2    50   Input ~ 0
@@ -934,7 +934,7 @@ VGA_HS
 Text GLabel 8150 2950 2    50   Input ~ 0
 VGA_VS
 Text GLabel 7650 2650 0    50   UnSpc ~ 0
-GND
+PMGND
 Text GLabel 7650 2550 0    50   UnSpc ~ 0
 3V3
 Text GLabel 7650 2100 0    50   Input ~ 0
@@ -954,11 +954,11 @@ VGA_G2
 Text GLabel 7650 2750 0    50   Input ~ 0
 VGA_G3
 Text GLabel 8150 1700 2    50   UnSpc ~ 0
-GND
+PMGND
 Text GLabel 8150 1600 2    50   UnSpc ~ 0
 3V3
 Text GLabel 8150 2650 2    50   UnSpc ~ 0
-GND
+PMGND
 Text GLabel 8150 2550 2    50   UnSpc ~ 0
 3V3
 Text Notes 6100 1150 2    50   ~ 0
@@ -1411,4 +1411,21 @@ F 3 "~" H 10200 850 50  0001 C CNN
 	1    10200 850 
 	-1   0    0    -1  
 $EndComp
+$Comp
+L Device:Jumper JP2
+U 1 1 615EF646
+P 10200 2900
+F 0 "JP2" H 10200 3164 50  0000 C CNN
+F 1 "Jumper" H 10200 3073 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 10200 2900 50  0001 C CNN
+F 3 "~" H 10200 2900 50  0001 C CNN
+	1    10200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 2900 9900 2900
+Text GLabel 9750 2900 0    50   UnSpc ~ 0
+PMGND
+Text GLabel 10500 2900 2    50   UnSpc ~ 0
+GND
 $EndSCHEMATC
