@@ -14,11 +14,11 @@
  * ------------------------------------------------------------
  */
 
-#include "xosera_api.h"
+#include "xosera_m68k_api.h"
 #include "pcx.h"
 #include "dprint.h"
 
-volatile xreg_t * const xosera_ptr = (volatile xreg_t * const)0xf80060;
+//volatile xreg_t * const xosera_ptr = (volatile xreg_t * const)0xf80060;
 
 extern void *_image_start;
 extern void *_image_end;
@@ -32,10 +32,10 @@ void kmain() {
 
     dprintf("\nxosera_init(0)...");
     bool success = xosera_init(0);
-    dprintf("%s (%dx%d)\n", success ? "succeeded" : "FAILED", xv_reg_getw(vidwidth), xv_reg_getw(vidheight));
+    dprintf("%s\n", success ? "succeeded" : "FAILED" /*, xv_reg_getw(vidwidth), xv_reg_getw(vidheight)*/);
 
-    xv_reg_setw(gfxctrl, 0x0075);
-    xv_reg_setw(dispwidth, 160);
+    xreg_setw(PA_GFX_CTRL, 0x0075);
+    xreg_setw(PA_LINE_LEN, 160);
 
     show_pcx(buf_size, buf);
 
