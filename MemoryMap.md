@@ -59,7 +59,7 @@ addresses.
 | $F80031-$F8003F | Odd      | MC68901 MFP (First few registers shadowed)     |
 | $F80028-$F8002E | Even     | Reserved                                       |
 | $F80040-$F8005F | Both     | ATA/IDE Interface Board                        |
-| $F80060-$F8009E | Even     | Reserved (for Xosera)                          |
+| $F80060-$F8009E | Even     | for Xosera                                     |
 | $F8009F-$F800A7 | Both     | Available (note 1)                             |
 | $F800A8-$F800C6 | Even     | MC68681 DUART Expansion Board (r2)             |
 | $F800C7-$FBFFFF | Both     | Available (note 1)                             |
