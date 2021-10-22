@@ -4,7 +4,7 @@ AR
   0  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
 Pin 23 = ODTACK       S0 = 1   S1 = 0
-  1  ---- ---- ---- ---- ---- ---- ---x ---- ---- ---- ----
+  1  ---- ---- ---- ---- ---- ---- ---x ---- x--- ---- ----
   2  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   3  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   4  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -15,7 +15,7 @@ Pin 23 = ODTACK       S0 = 1   S1 = 0
   9  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
 Pin 22 = VPA          S0 = 1   S1 = 0
- 10  ---- ---- ---x ---- ---- ---- ---- ---- ---- ---- ----
+ 10  ---- ---- ---x ---- ---- ---- ---- ---- x--- ---- ----
  11  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  12  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  13  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -44,7 +44,7 @@ Pin 21 = PPVPA        S0 = 0   S1 = 0
 
 Pin 20 = FPGAW        S0 = 0   S1 = 0
  34  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 35  -x-- ---- ---- ---- -x-- ---- ---- ---- ---- -x-- ----
+ 35  -x-- ---- ---- ---- -x-- ---- ---- ---- x--- -x-- ----
  36  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  37  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  38  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -61,7 +61,7 @@ Pin 20 = FPGAW        S0 = 0   S1 = 0
 
 Pin 19 = OIRQ         S0 = 1   S1 = 0
  49  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 50  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- x---
+ 50  ---- ---- ---- ---- ---- ---- ---- ---- x--- ---- x---
  51  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  52  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  53  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -80,7 +80,7 @@ Pin 19 = OIRQ         S0 = 1   S1 = 0
 
 Pin 18 = FPGAR        S0 = 0   S1 = 0
  66  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 67  -x-- ---- ---- ---- -x-- ---- ---- ---- ---- x--- ----
+ 67  -x-- ---- ---- ---- -x-- ---- ---- ---- x--- x--- ----
  68  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  69  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  70  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -116,7 +116,7 @@ Pin 17 = PPDT         S0 = 0   S1 = 0
 
 Pin 16 = FPGACS       S0 = 0   S1 = 0
  98  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
- 99  -x-- ---- ---- ---- -x-- ---- ---- ---- ---- ---- ----
+ 99  -x-- ---- ---- ---- -x-- ---- ---- ---- x--- ---- ----
 100  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 101  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 102  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -132,7 +132,7 @@ Pin 16 = FPGACS       S0 = 0   S1 = 0
 Pin 15 = IRQRS        S0 = 0   S1 = 0
 111  ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 112  ---- x--- x--- x--- -x-- -x-- x--- -x-- ---- x--- ----
-113  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+113  ---- ---- ---- ---- ---- ---- ---- ---- -x-- ---- ----
 114  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 115  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 116  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -142,7 +142,7 @@ Pin 15 = IRQRS        S0 = 0   S1 = 0
 120  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 121  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 14 = A7           S0 = 0   S1 = 0
+Pin 14 = NC           S0 = 0   S1 = 0
 122  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 123  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 124  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
