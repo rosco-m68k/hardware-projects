@@ -1,23 +1,24 @@
 GAL22V10
 XVIDGLUE
 
-FSEL  FC0    FC1    FC2     AS    A1      A2     A3     A4       RnW   UDIRQ     GND
-A5    A7     IRQRS  FPGACS  PPDT  FPGAR   OIRQ   FPGAW  PPVPA    VPA   ODTACK    VCC
+FSEL  FC0    FC1    FC2     AS    A1      A2     A3     RESET    RnW   UDIRQ     GND
+NC    NC     IRQRS  FPGACS  PPDT  FPGAR   OIRQ   FPGAW  PPVPA    VPA   ODTACK    VCC
 
-/FPGAR     = /FSEL * /AS * RnW
-/FPGAW     = /FSEL * /AS * /RnW
-OIRQ       = UDIRQ
-/FPGACS    = /FSEL * /AS
+/FPGAR     = RESET * /FSEL * /AS * RnW
+/FPGAW     = RESET * /FSEL * /AS * /RnW
+OIRQ       = RESET * UDIRQ
+/FPGACS    = RESET * /FSEL * /AS
 
 /PPDT      = /FSEL * /AS
 ODTACK.T   = GND
-ODTACK.E   = /PPDT
+ODTACK.E   = RESET * /PPDT
 
 /PPVPA     = FC0 * FC1 * FC2 * /AS * RnW * /A1 * A2 * /A3
 VPA.T      = GND
-VPA.E      = /PPVPA
+VPA.E      = RESET * /PPVPA
 
 /IRQRS     = FC0 * FC1 * FC2 * /AS * RnW * /A1 * A2 * /A3
+           + /RESET
 
 DESCRIPTION
 

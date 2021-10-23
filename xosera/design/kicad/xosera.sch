@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Xosera <-> M68k Bus Interface"
-Date "2021-08-15"
-Rev "p0"
+Date "2021-10-22"
+Rev "p1"
 Comp ""
 Comment1 "UPduino + PMOD to m68k bus"
 Comment2 "Copyright ©2021 Xark and Contributors"
@@ -1278,11 +1278,7 @@ Text GLabel 6850 3900 0    50   Input ~ 0
 OIRQ
 NoConn ~ 7450 4000
 Text GLabel 6550 5550 0    50   Input ~ 0
-A4
-Text GLabel 7550 5750 2    50   Input ~ 0
-A5
-Text GLabel 7550 5650 2    50   Input ~ 0
-A7
+RESET
 Text GLabel 7550 5550 2    50   Output ~ 0
 IRQRS
 Text GLabel 7000 4300 0    50   Input ~ 0
@@ -1393,8 +1389,6 @@ Text GLabel 7800 1250 2    50   UnSpc ~ 0
 5V
 Text Notes 6400 1500 0    50   ~ 0
 UD_IRQ is active high!\nGlue latches into IC6 on \nrising edge.
-Text Notes 5950 6400 0    50   ~ 0
-Could probably save one input and one output in IC4 if needed\nby directly using UD_IRQ and PPVPA to control IC6…
 Wire Wire Line
 	4600 1900 4700 1900
 Connection ~ 4700 1900
@@ -1428,4 +1422,6 @@ Text GLabel 9750 2900 0    50   UnSpc ~ 0
 PMGND
 Text GLabel 10500 2900 2    50   UnSpc ~ 0
 GND
+NoConn ~ 7550 5650
+NoConn ~ 7550 5750
 $EndSCHEMATC
