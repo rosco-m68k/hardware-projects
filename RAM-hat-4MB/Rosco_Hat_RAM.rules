@@ -1,0 +1,102 @@
+
+(rules PCB Rosco_Hat_RAM
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 17)
+    (layer_rule "F.Cu"
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule "In1.Cu"
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule "In2.Cu"
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule "B.Cu"
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clear 200.2)
+    (clear 100.0 (type smd_to_turn_gap))
+    (clear 50.0 (type "smd"-"smd"))
+  )
+  (padstack "Via[0-3]_450:250_um"
+    (shape
+      (circle "F.Cu" 450.0 0.0 0.0)
+    )
+    (shape
+      (circle "In1.Cu" 450.0 0.0 0.0)
+    )
+    (shape
+      (circle "In2.Cu" 450.0 0.0 0.0)
+    )
+    (shape
+      (circle "B.Cu" 450.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_450:250_um" "Via[0-3]_450:250_um" "default"
+  )
+  (via 
+    "Via[0-3]_450:250_um-kicad_default" "Via[0-3]_450:250_um" "kicad_default"
+  )
+  (via_rule
+    "default" "Via[0-3]_450:250_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_450:250_um-kicad_default"
+  )
+  (class "default"
+    "GND" "VCC" "A20" "A21" "A22" "A23" "A19" "A17"
+    "A16" "A13" "A8" "A7" "A6" "A5" "A4" "A3"
+    "A2" "A1" "D0" "D1" "D2" "D3" "D4" "D5"
+    "D6" "D7" "ODDRAM0" "A11" "WR" "A12" "A10" "A9"
+    "A14" "A15" "A18" "unconnected-(U2-Pad19)" "D8" "D9" "D10" "D11"
+    "D12" "D13" "D14" "D15" "unconnected-(U2-Pad36)" "ODDRAMSEL" "RW" "EVENRAMSEL"
+    "EVENRAM0" "unconnected-(U6-Pad19)" "unconnected-(U6-Pad36)" "ODDRAM1" "unconnected-(U7-Pad19)" "unconnected-(U7-Pad36)" "EVENRAM1" "unconnected-(U8-Pad19)"
+    "unconnected-(U8-Pad36)" "ODDRAM2" "unconnected-(U9-Pad19)" "unconnected-(U9-Pad36)" "EVENRAM2" "unconnected-(U10-Pad19)" "unconnected-(U10-Pad36)" "ODDRAM3"
+    "unconnected-(U11-Pad19)" "unconnected-(U11-Pad36)" "EVENRAM3" "unconnected-(U12-Pad19)" "unconnected-(U12-Pad36)"
+    (clearance_class "default")
+    (via_rule "default")
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
