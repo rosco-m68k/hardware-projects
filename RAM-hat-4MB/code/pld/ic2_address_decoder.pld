@@ -30,12 +30,13 @@ DTACK.E   = /PPDTACK
 
 DESCRIPTION
 
-IC2 (Address Decoder) for rosco_m68k r2
+Modified IC2 (Address Decoder) for rosco_m68k r2
+with HeathenUK's 4MB SRAM Hat.
 
-* Onboard RAM    : $00000000 - $000FFFFF (1MB)
-* Expansion space: $00100000 - $00DFFFFF (14MB)
+* Onboard RAM    : $00000000 - $003FFFFF (4MB)
+* Expansion space: $00400000 - $00DFFFFF (10MB)
 * ROM            : $00E00000 - $00EFFFFF (1MB)
 * IO             : $00F00000 - $FFFFFFFF (1MB)
 
-Copyright (c)2021 Ross Bamford. See LICENSE.
+Copyright (c)2022 HeathenUK. See README and LICENSE.
 
